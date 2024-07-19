@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-font {
+    font-family: 'Recursive', monospace;
+}
+
+.grid-lines {
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, #1e1e1e 1px, transparent 1px),
+    linear-gradient(to bottom, #1e1e1e 1px, transparent 1px);
+}
