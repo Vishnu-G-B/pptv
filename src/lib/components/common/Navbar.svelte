@@ -12,14 +12,18 @@
 
     function expandNavbar() {
         if (!isExpanded) {
-            gsap.to(navContainer, {width: expandedWidth, duration: 0.3, ease: "power2.out"});
+            gsap.to(navContainer, {
+                width: expandedWidth,
+                duration: 0.3,
+                ease: "power2.out"
+            });
             gsap.to(navLinks, {
                 opacity: 1,
                 y: 0,
                 duration: 0.3,
                 stagger: 0.05,
-                delay: 0.1,
-                ease: "power2.out"
+                ease: "power2.out",
+                delay: 0.3
             });
             isExpanded = true;
         }
@@ -27,12 +31,18 @@
 
     function collapseNavbar() {
         if (isExpanded) {
-            gsap.to(navContainer, {width: collapsedWidth, duration: 0.3, ease: "power2.out"});
             gsap.to(navLinks, {
                 opacity: 0,
                 y: "100%",
                 duration: 0.2,
-                ease: "power2.in"
+                ease: "power2.in",
+                onComplete: () => {
+                    gsap.to(navContainer, {
+                        width: collapsedWidth,
+                        duration: 0.2,
+                        ease: "power2.inOut"
+                    });
+                }
             });
             isExpanded = false;
         }
@@ -40,7 +50,11 @@
 
     onMount(() => {
         navLinks = navContainer.querySelectorAll('.desktop-nav-links-description');
-        gsap.set(navLinks, {opacity: 0, y: "100%"});
+        gsap.set(navLinks,
+            {
+                opacity: 0,
+                y: "100%"
+            });
 
         collapsedWidth = `${navContent.querySelector('.nav-icon').offsetWidth + 32}px`;
         expandedWidth = `${navContent.scrollWidth + 32}px`;
@@ -49,7 +63,7 @@
     });
 </script>
 
-<div class="h-screen fixed left-0 top-0 z-[4] transition-all duration-300"
+<div class="h-screen fixed left-0 top-0 z-[6] transition-all duration-300"
      on:mouseenter={expandNavbar}
      on:mouseleave={collapseNavbar}
      bind:this={navContainer} role="none">
