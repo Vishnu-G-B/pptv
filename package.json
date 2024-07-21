@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@svelte-put/dragscroll": "^3.0.1",
 		"gsap": "^3.12.5"
 	}
 }

@@ -5,6 +5,7 @@
 
     let navContainer;
     let navContent;
+    let navContainerBgGradient;
     let navLinks;
     let isExpanded = false;
     let collapsedWidth;
@@ -12,6 +13,9 @@
 
     function expandNavbar() {
         if (!isExpanded) {
+            gsap.to(navContainerBgGradient, {
+                left: 0,
+            });
             gsap.to(navContainer, {
                 width: expandedWidth,
                 duration: 0.3,
@@ -31,6 +35,10 @@
 
     function collapseNavbar() {
         if (isExpanded) {
+            gsap.to(navContainerBgGradient, {
+                left: "-120%",
+                duration: 1,
+            });
             gsap.to(navLinks, {
                 opacity: 0,
                 y: "100%",
@@ -63,6 +71,8 @@
     });
 </script>
 
+<div class="fixed -left-[120%] top-0 bg-gradient-to-r from-surface/60 to-transparent to-35% h-screen w-full"
+     bind:this={navContainerBgGradient}></div>
 <div class="h-screen fixed left-0 top-0 z-[6] transition-all duration-300"
      on:mouseenter={expandNavbar}
      on:mouseleave={collapseNavbar}
