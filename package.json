@@ -19,7 +19,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth/mongodb-adapter": "^3.4.2",
+		"@auth/sveltekit": "^1.4.2",
 		"@svelte-put/dragscroll": "^3.0.1",
-		"gsap": "^3.12.5"
+		"gsap": "^3.12.5",
+		"mongodb": "^6.8.0"
 	}
 }

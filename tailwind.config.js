@@ -6,7 +6,7 @@ export default {
         'width': 'width',
       },
       colors: {
-        "surface": "#141414",
+        "surface": "#250025",
         "on-surface": "#dee3e9",
         'primary': '#660066',
         'secondary-primary': '#250025',
