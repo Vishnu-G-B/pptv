@@ -1,0 +1,387 @@
+<script>
+    import sampleVid from "$lib/assets/images/samplevideo.mp4";
+    import {gsap} from "gsap/dist/gsap";
+    import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+    import {onMount} from "svelte";
+    import Divider from "$lib/components/common/divider.svelte";
+    import Subdivider from "$lib/components/common/subdivider.svelte";
+    import {dragscroll} from "@svelte-put/dragscroll";
+
+    onMount(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        let homeVideo = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.home-video-container-trigger',
+                start: 'top top',
+                end: 'top -65%',
+                scrub: true,
+                markers: false,
+            }
+        });
+        homeVideo.to('.home-video-container', {
+            opacity: 0,
+        })
+    })
+</script>
+
+<div class="bg-surface grid-lines">
+    <div class="w-full h-screen bg-surface grid-lines">
+        <div class="h-screen w-full bg-surface grid-lines relative flex justify-center items-center">
+            <div class="h-[50%] w-[35%] absolute rounded-xl bottom-12 left-24 z-10">
+                <div class="h-full w-full rounded-3xl flex-col justify-between items-center
+                        text-white primary-font p-4">
+                    <div class="text-center text-5xl mb-4 font-extrabold">
+                        Movie Name
+                    </div>
+                    <div class="text-center text-lg mb-2 tracking-widest">
+                        Movie Information, runtime, etc.
+                    </div>
+                    <div class="text-lg text-justify mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, itaque! Voluptate assumenda
+                        maiores
+                        voluptas dolorem. Ad, mollitia dolorum. Quam in minima aliquam earum consequatur saepe ab
+                        similique
+                        fuga modi minus.
+                    </div>
+                    <div class="text-center text-xl mb-2 font-light">
+                        Educational | Something | Something Else
+                    </div>
+                    <div class="w-full h-fit text-center text-2xl mt-2 font-bold flex justify-center items-center">
+                        <button class="rounded-lg backdrop-blur-lg bg-on-surface/20 text-lg text-on-surface primary-font px-3 py-2 flex flex-row items-center justify-between gap-2 group">
+                            <div class="bg-primary rounded-lg h-fit w-fit px-2 py-2 flex flex-row group-hover:translate-x-1 duration-300 transition-all">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="16"
+                                        width="14"
+                                        viewBox="0 0 448 512"
+                                        class="fill-on-surface"
+                                >
+                                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                    <path
+                                            d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+                                    />
+                                </svg
+                                >
+                            </div>
+                            Watch Now!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[90%] h-[90vh] rounded-xl overflow-hidden object-cover -mr-6">
+                <video autoplay muted loop playsinline id="myVideo" class="object-cover w-full h-full">
+                    <source src="{sampleVid}" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-fit px-24 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col flex-1">
+            <div class="flex flex-wrap justify-center gap-3 p-4">
+                <!--                <p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">-->
+                <!--                    Learn-->
+                <!--                </p>-->
+                <Divider text="LEARN"/>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aliquid harum aspernatur optio illum vitae a
+                nostrum dolorem nesciunt suscipit? Sed excepturi impedit aliquam maxime fuga quis rerum, nihil
+                praesentium.
+            </h2>
+            <!--        <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">-->
+            <!--            Investing is a way to potentially grow your money over time. Here are some basic concepts to help you-->
+            <!--            understand how it works.-->
+            <!--        </p>-->
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-2 pt-4">
+                Q: What is investing?
+            </h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+                A: Investing is the process of buying assets such as stocks, bonds, mutual funds, or real estate, with
+                the
+                expectation that they will increase in value over time. The
+                goal is to generate income from dividends or interest, or to sell the assets at a profit.
+            </p>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-2 pt-4">Q: Why
+                should I invest?</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+                A: Investing can help you build wealth and achieve long-term financial goals, such as retirement or
+                paying
+                for a child's education. It also provides a way to grow
+                your savings faster than traditional bank accounts, which may offer lower interest rates.
+            </p>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-2 pt-4">Q: What
+                are
+                the risks of investing?</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+                A: All investments carry some level of risk, including the potential to lose money. Factors such as
+                market
+                volatility, economic conditions, and company performance
+                can affect investment returns. However, higher-risk investments may offer the potential for greater
+                rewards
+                over time.
+            </p>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-2 pt-4">Q: How
+                do I
+                get started with investing?</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+                A: To begin investing, you'll need to open a brokerage account or other investment vehicle. Research
+                different types of investments and consider your financial goals,
+                risk tolerance, and time horizon. You may also want to consult with a financial advisor for personalized
+                guidance.
+            </p>
+        </div>
+    </div>
+
+    <div class="w-full h-fit px-24 flex justify-center">
+        <Divider text="ENGAGE"/>
+    </div>
+    <div class="w-full h-fit px-24 flex flex-1 justify-center py-5">
+        <div class="layout-content-container w-full h-fit flex justify-center flex-col flex-1">
+            <!--            <Subdivider width="w-[60%]" textColor="text-white" textSize="text-lg" text="Experiential Learning"/>-->
+
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Experiential
+                Learning
+            </h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat eligendi aut laudantium
+                perferendis deleniti suscipit, blanditiis consequatur facere officiis repellat quia, distinctio
+                excepturi! Quae iste enim perferendis nobis.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Home
+                Activities
+            </h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat eligendi aut laudantium
+                perferendis deleniti suscipit, blanditiis consequatur facere officiis repellat quia, distinctio
+                excepturi! Quae iste enim perferendis nobis.
+            </p>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+                <div class="flex items-stretch p-4 gap-3">
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/9b6407d0-f0a8-46b8-9384-76d514145601.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/86188ffb-78e1-470f-8966-b0a22497c587.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/d8a05a4d-8e5a-460e-bf6d-f36353b5b0a2.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/e58e5e89-8fc4-4229-8c74-c00166b69148.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/8156f15b-ad89-47c1-93e3-dd9d98d7b405.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/dc7c0cf5-8c5f-42df-8009-32076739155c.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/afb8fc13-a503-47d5-9873-67b1eb8c93f7.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/08492a8e-ea29-4a37-8afa-71f8a383212b.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-fit px-24 flex justify-center">
+        <Divider text="ACT"/>
+    </div>
+    <div class="w-full h-fit px-24 flex flex-1 justify-center py-5">
+        <div class="layout-content-container w-full h-fit flex justify-center flex-col flex-1">
+            <!--            <Subdivider width="w-[60%]" textColor="text-white" textSize="text-lg" text="Experiential Learning"/>-->
+
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Social Impact
+
+            </h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat eligendi aut laudantium
+                perferendis deleniti suscipit, blanditiis consequatur facere officiis repellat quia, distinctio
+                excepturi! Quae iste enim perferendis nobis.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Service
+                Learning
+            </h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat eligendi aut laudantium
+                perferendis deleniti suscipit, blanditiis consequatur facere officiis repellat quia, distinctio
+                excepturi! Quae iste enim perferendis nobis.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Responsible
+                Citizenship
+            </h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat eligendi aut laudantium
+                perferendis deleniti suscipit, blanditiis consequatur facere officiis repellat quia, distinctio
+                excepturi! Quae iste enim perferendis nobis.
+            </p>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+                <div class="flex items-stretch p-4 gap-3">
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/9b6407d0-f0a8-46b8-9384-76d514145601.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/86188ffb-78e1-470f-8966-b0a22497c587.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/d8a05a4d-8e5a-460e-bf6d-f36353b5b0a2.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/e58e5e89-8fc4-4229-8c74-c00166b69148.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/8156f15b-ad89-47c1-93e3-dd9d98d7b405.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/dc7c0cf5-8c5f-42df-8009-32076739155c.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/afb8fc13-a503-47d5-9873-67b1eb8c93f7.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                        <div
+                                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded flex flex-col"
+                                style='background-image: url("https://cdn.usegalileo.ai/stability/08492a8e-ea29-4a37-8afa-71f8a383212b.png");'
+                        ></div>
+                        <div>
+                            <p class="text-white text-base font-medium leading-normal">@butterfly</p>
+                            <p class="text-[#9dabb8] text-sm font-normal leading-normal">#art #digitalart
+                                #illustration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+</style>
