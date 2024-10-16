@@ -5,6 +5,7 @@
     import Learn from "$lib/components/PPLlabs/Learn.svelte";
     import Engage from "$lib/components/PPLlabs/Engage.svelte";
     import Act from "$lib/components/PPLlabs/Act.svelte";
+    import Pplheartbutton from "$lib/components/common/pplheartbutton.svelte";
 
     let activeSection = null;
     let sections = ['Learn', 'Engage', 'Act'];
@@ -98,12 +99,15 @@
                     {section}
                 </button>
             {/each}
-            <button
-                    class="heart-button px-4 py-2 bg-red-500 text-white rounded-lg transition-all duration-300 hover:bg-red-600"
-                    on:click={toggleLike}
-            >
-                {isLiked ? '❤️' : '🤍'}
-            </button>
+            <div class="w-fit h-fit">
+                <Pplheartbutton/>
+            </div>
+            <!--            <button-->
+            <!--                    class="heart-button px-4 py-2 bg-red-500 text-white rounded-lg transition-all duration-300 hover:bg-red-600"-->
+            <!--                    on:click={toggleLike}-->
+            <!--            >-->
+            <!--                {isLiked ? '❤️' : '🤍'}-->
+            <!--            </button>-->
         </div>
     </div>
 
