@@ -88,26 +88,24 @@
         </div>
     </div>
 
-    <div class="w-full px-24 flex justify-center">
-        <div class="flex space-x-4">
-            {#each sections as section}
-                <button
-                        class="px-4 py-2 bg-primary text-white rounded-lg transition-all duration-300 hover:bg-primary-dark"
-                        class:active={activeSection === section}
-                        on:click={() => showSection(section)}
-                >
-                    {section}
-                </button>
-            {/each}
+    <div class="w-full px-24 flex justify-center items-center">
+        <div class=" w-full flex justify-between items-center">
+            <div class="flex justify-center items-center gap-4">
+                {#each sections as section}
+                    <button
+                            class="px-4 py-2 bg-primary text-white text-xl uppercase font-bold
+                             rounded-lg transition-all duration-300 hover:bg-primary-dark"
+                            class:active={activeSection === section}
+                            on:click={() => showSection(section)}
+                    >
+                        {section}
+                    </button>
+                {/each}
+            </div>
+
             <div class="w-fit h-fit">
                 <Pplheartbutton/>
             </div>
-            <!--            <button-->
-            <!--                    class="heart-button px-4 py-2 bg-red-500 text-white rounded-lg transition-all duration-300 hover:bg-red-600"-->
-            <!--                    on:click={toggleLike}-->
-            <!--            >-->
-            <!--                {isLiked ? '❤️' : '🤍'}-->
-            <!--            </button>-->
         </div>
     </div>
 
