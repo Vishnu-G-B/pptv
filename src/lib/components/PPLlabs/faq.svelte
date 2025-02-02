@@ -1,5 +1,6 @@
 <script>
     import {onMount} from 'svelte';
+    import gsap from 'gsap';
 
     let questions = [
         {
@@ -25,9 +26,37 @@
     ];
 
     let activeIndex = -1;
+    let answerElements = {};
 
     function toggleAnswer(index) {
+        const prevIndex = activeIndex;
         activeIndex = activeIndex === index ? -1 : index;
+
+        // Close previous answer if exists
+        if (prevIndex !== -1 && answerElements[prevIndex]) {
+            gsap.to(answerElements[prevIndex], {
+                height: 0,
+                opacity: 0,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        }
+
+        // Open new answer if selected
+        if (activeIndex !== -1 && answerElements[activeIndex]) {
+            gsap.fromTo(answerElements[activeIndex],
+                {
+                    height: 0,
+                    opacity: 0
+                },
+                {
+                    height: "auto",
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                }
+            );
+        }
     }
 
     onMount(() => {
@@ -42,17 +71,16 @@
     });
 </script>
 
-<div class="flex flex-nowrap justify-start items-center -ml-4">
-    <div class="w-[90vw] max-w-[56.25rem]">
-        <article
-                class="grid mt-6 sm:mt-8 bg-[#1e1e1e] w-[90vw] rounded-xl shadow-lg overflow-hidden sm:grid-cols-[22.5rem,1fr]">
-            <div class="relative row-span-2 col-span-2 sm:row-span-1 sm:col-span-1 h-60  sm:h-full bg-primary sm:rounded-l-xl bg-no-repeat bg-[length:auto_85%,auto_50%] bg-[position:50%_0%,50%_100%] sm:bg-[length:120%,auto] sm:bg-[position:100%_50%,100%_60%]"
+<div class="h-fit w-full flex items-center justify-center px-4 py-16 md:py-32 bg-[#f6f5ec]">
+    <div class="w-full max-w-[76.25rem]">
+        <article class="grid bg-[#1e1e1e] rounded-xl shadow-lg overflow-hidden sm:grid-cols-[22.5rem,1fr]">
+            <div class="relative row-span-2 col-span-2 sm:row-span-1 sm:col-span-1 h-60 sm:h-full bg-primary sm:rounded-l-xl bg-no-repeat bg-[length:auto_85%,auto_50%] bg-[position:50%_0%,50%_100%] sm:bg-[length:120%,auto] sm:bg-[position:100%_50%,100%_60%]"
                  style="background-image: var(--mobile-illustration1), var(--mobile-illustration2);">
                 <div class="hidden sm:block absolute inset-0 w-1/2 -left-1/4 bg-no-repeat bg-[length:100%] bg-[position:left_65%]"
                      style="background-image: var(--desktop-illustration3);"></div>
             </div>
             <div class="row-span-2 col-span-1 sm:row-span-1 sm:col-span-1 p-8 sm:p-14 bg-primary sm:rounded-r-xl">
-                <h2 class="font-bold text-2xl text-center sm:text-left text-white mb-8">FAQ</h2>
+                <h2 class="font-bold text-4xl md:text-6xl text-center sm:text-left text-white mb-8">FAQ</h2>
                 {#each questions as question, index}
                     <div class="border-b border-on-surface py-4">
                         <div class="q-wrapper flex justify-between items-center cursor-pointer"
@@ -64,9 +92,11 @@
                                       fill-rule="evenodd"/>
                             </svg>
                         </div>
-                        {#if activeIndex === index}
-                            <p class="text-sm text-white mt-4 animation-slide-down">{question.answer}</p>
-                        {/if}
+                        <div class="answer-wrapper overflow-hidden"
+                             style="height: 0;"
+                             bind:this={answerElements[index]}>
+                            <p class="text-sm text-white pt-4">{question.answer}</p>
+                        </div>
                     </div>
                 {/each}
             </div>
@@ -75,19 +105,9 @@
 </div>
 
 <style>
-    @keyframes slide-down {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .animation-slide-down {
-        animation: slide-down 0.3s ease-out;
+    .bg-gradient {
+        background: rgb(216, 180, 254);
+        background: linear-gradient(180deg, rgba(216, 180, 254, 1) 0%, rgba(243, 244, 240, 1) 20%, rgba(243, 244, 240, 1) 80%, rgba(216, 180, 254, 1) 100%);
     }
 
     /* You may need to define these CSS variables in your global styles or adjust the background images accordingly */
