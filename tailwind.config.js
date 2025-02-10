@@ -9,7 +9,9 @@ export default {
                 "surface": "#250025",
                 "on-surface": "#dee3e9",
                 'primary': '#660066',
-                'secondary-primary': '#250025',
+                'alternate-primary': '#250025',
+                'brand-orange': '#ff9900',
+                'background': '#f6f5ec',
             },
             fontFamily: {
                 stint: ["StintUltra", "sans-serif"],

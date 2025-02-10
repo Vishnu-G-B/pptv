@@ -1,18 +1,15 @@
 <script>
     import {onMount} from 'svelte';
-    import gsap from 'gsap/dist/gsap';
-    import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+    import {gsap} from 'gsap/dist/gsap';
+    import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
     import EmblemLight from '$lib/assets/images/EmblemLight.svg';
     import EmblemDark from '$lib/assets/images/EmblemDark.svg';
     import LandingVid from '$lib/assets/images/landingVid.mp4';
     import temp1 from '$lib/assets/images/temp1.jpg';
-    import temp2 from '$lib/assets/images/temp2.jpg';
-    import temp3 from '$lib/assets/images/temp3.jpg';
     import temp4 from '$lib/assets/images/temp4.png';
 
     let sectionRef;
-    const headerText = "Our Achievements";
-
+    gsap.registerPlugin(ScrollTrigger)
 
     function formatNumber(num) {
         const x = num.toString();
@@ -24,11 +21,8 @@
     }
 
     onMount(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
         const boxes = sectionRef.querySelectorAll('.metric-box');
 
-        // Animate numbers counting up
         boxes.forEach((box) => {
             const numberElement = box.querySelector('.number');
             if (numberElement) {
@@ -41,11 +35,10 @@
                     ease: "power1.out",
                     scrollTrigger: {
                         trigger: box,
-                        start: "top center+=200px",
+                        start: "top center+=350",
                     },
                     snap: {innerText: 1},
                     onUpdate: function () {
-                        // console.log(this.targets());
                         numberElement.innerHTML = formatNumber(Math.ceil(this.targets()[0].innerText)) + "+";
                     }
                 });
@@ -67,42 +60,11 @@
                 start: "top center+=100",
             }
         });
-        gsap.fromTo(".letter",
-            {
-                rotationX: 90,
-                opacity: 1,
-                y: 30, // starts 30px below its final position (adjust as needed)
-                transformOrigin: "bottom center"
-            },
-            {
-                rotationX: 0,
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                ease: "expo.out",
-                stagger: 0.03,
-                scrollTrigger: {
-                    trigger: ".section-header",
-                    start: "top bottom"
-                }
-            }
-        );
     });
 </script>
 
 <section bind:this={sectionRef} class="h-fit w-full bg-[#f6f5ec]">
-<!--    <div class="section-header h-[20vh] w-full flex items-center justify-center overflow-hidden">-->
-<!--        <h1 class="text-4xl md:text-6xl font-bold text-primary uppercase">-->
-<!--            {#each headerText.split('') as letter}-->
-<!--                {#if letter === ' '}-->
-<!--                    <span class="letter inline-block">&nbsp;</span>-->
-<!--                {:else}-->
-<!--                    <span class="letter inline-block">{letter}</span>-->
-<!--                {/if}-->
-<!--            {/each}-->
-<!--        </h1>-->
-<!--    </div>-->
-    <div class="h-fit w-full grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-auto md:p-4 relative bg-video">
+    <div class="h-fit w-full grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-auto p-4 relative bg-video">
         <div class="relative metric-box md:col-span-4 bg-gray-50 rounded-2xl p-8 flex flex-col justify-center min-h-[200px]
                 ">
             <div class="absolute inset-0 rounded-2xl">
@@ -133,13 +95,13 @@
             </div>
         </div>
 
-        <div class="metric-box md:col-span-2 bg-gray-50 rounded-2xl p-6 flex flex-col justify-center">
+        <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-6 flex flex-col justify-center ">
             <span class="number text-4xl md:text-5xlf text-primary font-stint font-bold"
                   data-value="65">65</span>
             <p class="text-orange-400 mt-2 text-xl font-karla uppercase font-bold">international film festivals</p>
         </div>
 
-        <div class="metric-box md:col-span-2 bg-gray-50 rounded-2xl p-6 flex flex-col justify-center">
+        <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-6 flex flex-col justify-center">
             <span class="number text-4xl md:text-5xl font-bold text-orange-400 font-stint" data-value="21">21</span>
             <p class="text-primary mt-2 text-xl font-karla uppercase font-bold">global awards & accolades</p>
         </div>
@@ -161,7 +123,7 @@
             </div>
         </div>
 
-        <div class="metric-box md:col-span-2 bg-gray-50 rounded-2xl p-1 flex flex-col md:flex-row justify-center items-center">
+        <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-1 flex flex-col md:flex-row justify-center items-center">
             <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">
                 <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>
             </div>
@@ -183,7 +145,7 @@
             </div>
         </div>
 
-        <div class="metric-box md:col-span-2 bg-gray-50 rounded-2xl p-1 flex flex-col md:flex-row justify-center items-center">
+        <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-1 flex flex-col md:flex-row justify-center items-center">
             <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">
                 <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>
             </div>
