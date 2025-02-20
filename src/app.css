@@ -28,6 +28,15 @@
     src: url(./lib/assets/fonts/Inconsolata.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: 'InterVariable';
+    src: url(./lib/assets/fonts/InterVariable.ttf) format("truetype");
+}
+
+.brand-font {
+    font-family: 'InterVariable';
+}
+
 .primary-font {
     font-family: 'Recursive', monospace;
 }
