@@ -105,6 +105,7 @@
     import {gsap} from "gsap/dist/gsap";
     import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
     import {MotionPathPlugin} from "gsap/dist/MotionPathPlugin";
+    import {textAnimation} from "$lib/animations/textSplit.js";
 
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -176,7 +177,9 @@
 <div class="cardContainer bg-[#f6f5ec] h-[400vh] w-full relative">
     <!-- Header / Spacer -->
     <div class="h-[50vh] w-full text-center flex justify-center items-center sticky top-0">
-        <div class="text-center text-5xl capitalize font-bold text-primary" style="font-family: Arial">
+        <div
+                use:textAnimation
+                class="text-center text-5xl capitalize font-bold text-primary" style="font-family: Arial">
             What makes us WOW!
         </div>
     </div>

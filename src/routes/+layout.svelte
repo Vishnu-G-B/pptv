@@ -4,8 +4,8 @@
     import HorizontalNav from "$lib/components/common/HorizontalNav.svelte";
     import {page} from "$app/stores";
 
-    const hideHorizontalNavPaths = ['/'];
-    const hideNavbarPaths = ['/'];
+    const hideHorizontalNavPaths = ['/', '/test'];
+    const hideNavbarPaths = ['/', '/test'];
 
     $: showHorizontalNav = !hideHorizontalNavPaths.includes($page.url.pathname);
     $: showNavbar = !hideNavbarPaths.includes($page.url.pathname);

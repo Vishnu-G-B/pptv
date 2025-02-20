@@ -17,7 +17,8 @@ export default {
                 stint: ["StintUltra", "sans-serif"],
                 karla: ['Karla', "sans-serif"],
                 Iconsolata: ['Iconsolata', "sans-serif"],
-            }
+            },
+
         }
     },
     plugins: []

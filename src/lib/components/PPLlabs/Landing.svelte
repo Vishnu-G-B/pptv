@@ -9,6 +9,7 @@
     import yiflogo from "$lib/assets/images/YIF logo.png";
     import crewstorylogo from "$lib/assets/images/crewstory.jpeg";
     import {goto} from "$app/navigation";
+    import {textAnimation} from "$lib/animations/textSplit.js";
 
     let contentContainer;
     let mainHeading;
@@ -23,57 +24,57 @@
             ".navAnim",
             {
                 opacity: 0,
-                y: 30,
-                rotationX: 90,
+                y: -30,
+                // rotationX: 90,
                 transformOrigin: "bottom center"
             },
             {
                 opacity: 1,
                 y: 0,
-                rotateX: 0,
+                // rotateX: 0,
                 duration: 2,
                 ease: "expo.out",
                 stagger: 0.1
             }
         );
 
-        tl.from(contentContainer, {
-            opacity: 0,
-            duration: 1
-        })
-            .from(mainHeading, {
-                y: 50,
-                opacity: 0,
-                duration: 0.8
-            })
-            .from(
-                subHeading,
-                {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.8
-                },
-                "-=0.6"
-            )
-            .from(
-                tagline,
-                {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.8
-                },
-                "-=0.6"
-            )
-            .from(
-                buttons.children,
-                {
-                    y: 20,
-                    opacity: 0,
-                    stagger: 0.2,
-                    duration: 0.5
-                },
-                "-=0.4"
-            );
+        // tl.from(contentContainer, {
+        //     opacity: 0,
+        //     duration: 1
+        // })
+        //     .from(mainHeading, {
+        //         y: 50,
+        //         opacity: 0,
+        //         duration: 0.8
+        //     })
+        //     .from(
+        //         subHeading,
+        //         {
+        //             y: 30,
+        //             opacity: 0,
+        //             duration: 0.8
+        //         },
+        //         "-=0.6"
+        //     )
+        //     .from(
+        //         tagline,
+        //         {
+        //             y: 20,
+        //             opacity: 0,
+        //             duration: 0.8
+        //         },
+        //         "-=0.6"
+        //     )
+        //     .from(
+        //         buttons.children,
+        //         {
+        //             y: 20,
+        //             opacity: 0,
+        //             stagger: 0.2,
+        //             duration: 0.5
+        //         },
+        //         "-=0.4"
+        //     );
 
         // Hover animation for buttons
         gsap.utils.toArray('.animate-button').forEach(button => {
@@ -134,13 +135,13 @@
             class="absolute inset-0 flex items-end justify-start z-10 mb-4 md:mb-[2.5rem]"
             bind:this={contentContainer}>
         <div class="max-w-3xl p-4 md:p-8 rounded-lg primary-font">
-            <h1
+            <h1     use:textAnimation
                     class="text-xl md:text-[1.8rem] font-bold text-[#ff9900] mb-2 md:mb-4 leading-tight"
                     bind:this={mainHeading}
                     style="font-family: Arial">
                 Edutainment With A Purpose @ ONE Rupee*
             </h1>
-            <h2
+            <h2     use:textAnimation
                     class="text-base md:text-lg text-white/90 mb-4 md:mb-6 text-justify"
                     bind:this={subHeading}>
                 We are a Conscious OTT Platform for K to 12 schools committed to produce and promote impactful cinema,
