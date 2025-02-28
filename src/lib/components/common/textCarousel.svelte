@@ -38,7 +38,7 @@
         }
         if (total === 4) {
             const offsets = [
-                {fadeIn: 15, fadeOut: 25},
+                {fadeIn: 5, fadeOut: 25},
                 {fadeIn: 35, fadeOut: 55},
                 {fadeIn: 55, fadeOut: 70},
                 {fadeIn: 80, fadeOut: 100}
@@ -238,7 +238,7 @@
     });
 </script>
 
-<div class="words-carousel relative {isNarrow ? 'h-[300vh] lg:-mt-[25vh]' : 'h-[450vh]'} bg-[#f6f5ec] mt-4 -mb-[18rem]"
+<div class="words-carousel relative {isNarrow ? 'h-[300vh] lg:-mt-[25vh]' : 'h-[450vh]'} bg-background mt-4 -mb-[18rem]"
      bind:this={container}>
     <div class="words-carousel__bg sticky top-1/2 left-1/2
                 transform -translate-x-3 sm:-translate-x-8 -translate-y-1/2

@@ -11,7 +11,7 @@ export default {
                 'primary': '#660066',
                 'alternate-primary': '#250025',
                 'brand-orange': '#ff9900',
-                'background': '#f6f5ec',
+                'background': '#f3f3e7',
                 'brand-green': '#6aa84f',
             },
             fontFamily: {

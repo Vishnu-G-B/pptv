@@ -63,7 +63,7 @@
     });
 </script>
 
-<section bind:this={sectionRef} class="h-fit w-full bg-[#f6f5ec]">
+<section bind:this={sectionRef} class="h-fit w-full bg-background">
     <div class="h-fit w-full grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-auto p-4 relative bg-video">
         <div class="relative metric-box md:col-span-4 bg-gray-50 rounded-2xl p-8 flex flex-col justify-center min-h-[200px]
                 ">
