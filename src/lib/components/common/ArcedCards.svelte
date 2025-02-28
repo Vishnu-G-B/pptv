@@ -4,7 +4,7 @@
     import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
     import {MotionPathPlugin} from "gsap/dist/MotionPathPlugin";
     import {textAnimation} from "$lib/animations/textSplit.js";
-    import bgImg from "$lib/assets/images/temp5.jpg";
+    import bgImg from "$lib/assets/images/arcedBGImg.jpg";
 
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -76,16 +76,16 @@
 <div class="MainContainer  bg-[#f6f5ec] h-fit w-full relative">
 
     <div class="bgimgcontainer h-screen w-full sticky top-0 z-10 transform overflow-hidden">
-        <img src="{bgImg}" alt="filling background" class="object-cover sm:object-fill w-full h-full">
+        <img src="{bgImg}" alt="filling background" class="object-contain sm:object-cover w-full h-full">
     </div>
 
     <div class="cardContainer bg-[#f6f5ec] h-[400vh] w-full relative -mt-[100vh]">
         <!-- Header / Spacer -->
-        <div class="h-[50vh] w-full text-center flex justify-center items-center sticky top-0 z-20 ">
+        <div class="h-[50vh] w-full text-center flex justify-end items-start sticky top-6 z-20 -ml-36 mt-24">
             <div
                     use:textAnimation
                     class="text-center text-5xl capitalize font-bold text-brand-green z-20" style="font-family: Arial">
-                What makes us WOW!
+                What <br/> makes us <br/> WOW!
             </div>
         </div>
 
@@ -108,7 +108,9 @@
                 </div>
             {/each}
 
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 opacity-0 w-full max-w-[500px] h-[450px]
+            <div class="absolute top-1/2 left-1/2
+                        transform translate-x-[250px] -translate-y-[85%]
+                        z-50 opacity-0 w-full max-w-[500px] h-[450px]
                    ml-2 sm:ml-0">
                 <svg
                         viewBox="0 -50 500 450"
@@ -124,8 +126,3 @@
         </div>
     </div>
 </div>
-<style>
-    .bgimgclass {
-        background-image: url("../");
-    }
-</style>

@@ -38,7 +38,7 @@
         }
         if (total === 4) {
             const offsets = [
-                {fadeIn: 5, fadeOut: 25},
+                {fadeIn: 15, fadeOut: 25},
                 {fadeIn: 35, fadeOut: 55},
                 {fadeIn: 55, fadeOut: 70},
                 {fadeIn: 80, fadeOut: 100}
