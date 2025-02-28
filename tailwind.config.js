@@ -12,6 +12,7 @@ export default {
                 'alternate-primary': '#250025',
                 'brand-orange': '#ff9900',
                 'background': '#f6f5ec',
+                'brand-green': '#5cb85c',
             },
             fontFamily: {
                 stint: ["StintUltra", "sans-serif"],

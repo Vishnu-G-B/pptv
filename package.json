@@ -23,6 +23,7 @@
 		"@auth/sveltekit": "^1.4.2",
 		"@svelte-put/dragscroll": "^3.0.1",
 		"gsap": "^3.12.7",
-		"mongodb": "^6.8.0"
+		"mongodb": "^6.8.0",
+		"sp-supermarquee": "^3.0.0"
 	}
 }

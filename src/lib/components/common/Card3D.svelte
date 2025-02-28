@@ -45,7 +45,7 @@
         glareY = 50;
     }
 </script>
-<div class="h-fit w-fit relative">
+<div class="h-fit w-fit relative" data-buddy-text="#Go Purple">
     <div
             class="relative group transition-[transform] duration-300 ease-out cursor-pointer"
             on:mouseleave={handleMouseLeave}

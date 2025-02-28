@@ -11,6 +11,7 @@
     import {Flip} from "gsap/dist/Flip";
     import {TextPlugin} from "gsap/dist/TextPlugin";
     import Card3D from "$lib/components/common/Card3D.svelte";
+    import Footer from "$lib/components/common/Footer.svelte";
 
 
     const imageModules = import.meta.glob('$lib/assets/images/top10Posters/*', {
@@ -100,15 +101,18 @@
 
         let wonderfullCoverTimeline = gsap.timeline({
             scrollTrigger: {
-                trigger: '.wonderfull-poster-div',
-                start: 'top top',
-                end: 'top -25%',
+                trigger: '#wonderfull-poster-div',
+                start: 'top bottom',
+                end: 'top 60%',
                 scrub: true,
+                markers: false,
             }
         });
         wonderfullCoverTimeline.to('#wonderfull-cover-div', {
             opacity: 1,
         });
+
+
     });
 
     function handleMovieCardTrailer() {
@@ -262,8 +266,8 @@
 <svelte:window bind:innerWidth/>
 
 <Landing/>
-<BentoBox/>
-<ArcedCards/>
+<!--<BentoBox/>-->
+<!--<ArcedCards/>-->
 <div class="min-h-screen h-fit w-full flex flex-col relative bg-background wonderfull-trigger items-start justify-start pt-5">
     <p class="brand-font text-4xl md:text-5xl font-bold lg:hidden text-left px-5 text-primary w-full lg:text-7xl group">
         The <span class="text-brand-orange relative">ONEderfull <span
@@ -329,7 +333,7 @@
             </p>
         </div>
     </div>
-    <div class="min-h-screen h-fit mt-24 lg:hidden w-full bg-background flex flex-col items-center pt-5 relative wonderfull-poster-div">
+    <div class="min-h-screen h-fit lg:hidden w-full bg-background flex flex-col items-center pt-5 relative">
         <div class="h-[300px] w-full flex flex-row items-center justify-center overflow-hidden absolute top-5 z-[2] movie-cards-container">
             {#each {length: totalMovieCards} as _, index}
                 <div class="flex flex-row h-[300px] items-end justify-center absolute">
@@ -449,7 +453,7 @@
     <!--        </div>-->
     <!--    </div>-->
     <!--    GRID SOLUTION-->
-    <div class="h-fit w-full flex-col items-center justify-center mt-24 hidden lg:flex">
+    <div class="h-fit w-full flex-col items-center justify-center mt-24 hidden lg:flex" id="wonderfull-poster-div">
         <div class="grid-cols-[repeat(3,minmax(0,1fr))] hidden lg:grid lg:gap-[40px] xl:grid-cols-[repeat(4,minmax(0,1fr))] xl:gap-[30px] px-10">
             {#each {length: totalMovieCards} as _, index}
                 <!--Translate y value is half of the height of the card div-->
@@ -520,7 +524,9 @@
     <!--        </div>-->
     <!--    </div>-->
 </div>
-<Faq/>
+<div class="h-[400px] bg-background"></div>
+<Footer />
+<!--<Faq/>-->
 
 <style>
     .ml7 {
