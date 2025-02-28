@@ -524,10 +524,11 @@
     <!--    </div>-->
 </div>
 <div class="h-[400px] bg-background"></div>
-<Footer />
+
 <!--<Faq/>-->
 <TextCarousel/>
-<Faq/>
+<!--<Faq/>-->
+<Footer/>
 
 <style>
     .ml7 {
