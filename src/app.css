@@ -14,31 +14,16 @@
 
 
 @font-face {
-    font-family: 'StintUltra';
-    src: url(./lib/assets/fonts/StintUltra.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'Karla';
-    src: url(./lib/assets/fonts/Karla.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'Iconsolata';
-    src: url(./lib/assets/fonts/Inconsolata.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'InterVariable';
-    src: url(./lib/assets/fonts/InterVariable.ttf) format("truetype");
+    font-family: 'Poppins';
+    src: url(./lib/assets/fonts/Poppins-Regular.ttf) format("truetype");
 }
 
 .brand-font {
-    font-family: 'InterVariable';
+    font-family: 'Poppins', sans-serif;
 }
 
 .primary-font {
-    font-family: 'Recursive', monospace;
+    font-family: 'Poppins', sans-serif;
 }
 
 .grid-lines {
@@ -50,4 +35,8 @@
 .bg-gradient {
     background: rgb(216, 180, 254);
     background: linear-gradient(180deg, rgba(216, 180, 254, 1) 0%, rgba(243, 244, 240, 1) 20%, rgba(243, 244, 240, 1) 80%, rgba(216, 180, 254, 1) 100%);
+}
+
+body {
+    background-color: #f6f5ec;
 }

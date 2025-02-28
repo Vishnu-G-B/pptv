@@ -1,5 +1,6 @@
 export default {
     content: ['./src/**/*.{html,js,svelte,ts}'],
+    mode: 'jit',
     theme: {
         extend: {
             transitionProperty: {
@@ -12,11 +13,12 @@ export default {
                 'alternate-primary': '#250025',
                 'brand-orange': '#ff9900',
                 'background': '#f6f5ec',
+                'brand-green': '#6aa84f',
             },
             fontFamily: {
-                stint: ["StintUltra", "sans-serif"],
-                karla: ['Karla', "sans-serif"],
-                Iconsolata: ['Iconsolata', "sans-serif"],
+                stint: ["Poppins", "sans-serif"],
+                karla: ['Poppins', "sans-serif"],
+                Iconsolata: ['Poppins', "sans-serif"],
             },
 
         }

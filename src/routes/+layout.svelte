@@ -12,9 +12,9 @@
 
 </script>
 
-{#if showHorizontalNav}
-    <HorizontalNav/>
-{/if}
+<!--{#if showHorizontalNav}-->
+<!--    <HorizontalNav/>-->
+<!--{/if}-->
 
 <slot/>
 
