@@ -91,7 +91,8 @@
 
     <!--  REMOVE LINE FROM LEFT OF PPL LOGO  -->
 
-    <div class="h-fit w-full absolute top-0 left-0 flex justify-start items-center gap-[2vw] py-[1vh] px-[2vw]">
+    <div class="relative h-fit w-full absolute top-0 left-0 flex justify-start items-center gap-[2vw] py-[1vh] px-[2vw]">
+        <!-- Background HR lines -->
         <div class="absolute top-1/2 left-0 w-full -translate-y-1/2 z-0">
             <hr class="border-t-2 border-primary">
         </div>
@@ -101,28 +102,35 @@
         <div class="absolute top-1/2 left-0 w-full -translate-y-[0.4rem] z-0">
             <hr class="border-t-2 border-brand-green">
         </div>
-        <div class="navAnim h-[12vh] min-[426px]:h-[15vh] w-auto bg-transparent rounded-full overflow-hidden mr-4">
-            <img src="{PPLlogo}" alt="PPL labs Logo" class="object-contain h-full w-full overflow-hidden"/>
+
+        <!-- Navigation Images -->
+        <div class="navAnim flex-shrink-0 min-w-0 h-[12vh] min-[426px]:h-[15vh] w-auto bg-transparent rounded-full overflow-hidden mr-4">
+            <img src="{PPLlogo}" alt="PPL labs Logo" class="object-contain h-full w-full max-w-full max-h-full"/>
         </div>
-        <div class="navAnim h-[8vh] min-[426px]:h-[10vh] w-auto bg-transparent rounded-full overflow-hidden">
-            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-contain h-full w-full overflow-hidden"/>
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10vh] w-auto bg-transparent rounded-full overflow-hidden">
+            <img src="{kiddinglogo}" alt="Kidding Bharat Logo"
+                 class="object-contain h-full w-full max-w-full max-h-full"/>
         </div>
-        <div class="navAnim h-[8vh] w-[8vh] min-[426px]:h-[9vh] min-[426px]:w-[9vh] bg-black rounded-full overflow-hidden">
-            <img src="{evidyaLogo}" alt="Evidya Logo" class="object-cover h-full w-full rounded-full overflow-hidden"/>
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[9vh] min-[426px]:w-[9vh] bg-black rounded-full overflow-hidden">
+            <img src="{evidyaLogo}" alt="Evidya Logo"
+                 class="object-cover h-full w-full rounded-full max-w-full max-h-full"/>
         </div>
-        <div class="navAnim h-[8vh] w-[8vh] min-[426px]:h-[9vh] min-[426px]:w-[9vh] bg-black rounded-full overflow-hidden">
-            <img src="{ecatvlogo}" alt="Ecatv Logo" class="object-cover h-full w-full rounded-full overflow-hidden"/>
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[9vh] min-[426px]:w-[9vh] bg-black rounded-full overflow-hidden">
+            <img src="{ecatvlogo}" alt="Ecatv Logo"
+                 class="object-cover h-full w-full rounded-full max-w-full max-h-full"/>
         </div>
-        <div class="navAnim h-[8vh] min-[426px]:h-[12.5vh] w-[9vh] bg-transparent  overflow-hidden">
-            <img src="{projectGulak}" alt="PPL labs Logo" class="object-cover h-full w-full overflow-hidden"/>
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[12.5vh] w-[9vh] bg-transparent overflow-hidden">
+            <img src="{projectGulak}" alt="Project Gulak Logo"
+                 class="object-cover h-full w-full max-w-full max-h-full"/>
         </div>
-        <div class="navAnim h-[8vh] min-[426px]:h-[10.1vh] w-auto bg-transparent  overflow-hidden">
-            <img src="{swadeshplex}" alt="PPL labs Logo" class="object-contain h-full w-full overflow-hidden"/>
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-auto bg-transparent overflow-hidden">
+            <img src="{swadeshplex}" alt="Swadeshplex Logo" class="object-contain h-full w-full max-w-full max-h-full"/>
         </div>
-        <div class="navAnim h-[8vh] min-[426px]:h-[10.1vh] w-auto bg-transparent  overflow-hidden">
-            <img src="{yif_logo}" alt="PPL labs Logo" class="object-cover h-full w-full overflow-hidden"/>
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-auto bg-transparent overflow-hidden">
+            <img src="{yif_logo}" alt="YIF Logo" class="object-cover h-full w-full max-w-full max-h-full"/>
         </div>
     </div>
+
 
     <div
             class="absolute inset-0 flex items-end justify-start z-10 mb-4 md:mb-[2.5rem]"
