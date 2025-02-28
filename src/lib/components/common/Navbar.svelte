@@ -89,7 +89,7 @@
          class="h-full desktop-nav-container backdrop-blur-sm relative flex flex-col items-start justify-center p-4 gap-5 overflow-hidden"
          role="navigation">
         <div class="w-fit h-fit mb-4 absolute top-3 -ml-2">
-            <img src="{pplLogo}" class="w-[55px] h-[55px]" alt="ppl logo">
+            <img src="{pplLogo}" class="w-[65px] h-[65px]" alt="ppl logo">
         </div>
         <a href="/">
             <div class="w-full h-fit flex flex-row items-center group whitespace-nowrap">

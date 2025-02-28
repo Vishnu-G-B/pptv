@@ -127,8 +127,8 @@
             <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">
                 <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>
             </div>
-            <p class="text-primary text-xl font-karla uppercase font-bold">Conferred award for blending films in
-                education</p>
+            <p class="text-primary text-xl font-karla uppercase font-bold text-center">
+                Conferred award for blending films in education</p>
         </div>
 
         <div class="metric-box md:col-span-2 md:row-span-2 relative bg-gray-50 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-center overflow-hidden">
@@ -140,7 +140,7 @@
             <div class="relative z-10 h-[15rem] w-fit mb-4 rounded-lg p-2">
                 <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto mb-4"/>
             </div>
-            <div class="relative z-10 text-white text-xl font-karla uppercase font-bold">
+            <div class="z-10 text-white text-xl font-karla uppercase font-bold text-center">
                 Recognized by the Government Of India
             </div>
         </div>
@@ -149,7 +149,7 @@
             <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">
                 <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>
             </div>
-            <div class="text-primary text-xl font-karla uppercase font-bold">
+            <div class="text-primary text-xl font-karla uppercase font-bold text-center">
                 Collaboration project for PM eVIDYA Studio
             </div>
         </div>

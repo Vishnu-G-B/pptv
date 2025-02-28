@@ -12,13 +12,14 @@ export default {
                 'alternate-primary': '#250025',
                 'brand-orange': '#ff9900',
                 'background': '#f6f5ec',
-                'brand-green': '#5cb85c',
+                'brand-green': '#6aa84f',
             },
             fontFamily: {
-                stint: ["StintUltra", "sans-serif"],
-                karla: ['Karla', "sans-serif"],
-                Iconsolata: ['Iconsolata', "sans-serif"],
-            }
+                stint: ["Poppins", "sans-serif"],
+                karla: ['Poppins', "sans-serif"],
+                Iconsolata: ['Poppins', "sans-serif"],
+            },
+
         }
     },
     plugins: []
