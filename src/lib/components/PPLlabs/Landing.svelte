@@ -91,8 +91,8 @@
 
     <!--  REMOVE LINE FROM LEFT OF PPL LOGO  -->
 
-    <div class="relative h-fit w-full absolute top-0 left-0 flex justify-start items-center gap-[2vw] py-[1vh] px-[2vw]">
-        <!-- Background HR lines -->
+    <div class="h-fit w-full absolute top-0 left-0 flex justify-start items-center gap-[2vw] py-[1vh] px-[2vw]">
+        <!-- Background horizontal lines -->
         <div class="absolute top-1/2 left-0 w-full -translate-y-1/2 z-0">
             <hr class="border-t-2 border-primary">
         </div>
@@ -103,31 +103,40 @@
             <hr class="border-t-2 border-brand-green">
         </div>
 
-        <!-- Navigation Images -->
+        <!-- Navigation Logos -->
+        <!-- 1. PPLlabs logo (remains auto width) -->
         <div class="navAnim flex-shrink-0 min-w-0 h-[12vh] min-[426px]:h-[15vh] w-auto bg-transparent rounded-full overflow-hidden mr-4">
-            <img src="{PPLlogo}" alt="PPL labs Logo" class="object-contain h-full w-full max-w-full max-h-full"/>
+            <img src="{PPLlogo}" alt="PPL labs Logo" class="object-contain h-full w-full"/>
         </div>
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10vh] w-auto bg-transparent rounded-full overflow-hidden">
-            <img src="{kiddinglogo}" alt="Kidding Bharat Logo"
-                 class="object-contain h-full w-full max-w-full max-h-full"/>
+
+        <!-- 2. Kidding Bharat logo: fixed width to avoid Safari stretching -->
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10vh] w-[10vh] bg-transparent rounded-full overflow-hidden">
+            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-contain h-full w-full"/>
         </div>
+
+        <!-- 3. Evidya logo (circular, fixed width already) -->
         <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[9vh] min-[426px]:w-[9vh] bg-black rounded-full overflow-hidden">
-            <img src="{evidyaLogo}" alt="Evidya Logo"
-                 class="object-cover h-full w-full rounded-full max-w-full max-h-full"/>
+            <img src="{evidyaLogo}" alt="Evidya Logo" class="object-cover h-full w-full rounded-full"/>
         </div>
+
+        <!-- 4. Ecatv logo (circular, fixed width already) -->
         <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[9vh] min-[426px]:w-[9vh] bg-black rounded-full overflow-hidden">
-            <img src="{ecatvlogo}" alt="Ecatv Logo"
-                 class="object-cover h-full w-full rounded-full max-w-full max-h-full"/>
+            <img src="{ecatvlogo}" alt="Ecatv Logo" class="object-cover h-full w-full rounded-full"/>
         </div>
+
+        <!-- 5. Project Gulak logo (remains fixed) -->
         <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[12.5vh] w-[9vh] bg-transparent overflow-hidden">
-            <img src="{projectGulak}" alt="Project Gulak Logo"
-                 class="object-cover h-full w-full max-w-full max-h-full"/>
+            <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-full w-full"/>
         </div>
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-auto bg-transparent overflow-hidden">
-            <img src="{swadeshplex}" alt="Swadeshplex Logo" class="object-contain h-full w-full max-w-full max-h-full"/>
+
+        <!-- 6. Swadeshplex logo: fixed width to prevent excessive auto sizing -->
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-[10vh] bg-transparent overflow-hidden">
+            <img src="{swadeshplex}" alt="Swadeshplex Logo" class="object-contain h-full w-full"/>
         </div>
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-auto bg-transparent overflow-hidden">
-            <img src="{yif_logo}" alt="YIF Logo" class="object-cover h-full w-full max-w-full max-h-full"/>
+
+        <!-- 7. YIF logo: fixed width to prevent excessive auto sizing -->
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-[10vh] bg-transparent overflow-hidden">
+            <img src="{yif_logo}" alt="YIF Logo" class="object-contain h-full w-full"/>
         </div>
     </div>
 
@@ -142,13 +151,12 @@
                 style="font-family: Arial">
                 Edutainment With A Purpose @ ONE Rupee*
             </h1>
-            <h2
-                    class="text-base md:text-lg text-white/90 mb-4 md:mb-6 text-justify large-animation-3"
-                    bind:this={subHeading}>
+            <h2 class="text-base md:text-lg text-white/90 mb-4 md:mb-6 text-justify large-animation-3"
+                bind:this={subHeading}>
                 We are a Conscious OTT Platform for K to 12 schools committed to produce and promote impactful cinema,
-                educational content & curriculum.<br/><br/>
+                educational content & curriculum.
                 Our mission is to support the Ministry Of Education’s PM eVIDYA initiative aligned with NEP 2020, for 25
-                Crore school going children and their families <br/>
+                Crore school going children and their families
                 at Just ONE Rupee*. #ONEderful #GoPurple
             </h2>
             <p
