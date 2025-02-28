@@ -4,11 +4,6 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	kit: {
 		adapter: adapter(),
-		vite: {
-			build: {
-				target: 'esnext',
-			}
-		}
 	},
 	preprocess: vitePreprocess()
 };
