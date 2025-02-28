@@ -105,7 +105,7 @@
 
         <!-- Navigation Logos -->
         <!-- 1. PPLlabs logo (remains auto width) -->
-        <div class="navAnim flex-shrink-0 min-w-0 h-[12vh] min-[426px]:h-[15vh] w-[10vh] bg-transparent rounded-full overflow-hidden mr-4">
+        <div class="navAnim flex-shrink-0 min-w-0 h-[12vh] min-[426px]:h-[20vh] w-[10vh] bg-transparent rounded-full overflow-hidden mr-4">
             <img src="{PPLlogo}" alt="PPL labs Logo" class="object-contain h-full w-full"/>
         </div>
 
