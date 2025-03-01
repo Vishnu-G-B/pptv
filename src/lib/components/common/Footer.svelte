@@ -117,34 +117,34 @@
     <!--        />-->
     <!--    </div>-->
 </div>
-<div class="pt-2 w-full flex flex-col items-center justify-center sticky z-0 bottom-0 h-full">
-    <div class="absolute left-1 top-0 h-1/2 w-[2px] bg-brand-orange">
-        <div class="h-2 w-2 absolute bottom-0 left-1/2 -translate-x-1/2 bg-brand-orange rounded-full"></div>
-    </div>
-    <div class="absolute left-3 top-0 h-1/3 w-[2px] bg-brand-green">
-        <div class="h-2 w-2 absolute bottom-0 left-1/2 -translate-x-1/2 bg-brand-green rounded-full"></div>
-    </div>
+<!--<div class="pt-2 w-full flex flex-col items-center justify-center sticky z-0 bottom-0 h-full">-->
+<!--    <div class="absolute left-1 top-0 h-1/2 w-[2px] bg-brand-orange">-->
+<!--        <div class="h-2 w-2 absolute bottom-0 left-1/2 -translate-x-1/2 bg-brand-orange rounded-full"></div>-->
+<!--    </div>-->
+<!--    <div class="absolute left-3 top-0 h-1/3 w-[2px] bg-brand-green">-->
+<!--        <div class="h-2 w-2 absolute bottom-0 left-1/2 -translate-x-1/2 bg-brand-green rounded-full"></div>-->
+<!--    </div>-->
 
-    <AutoText
-            className="rounded-lg brand-font text-primary"
-            maxSize={1000}
-            minSize={16}
-            text="Edutainment With A Purpose"
-    />
-    <p class="text-sm sm:text-xl brand-font text-bold text-primary -mt-2 mb-3">
-        <span class="bg-brand-orange">#</span>Go Purple <span class="bg-brand-green">#</span>ONEderfull
-    </p>
-    <div class="h-[1px] w-full border-[1px] border-dotted border-surface mb-3"></div>
-    <div class="h-fit w-full flex flex-row mb-3 px-5 justify-between">
-        <p class="text-[0.65rem] text-black font-bold brand-font">
-            © 2025 Purple People Labs <span class="text-black/70">// ALL RIGHTS RESERVED</span>
-        </p>
-        <!--        <p class="text-[0.65rem] text-black font-bold brand-font">-->
-        <!--            WE RESPECT YOUR PRIVACY-->
-        <!--        </p>-->
-    </div>
-    <div class="flex absolute right-0 top-0 h-full z-0">
-        <div class="h-full w-[30px] bg-brand-orange"></div>
-        <div class="h-full w-[30px] bg-brand-green"></div>
-    </div>
-</div>
+<!--    <AutoText-->
+<!--            className="rounded-lg brand-font text-primary"-->
+<!--            maxSize={1000}-->
+<!--            minSize={16}-->
+<!--            text="Edutainment With A Purpose"-->
+<!--    />-->
+<!--    <p class="text-sm sm:text-xl brand-font text-bold text-primary -mt-2 mb-3">-->
+<!--        <span class="bg-brand-orange">#</span>Go Purple <span class="bg-brand-green">#</span>ONEderfull-->
+<!--    </p>-->
+<!--    <div class="h-[1px] w-full border-[1px] border-dotted border-surface mb-3"></div>-->
+<!--    <div class="h-fit w-full flex flex-row mb-3 px-5 justify-between">-->
+<!--        <p class="text-[0.65rem] text-black font-bold brand-font">-->
+<!--            © 2025 Purple People Labs <span class="text-black/70">// ALL RIGHTS RESERVED</span>-->
+<!--        </p>-->
+<!--        &lt;!&ndash;        <p class="text-[0.65rem] text-black font-bold brand-font">&ndash;&gt;-->
+<!--        &lt;!&ndash;            WE RESPECT YOUR PRIVACY&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="flex absolute right-0 top-0 h-full z-0">-->
+<!--        <div class="h-full w-[30px] bg-brand-orange"></div>-->
+<!--        <div class="h-full w-[30px] bg-brand-green"></div>-->
+<!--    </div>-->
+<!--</div>-->
