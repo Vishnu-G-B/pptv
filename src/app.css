@@ -18,6 +18,11 @@
     src: url(./lib/assets/fonts/Poppins-Regular.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "FancyFont";
+    src: url(./lib/assets/fonts/autumn-brush.regular.otf) format("opentype");
+}
+
 .brand-font {
     font-family: 'Poppins', sans-serif;
 }

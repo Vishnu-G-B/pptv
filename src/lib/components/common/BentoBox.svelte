@@ -72,10 +72,11 @@
                 <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
             </div>
             <span class="number relative z-10 text-orange-400 text-5xl md:text-7xl font-stint font-bold"
-                  data-value="300000">
-                300000
+                  data-value="25000000">
+                25000000
             </span>
-            <p class="mt-2 relative z-10 text-white text-xl font-karla uppercase font-bold">young filmmakers trained</p>
+            <p class="mt-2 relative z-10 text-white text-xl font-karla uppercase font-bold">Crore school children
+                taught</p>
         </div>
 
 
@@ -97,7 +98,7 @@
 
         <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-6 flex flex-col justify-center ">
             <span class="number text-4xl md:text-5xlf text-primary font-stint font-bold"
-                  data-value="65">65</span>
+                  data-value="78">78</span>
             <p class="text-orange-400 mt-2 text-xl font-karla uppercase font-bold">international film festivals</p>
         </div>
 
@@ -128,6 +129,7 @@
                 <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>
             </div>
             <p class="text-primary text-xl font-karla uppercase font-bold text-center">
+                <span class="text-2xl text-center font-extrabold">ECA - APER</span><br/>
                 Conferred award for blending films in education</p>
         </div>
 
@@ -137,11 +139,13 @@
                 <div class="absolute inset-0 bg-primary/60"></div>
             </div>
 
-            <div class="relative z-10 h-[15rem] w-fit mb-4 rounded-lg p-2">
-                <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto mb-4"/>
-            </div>
-            <div class="z-10 text-white text-xl font-karla uppercase font-bold text-center">
-                Recognized by the Government Of India
+            <div class="relative z-10 text-white ">
+                <span class="number text-4xl md:text-6xl font-bold font-stint text-white"
+                      data-value="1500">1500
+                </span>
+                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">
+                    Young Filmmakers Inspired in urban and rural schools
+                </p>
             </div>
         </div>
 
@@ -149,8 +153,10 @@
             <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">
                 <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>
             </div>
-            <div class="text-primary text-xl font-karla uppercase font-bold text-center">
-                Collaboration project for PM eVIDYA Studio
+            <div class="text-primary text-xl font-karla font-bold text-center">
+                <span class="text-2xl text-center font-extrabold">1<sup class="lowercase">st</sup> Academic Film Studio</span><br/>
+                Co-Production with Ladakh Government <br/>
+                Co-Production with Ladakh Autonomous Hill Development Council
             </div>
         </div>
     </div>

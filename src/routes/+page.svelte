@@ -1,10 +1,8 @@
 <script>
     import {onMount} from 'svelte';
     import {gsap} from 'gsap/dist/gsap';
-    import Faq from "$lib/components/PPLlabs/faq.svelte";
     import BentoBox from "$lib/components/common/BentoBox.svelte";
     import LandingVid from "$lib/assets/images/landingVid.mp4";
-    import PPLlogo from "$lib/assets/images/PPLlogo.png";
     import Landing from "$lib/components/PPLlabs/Landing.svelte";
     import ArcedCards from "$lib/components/common/ArcedCards.svelte";
     import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
@@ -13,6 +11,7 @@
     import Card3D from "$lib/components/common/Card3D.svelte";
     import Footer from "$lib/components/common/Footer.svelte";
     import TextCarousel from '$lib/components/common/textCarousel.svelte';
+    import ImgNav from "$lib/components/common/ImgNav.svelte";
 
 
     const imageModules = import.meta.glob('$lib/assets/images/top10Posters/*', {
@@ -264,6 +263,7 @@
 </script>
 <svelte:window bind:innerWidth/>
 
+<ImgNav/>
 <Landing/>
 <BentoBox/>
 <ArcedCards/>
@@ -439,18 +439,6 @@
             </div>
         </div>
     </div>
-    <!--    FLEX SOLUTION -->
-    <!--    <div class="hidden lg:flex flex-row justify-between gap-10 w-full h-full mt-24">-->
-    <!--        <div class="flex flex-row items-center justify-center flex-wrap gap-5">-->
-    <!--            {#each {length: totalMovieCards} as _, index}-->
-    <!--                <Card3D imgLocation="{movieCardsPosters[index]}" index="{index+1}"-->
-    <!--                        cardContainerColor="{index%2 === 0 ? 'bg-brand-orange' : 'bg-primary'}"/>-->
-    <!--                &lt;!&ndash;                <div class="flex-shrink-0 xl:h-[600px] xl:w-[400px] lg:h-[300px] lg:w-[200px]">&ndash;&gt;-->
-    <!--                &lt;!&ndash;                    <img src="{movieCardsPosters[index]}" alt="" class="object-fit h-full w-full">&ndash;&gt;-->
-    <!--                &lt;!&ndash;                </div>&ndash;&gt;-->
-    <!--            {/each}-->
-    <!--        </div>-->
-    <!--    </div>-->
     <!--    GRID SOLUTION-->
     <div class="h-fit w-full flex-col items-center justify-center mt-24 hidden lg:flex" id="wonderfull-poster-div">
         <div class="grid-cols-[repeat(3,minmax(0,1fr))] hidden lg:grid lg:gap-[40px] xl:grid-cols-[repeat(4,minmax(0,1fr))] xl:gap-[30px] px-10">
@@ -466,68 +454,10 @@
             {/each}
         </div>
     </div>
-    <!--    <div class="h-[100vh] w-full wonderfull-gallery-trigger">-->
-    <!--        <div class="h-screen w-full items-center justify-center sticky top-0 overflow-hidden main-movie-container">-->
-    <!--            <div class="absolute top-12 right-3 flex flex-col gap-2 z-[3]">-->
-    <!--                <div class="h-fit w-full px-2">-->
-    <!--                    <div class="h-[3px] bg-primary transition-all duration-100"-->
-    <!--                         style="width: {(currentIndexMovieCarousel/totalMovieCards) * 100}%;"></div>-->
-    <!--                </div>-->
-    <!--                <div class="flex flex-row gap-5">-->
-    <!--                    <button class="h-8 w-8 rounded-full bg-on-surface/50 backdrop-blur-xl wow-controller-left flex items-center justify-center"-->
-    <!--                            on:click={movieCarouselLeft}>-->
-    <!--                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">-->
-    <!--                            <g>-->
-    <!--                                <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"/>-->
-    <!--                                <polygon-->
-    <!--                                        points="12.707 8.707 11.293 7.293 6.586 12 11.293 16.707 12.707 15.293 10.414 13 16 13 16 11 10.414 11 12.707 8.707"/>-->
-    <!--                            </g>-->
-    <!--                        </svg>-->
-    <!--                        <p class="hidden">Go left</p>-->
-    <!--                    </button>-->
-    <!--                    <button class="h-8 w-8 rounded-full bg-on-surface/50 backdrop-blur-xl woww-controller-right flex items-center justify-center"-->
-    <!--                            on:click={() => {movieCarouselRight()}}>-->
-    <!--                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">-->
-    <!--                            <g>-->
-    <!--                                <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"/>-->
-    <!--                                <polygon-->
-    <!--                                        points="11.293 8.707 13.586 11 8 11 8 13 13.586 13 11.293 15.293 12.707 16.707 17.414 12 12.707 7.293 11.293 8.707"/>-->
-    <!--                            </g>-->
-    <!--                        </svg>-->
-    <!--                        <p class="hidden">Go Right</p>-->
-    <!--                    </button>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="h-[450px] w-full flex flex-row items-center justify-center overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 movie-cards-container">-->
-    <!--                {#each {length: totalMovieCards} as _, index}-->
-    <!--                    <div class="absolute h-[450px] w-[300px] flex-shrink-0 movie-cards movie-card-{index+1} flex flex-row-reverse"-->
-    <!--                         style="translate: translate3d({110 * index}%, 0, 0); opacity: {index === 0 ? 1 : 0.7};-->
-    <!--                        scale: {index === 0 ? 1 : 0.9}">-->
-    <!--                        <div class="h-full w-full">-->
-    <!--                            <div class="h-full w-full relative">-->
-    <!--                                <img src="{movieCardsPosters[index]}" alt="photo of all the avengers"-->
-    <!--                                     class="w-full h-full object-cover"-->
-    <!--                                     style="filter: {currentIndexMovieCarousel === index ? '': 'grayscale(100%) sepia(100%) hue-rotate(260deg)'};">-->
-    <!--                                <div class="absolute top-0 h-full w-full"></div>-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                {/each}-->
-    <!--            </div>-->
-    <!--            <div class="h-fit w-full absolute bottom-5 flex items-center justify-center">-->
-    <!--                <button class="h-fit w-[300px] p-2 bg-primary text-brand-orange brand-font font-bold z-[3]"-->
-    <!--                        on:click={handleMovieCardTrailer}>-->
-    <!--                    {!trailerPlaying ? 'GET A GLIMPSE!' : 'CLOSE'}-->
-    <!--                </button>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
 </div>
 <div class="h-[400px] bg-background"></div>
 
-<!--<Faq/>-->
 <TextCarousel/>
-<!--<Faq/>-->
 <Footer/>
 
 <style>

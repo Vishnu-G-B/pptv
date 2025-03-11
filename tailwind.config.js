@@ -18,6 +18,7 @@ export default {
                 stint: ["Poppins", "sans-serif"],
                 karla: ['Poppins', "sans-serif"],
                 Iconsolata: ['Poppins', "sans-serif"],
+                fancy: ["FancyFont", "sans-serif"],
             },
 
         }
