@@ -86,22 +86,22 @@
         <div class="absolute top-1/2 left-0 w-full -translate-y-1/2 z-[1]">
             <hr class="border-t-2 border-primary">
         </div>
-        <div class="absolute top-1/2 left-0 w-full translate-y-[0.3rem] z-[1]">
-            <hr class="border-t-2 border-brand-orange">
-        </div>
-        <div class="absolute top-1/2 left-0 w-full -translate-y-[0.4rem] z-[1]">
-            <hr class="border-t-2 border-brand-green">
-        </div>
-        <div class="bgBlurDiv absolute top-0 left-0 w-full h-[130px] z-0 backdrop-blur-0">
-        </div>
+<!--        <div class="absolute top-1/2 left-0 w-full translate-y-[0.3rem] z-[1]">-->
+<!--            <hr class="border-t-2 border-brand-orange">-->
+<!--        </div>-->
+<!--        <div class="absolute top-1/2 left-0 w-full -translate-y-[0.4rem] z-[1]">-->
+<!--            <hr class="border-t-2 border-brand-green">-->
+<!--        </div>-->
+<!--        <div class="bgBlurDiv absolute top-0 left-0 w-full h-[130px] z-0 backdrop-blur-0">-->
+        <!--        </div>-->
 
-        <div class="gopurpleButton  absolute w-[200px] h-[100px] top-1/2 right-0
-                    transform -translate-x-1/2 -translate-y-[30%] z-[2] opacity-0 hidden">
-            <button class="animate-button text-base md:text-3xl text-white px-4 md:px-8 py-2 md:py-3
-                        rounded-xl font-bold font-sans transition-colors duration-300 backdrop-blur-sm bg-[#660066]">
-                #GoPurple
-            </button>
-        </div>
+<!--        <div class="gopurpleButton  absolute w-[100px] h-[50px] top-1/2 right-1/2-->
+<!--                x`    transform -translate-x-1/2 z-[2] opacity-0 hidden">-->
+<!--            <button class="animate-button text-base md:text-3xl text-white px-4 md:px-8 py-2 md:py-3-->
+<!--                        rounded-xl font-bold font-sans transition-colors duration-300 backdrop-blur-sm bg-[#660066]">-->
+<!--                #GoPurple-->
+<!--            </button>-->
+<!--        </div>-->
 
         <div class="navAnim firstImg flex-shrink-0 min-w-0 h-[12vh] min-[426px]:h-[20vh] w-auto max-w-[15vh]
                     bg-transparent rounded-full overflow-hidden mr-4 z-[1]">
@@ -109,13 +109,13 @@
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10vh] w-[10vh] bg-transparent rounded-full
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.5vh] w-[10.5vh] bg-transparent rounded-full
                     overflow-hidden z-[1]">
             <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-contain h-full w-full"
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11vh] min-[426px]:w-[11vh]
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10.5vh] min-[426px]:w-[10.5vh]
                     bg-transparent rounded-full overflow-hidden z-[1]">
             <img src="{evidyaLogo}" alt="Evidya Logo" class="object-cover h-full w-full rounded-full"
             />

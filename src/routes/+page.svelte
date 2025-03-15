@@ -12,6 +12,7 @@
     import Footer from "$lib/components/common/Footer.svelte";
     import TextCarousel from '$lib/components/common/textCarousel.svelte';
     import ImgNav from "$lib/components/common/ImgNav.svelte";
+    import img1 from "$lib/assets/images/top10Posters/Final_Website Appo Ke Kath.jpg"
 
 
     const imageModules = import.meta.glob('$lib/assets/images/top10Posters/*', {
@@ -264,9 +265,9 @@
 <svelte:window bind:innerWidth/>
 
 <ImgNav/>
-<Landing/>
+<!--<Landing/>-->
 <BentoBox/>
-<ArcedCards/>
+<!--<ArcedCards/>-->
 <div class="min-h-screen h-fit w-full flex flex-col relative bg-background wonderfull-trigger items-start justify-start pt-5">
     <p class="brand-font text-4xl md:text-5xl font-bold lg:hidden text-left px-5 text-primary w-full lg:text-7xl group">
         The <span class="text-brand-orange relative">ONEderfull <span
@@ -281,9 +282,9 @@
         </p>
         <div class="text-7xl xl:text-8xl 2xl:text-9xl brand-font font-bold text-brand-orange relative italic overflow-hidden flex flex-row">
             <div class="relative overflow-visible">
-                <p class="opacity-0">WONDERFULL</p>
+                <p class="opacity-0 ">WONDERFULL</p>
             </div>
-            <div class="flex flex-row h-fit overflow-hidden absolute">
+            <div class="flex flex-row h-fit overflow-hidden absolute ">
                 <span class="wonderfull-text-1 wonderfull-text">O</span><span class="wonderfull-text-2 wonderfull-text">N</span><span
                     class="wonderfull-text-3 wonderfull-text">E</span><span
                     class="wonderfull-text-4 wonderfull-text">D</span><span
@@ -294,7 +295,7 @@
                     class="wonderfull-text-9 wonderfull-text">L</span><span
                     class="wonderfull-text-10 wonderfull-text">L</span>
             </div>
-            <div class="flex flex-row h-fit overflow-hidden absolute">
+            <div class="flex flex-row h-fit overflow-hidden absolute text-brand-green">
                 <span class="wonderfull-text-part-2 translate-y-[100%]">W</span><span
                     class="wonderfull-text-part-2 translate-y-[100%]">O</span><span
                     class="wonderfull-text-part-2 translate-y-[100%]">N</span><span

@@ -4,7 +4,6 @@
     import yifLogo from "$lib/assets/images/YIF logo.png";
     import pplLogo from "$lib/assets/images/PPLlogo.png";
     import trending from "$lib/assets/images/trending.png";
-    import evidyaLogo from "$lib/assets/images/evidya.jpeg";
     import kiddinglogo from "$lib/assets/images/Kidding Around Bharat.png";
     import ecatvlogo from "$lib/assets/images/ecatv.jpeg";
     import yiflogo from "$lib/assets/images/YIF logo.png";

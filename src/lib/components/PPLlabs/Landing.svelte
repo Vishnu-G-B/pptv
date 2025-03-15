@@ -3,7 +3,6 @@
     import gsap from 'gsap';
     import LandingVid from "$lib/assets/images/landingVid.mp4";
     import PPLlogo from "$lib/assets/images/PPLlogo.png";
-    import evidyaLogo from "$lib/assets/images/evidya.jpeg";
     import kiddinglogo from "$lib/assets/images/Kidding Around Bharat.png";
     import ecatvlogo from "$lib/assets/images/ecatv.jpeg";
     import projectGulak from "$lib/assets/images/Project Gullak Logo.png";
@@ -84,9 +83,9 @@
             </h1>
             <h2 class="text-base md:text-lg text-white/90 mb-4 md:mb-6 text-justify large-animation-3"
                 bind:this={subHeading}>
-                We are a Conscious OTT Platform for K to 12 schools committed to produce and promote impactful cinema,
-                educational content, film and media curriculum for students and teachers aligned with NEP 2020.
-                Starting at Just ONE Rupee* #ONEderful #GoPurple
+                We are a Conscious OTT Platform committed to produce and promote impactful cinema and content to
+                educate, entertain, empower children. We specialize in film pedagogy for students and teachers of K to
+                12 schools, aligned with NEP 2020.
             </h2>
             <h2 class="text-base md:text-lg text-white/90 mb-4 md:mb-6 text-justify "
                 bind:this={subHeading}

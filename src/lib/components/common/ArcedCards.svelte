@@ -11,19 +11,19 @@
     let cardContent = [
         {
             title: "Conscious OTT Platform",
-            text: "We promote and stream impactful cinema and quality educational content aligned with NEP 2020 to support the PM eVIDYA initiative. Each Film also has activity-based learning modules."
+            text: "We promote and stream impactful cinema and quality educational content aligned with NEP 2020 to support the PM eVIDYA initiative. Each Film also has activity- based learning modules. #GoPurple"
         },
         {
             title: "Feature Your Film",
-            text: "Learn filmmaking from industry mentors and feature your film for a larger cause! You can embark on a filmmaking tour or join our digital film festival project."
+            text: "Learn filmmaking from industry mentors and feature your film for a larger cause! You can embark on a filmmaking tour at  Kidding Around Bharat or Join India’s largest Student Film Festival at Young India Filmmakers"
         },
         {
             title: "Children’s Perspective",
-            text: "Watch inspiring films made by young minds (ages 6-18) that provide a fresh, children’s perspective on how they perceive the world around them."
+            text: "Watch quality content relevant for teachers and parents to empower pur children in their early years and preparatory years. Our collaboration with ECA-APER coming soon."
         },
         {
             title: "Make A Difference",
-            text: "Every subscription contributes to free filmmaking workshops in rural areas, grants for urban school filmmakers & social impact projects."
+            text: "Every subscription contributes to free filmmaking workshops in rural areas, grants for urban school filmmakers & social impact projects and all we do at SWADESHPLEX"
         }
     ];
 
