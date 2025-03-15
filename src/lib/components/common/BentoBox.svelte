@@ -224,7 +224,7 @@
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
                 <!-- Shift the image UP so the face are visible-->
                 <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
-                <div class="absolute inset-0 bg-primary/60 rounded-2xl "></div>
+                <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
             </div>
             <div>
                 <span class="number relative z-10 text-orange-400 text-5xl md:text-7xl font-stint font-bold"
@@ -248,7 +248,7 @@
                 <source src="{teacherTraining}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute inset-0 bg-primary/60 rounded-2xl "></div>
+            <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
             <div class="relative z-10 text-brand-orange">
                 <div>
                     <span class="number text-4xl md:text-6xl font-bold font-stint"
@@ -359,7 +359,7 @@
                 <source src="{lahdcvid}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute inset-0 bg-primary/60 rounded-2xl "></div>
+            <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
             <div class="flex flex-row justify-around items-center w-full z-10">
                 <!--                <div class="h-[10rem] w-fit bg-transparent rounded-lg mx-1 z-10">-->
                 <!--                    <img src={year75logo} alt="Government of India Logo" class="object-contain h-full w-auto mb-4 z-10"/>-->
@@ -381,7 +381,7 @@
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
                 <!-- Shift the image UP so the face are visible-->
                 <img src="{studentfilmbg}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
-                <div class="absolute inset-0 bg-primary/60 rounded-2xl "></div>
+                <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
             </div>
             <div class="relative z-10 text-brand-orange">
                 <div>
