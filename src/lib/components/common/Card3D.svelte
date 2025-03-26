@@ -71,7 +71,7 @@
 
     </div>
     <div class="absolute -bottom-5 -left-8">
-        <p class="brand-font font-bold {index%2 == 0 ? 'text-brand-orange': 'text-primary'} text-8xl xl:text-9xl">{index}</p>
+        <p class="brand-font font-[900] {index%2 == 0 ? 'text-brand-orange': 'text-primary'} text-8xl xl:text-9xl">{index}</p>
     </div>
 </div>
 

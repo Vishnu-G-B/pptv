@@ -83,15 +83,15 @@
             </h1>
             <h2 class="text-base md:text-lg text-white/90 mb-4 md:mb-6 text-justify large-animation-3"
                 bind:this={subHeading}>
-                We are a Conscious OTT Platform committed to produce and promote impactful cinema and content to
-                educate, entertain, empower children. We specialize in film pedagogy for students and teachers of K to
-                12 schools, aligned with NEP 2020.
+                We are a Conscious OTT Platform committed to produce and promote impactful cinema and content for K to
+                12 schools. Aligned with NEP 2020, <br/> we specialize in curriculum integration of “Film Pedagogy” to
+                educate, entertain, empower and enthuse school teachers and children.
             </h2>
             <h2 class="text-base md:text-lg text-white/90 mb-4 md:mb-6 text-justify "
                 bind:this={subHeading}
                 use:textAnimation>
-                Starting at Just ONE Rupee* <span class="bg-brand-green -skew-x-12">#</span>ONEderful
-                <span class="bg-brand-orange -skew-x-12">#</span>Go <span class="bg-primary -skew-x-12">Purple</span>
+                Starting at Just ONE Rupee* #ONEderful
+                #Go Purple
             </h2>
             <p
                     class="text-base md:text-lg text-white/80 mb-4 md:mb-8 text-[#6aa84f] text-justify"

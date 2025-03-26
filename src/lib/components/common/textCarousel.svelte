@@ -3,20 +3,20 @@
     import {gsap} from 'gsap/dist/gsap';
     import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
     import temp1 from "$lib/assets/images/1_PPL OTT.jpg";
-    import temp2 from "$lib/assets/images/2B_KAB.png";
-    import temp3 from "$lib/assets/images/3B_ECA TV.png";
+    import temp2 from "$lib/assets/images/2_KAB.png";
+    import temp3 from "$lib/assets/images/5_School Studio.png";
     import temp4 from "$lib/assets/images/4_YIF.webp";
     import temp5 from "$lib/assets/images/2_KAB.png";
 
     gsap.registerPlugin(ScrollTrigger);
 
-    export let items = ["Purple People Labs", "Kidding Around Bharat", "ECA - APER TV", "Young India Filmmakers"];
+    export let items = ["SwadeshPlex", "Kidding Around Bharat", "PM eVidya School Studio", "Young India Filmmakers"];
     // export let items = ["Learn", "Create", "Innovate", "Master"];
     export let paragraphs = [
-        "A Conscious OTT platform streaming impactful and educational content starting at Just ONE Rupee",
-        "Community Filmmaking Tours to villages, artisans, start-ups  & changemakers across India with a filmmaking project on tour.",
-        "Teacher’s OTT platform streaming resourceful content for early years and preparatory years education.",
-        "India’s largest festival of films made by school going children from rural and urban schools.",
+        "A Conscious OTT platform streaming impactful & educational content starting @ Just ONE Rupee",
+        "Community Filmmaking Tours to villages, artisans, start-ups  & changemakers across India capturing real stories on reel",
+        "A capacity building program for the Ministry Of Education’s PM eVIDYA initiative including studio design, teacher training and co-production of curriculum based content in regional languages.",
+        "A filmmaking festival for children  amplifying young voices from rural and urban communities across India",
         // "Social impact initiative to support rural tourism, artisans, start-ups, through the incredible power of stories & cinema."
     ];
     export let isNarrow = false;
@@ -52,7 +52,7 @@
         if (total === 4) {
             const offsets = [
                 {fadeIn: 20, fadeOut: 35},
-                {fadeIn: 40, fadeOut: 55},
+                {fadeIn: 40, fadeOut: 60},
                 {fadeIn: 65, fadeOut: 75},
                 {fadeIn: 85, fadeOut: 100}
             ];
@@ -393,7 +393,7 @@
                     style="opacity: {i === 0 ? 1 : 0};"
             />
         {/each}
-        <div class="words-carousel__filter absolute inset-0 bg-[#250025]/60 rounded-xl"></div>
+        <div class="words-carousel__filter absolute inset-0 bg-[#250025]/70 rounded-xl"></div>
     </div>
 
     <div class="words-carousel__inner sticky top-1/2 transform -translate-y-1/2 h-screen flex items-center
@@ -420,7 +420,7 @@
                             {/each}
                         </div>
                         <div class="paragraph-item w-full text-center text-lg md:text-2xl opacity-0
-                              text-white font-light mx-auto max-w-lg px-4"
+                              text-white font-light mx-auto max-w-2xl "
                              style="opacity: {index === 0 ? 1 : 0};">
                             {paragraphs[index]}
                         </div>

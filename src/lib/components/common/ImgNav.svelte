@@ -3,6 +3,7 @@
     import kiddinglogo from "$lib/assets/images/Kidding Around Bharat.png";
     import evidyaLogo from "$lib/assets/images/evidyaLogo.png";
     import ecatvlogo from "$lib/assets/images/ecatv.jpeg";
+    import ecatvlogo2 from "$lib/assets/images/ecatv.png";
     import projectGulak from "$lib/assets/images/Project Gullak Logo.png";
     import swadeshplex from "$lib/assets/images/SWADESHPLEX_LOGO.png";
     import yif_logo from "$lib/assets/images/YIF logo (2).png";
@@ -82,66 +83,52 @@
 
 <div class="h-fit w-full sticky top-0 z-50 ">
     <div class="imageContainer h-fit w-full absolute top-0 left-0 flex justify-start items-center
-                gap-[2vw] pt-[1vh] pb-[1vh] pl-[2vw] z-50">
+                gap-[1vw] min-[376px]:gap-[2vw] p-0 min-[376px]:p-[0vw] sm:pl-[2vw] sm:py-0 sm:pr-0 z-50">
         <div class="absolute top-1/2 left-0 w-full -translate-y-1/2 z-[1]">
             <hr class="border-t-2 border-primary">
+            <hr class="border-t-2 border-[#adff30] opacity-75 mt-1">
         </div>
-<!--        <div class="absolute top-1/2 left-0 w-full translate-y-[0.3rem] z-[1]">-->
-<!--            <hr class="border-t-2 border-brand-orange">-->
-<!--        </div>-->
-<!--        <div class="absolute top-1/2 left-0 w-full -translate-y-[0.4rem] z-[1]">-->
-<!--            <hr class="border-t-2 border-brand-green">-->
-<!--        </div>-->
-<!--        <div class="bgBlurDiv absolute top-0 left-0 w-full h-[130px] z-0 backdrop-blur-0">-->
-        <!--        </div>-->
 
-<!--        <div class="gopurpleButton  absolute w-[100px] h-[50px] top-1/2 right-1/2-->
-<!--                x`    transform -translate-x-1/2 z-[2] opacity-0 hidden">-->
-<!--            <button class="animate-button text-base md:text-3xl text-white px-4 md:px-8 py-2 md:py-3-->
-<!--                        rounded-xl font-bold font-sans transition-colors duration-300 backdrop-blur-sm bg-[#660066]">-->
-<!--                #GoPurple-->
-<!--            </button>-->
-<!--        </div>-->
-
-        <div class="navAnim firstImg flex-shrink-0 min-w-0 h-[12vh] min-[426px]:h-[20vh] w-auto max-w-[15vh]
-                    bg-transparent rounded-full overflow-hidden mr-4 z-[1]">
+        <div class="navAnim firstImg flex-shrink-0 min-w-0 h-[7vh] min-[426px]:h-[20vh] w-auto max-w-[15vh]
+                    bg-transparent rounded-full overflow-hidden mr-0 min-[426px]:mr-4 z-[1]">
             <img src="{PPLlogo}" alt="PPL labs Logo" class="object-contain h-full w-full"
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.5vh] w-[10.5vh] bg-transparent rounded-full
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh]  bg-transparent
                     overflow-hidden z-[1]">
-            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-contain h-full w-full"
+            <img src="{swadeshplex}" alt="Swadeshplex Logo" class="object-cover h-full w-full"
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10.5vh] min-[426px]:w-[10.5vh]
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh] bg-transparent rounded-full
+                    overflow-hidden z-[1]">
+            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-cover h-full w-full"
+            />
+        </div>
+
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh]
                     bg-transparent rounded-full overflow-hidden z-[1]">
             <img src="{evidyaLogo}" alt="Evidya Logo" class="object-cover h-full w-full rounded-full"
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[9vh] min-[426px]:w-[9vh]
-                    bg-transparent rounded-full overflow-hidden z-[1]">
-            <img src="{ecatvlogo}" alt="Ecatv Logo" class="object-cover h-full w-full rounded-full"
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh] bg-transparent
+                    overflow-hidden z-[1]">
+            <img src="{yif_logo}" alt="YIF Logo" class="object-contain h-full w-full"
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[12.5vh] w-[9vh] bg-transparent
+
+        <div class="navAnim flex-shrink-0 min-w-0 h-[10vh] w-[8vh] min-[426px]:h-[13.5vh] min-[426px]:w-[12vh]  bg-transparent
                     overflow-hidden z-[1]">
             <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-full w-full"
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-[10vh] bg-transparent
-                    overflow-hidden z-[1]">
-            <img src="{swadeshplex}" alt="Swadeshplex Logo" class="object-contain h-full w-full"
-            />
-        </div>
-
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] min-[426px]:h-[10.1vh] w-[10vh] bg-transparent
-                    overflow-hidden z-[1]">
-            <img src="{yif_logo}" alt="YIF Logo" class="object-contain h-full w-full"
+        <div class="navAnim flex-shrink-0 min-w-0 h-[7vh] w-[7vh] min-[426px]:h-[10.5vh] min-[426px]:w-[11vh]
+                    bg-transparent rounded-full overflow-hidden z-[1]">
+            <img src="{ecatvlogo2}" alt="Ecatv Logo" class="object-contain h-full w-full rounded-full"
             />
         </div>
 

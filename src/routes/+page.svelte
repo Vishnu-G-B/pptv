@@ -267,7 +267,6 @@
 <ImgNav/>
 <Landing/>
 <BentoBox/>
-<ArcedCards/>
 <div class="min-h-screen h-fit w-full flex flex-col relative bg-background wonderfull-trigger items-start justify-start pt-5">
     <p class="brand-font text-4xl md:text-5xl font-bold lg:hidden text-left px-5 text-primary w-full lg:text-7xl group">
         The <span class="text-brand-orange relative">ONEderfull <span
@@ -459,6 +458,7 @@
 <div class="h-[400px] bg-background"></div>
 
 <TextCarousel/>
+<ArcedCards/>
 <Footer/>
 
 <style>

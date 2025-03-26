@@ -4,6 +4,7 @@
     import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
     import EmblemLight from '$lib/assets/images/EmblemLight.svg';
     import EmblemDark from '$lib/assets/images/EmblemDark.svg';
+    import mygovlogo from '$lib/assets/images/mygovlogo.png';
     import LandingVid from '$lib/assets/images/landingVid.mp4';
     import temp4 from '$lib/assets/images/Pragya Bodhini.webp';
     import studentfilmbg from "$lib/assets/images/2B_KAB.png"
@@ -11,7 +12,8 @@
     import year75logo from "$lib/assets/images/Azadi-Ka-Amrit-Mahotsav-Logo.png";
     import studentfilmsbgvideo from "$lib/assets/Videos/PPL Films_Website Final.mp4";
     import projectGulak from "$lib/assets/images/Project Gullak Logo.png";
-    import lahdcvid from "$lib/assets/Videos/Ladakh PM evidya_Website_Final.mp4"
+    import lahdcvid from "$lib/assets/Videos/Ladakh PM evidya_Website_Final.mp4";
+    import yifVideoFinal from "$lib/assets/Videos/YIF_Website_Final 02.mp4";
 
     let sectionRef;
     gsap.registerPlugin(ScrollTrigger)
@@ -216,6 +218,9 @@
 <!--    &lt;!&ndash;    PPL video being 250+ bento&ndash;&gt;-->
 <!--</section>-->
 
+<!--        IN PHOTO REF REPLACE THE 3l with the PM-EVIDYA box Make sure the 3l one is landscape-->
+
+
 <section bind:this={sectionRef} class="h-fit w-full bg-background">
     <div class="grid grid-cols-12 grid-rows-[repeat(12,minmax(100px,auto))] gap-4 m-4">
         <div class="metric-box flex flex-col justify-end items-start
@@ -223,8 +228,8 @@
                     bg-gray-50 rounded-2xl pl-4 pb-4 relative">
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
                 <!-- Shift the image UP so the face are visible-->
-                <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
-                <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
+                <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl "/>
+                <div class="absolute inset-0 bg-primary/60 rounded-2xl -mt-4"></div>
             </div>
             <div>
                 <span class="number relative z-10 text-orange-400 text-5xl md:text-7xl font-stint font-bold"
@@ -259,8 +264,7 @@
                     </span>
                 </div>
                 <p class="text-white mt-2 text-xl font-karla uppercase font-bold">
-                    In Film Pedagogy integration <br> into the
-                    academic curriculum</p>
+                    Blending Film Pedagogy & Academics
             </div>
         </div>
 
@@ -268,11 +272,11 @@
                     col-start-1 row-start-7 col-span-12 row-span-3 md:col-start-5 md:row-start-4 md:col-span-4 md:row-span-4
                     bg-gray-50 border-2 border-surface rounded-2xl pl-4 pb-4">
             <div class="flex flex-row justify-around items-center w-full">
-                <div class="h-[10rem] w-fit bg-gray-50 rounded-lg mx-1">
+                <div class="h-[8rem] w-fit bg-gray-50 rounded-lg mx-1">
                     <img src={year75logo} alt="Government of India Logo" class=" object-contain h-full w-auto mb-4"/>
                 </div>
-                <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">
-                    <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>
+                <div class="h-[8rem] w-fit bg-gray-50 rounded-lg mx-1">
+                    <img src={mygovlogo} alt="Government of India Logo" class="h-full w-auto mb-4"/>
                 </div>
             </div>
 
@@ -285,22 +289,22 @@
                     bg-gray-50 rounded-2xl pb-4 pl-4 relative">
             <video class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted
                    playsinline>
-                <source src="{LandingVid}" type="video/mp4">
+                <source src="{yifVideoFinal}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="absolute top-0 left-0 w-full h-full bg-primary/40 z-5 rounded-2xl"></div>
             <div class="relative z-10 text-brand-orange">
                 <div>
-                    <span class="number text-4xl md:text-6xl font-bold font-stint text-brand-orange" data-value="3">3</span>
-                    <span class="relative z-10 text-5xl md:text-4xl font-stint font-bold">
-                        Lakh
-                    </span>
-                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold">
-                        Young Filmmakers
-                    </span>
+                    <span class="number text-4xl md:text-6xl font-bold font-stint text-brand-orange" data-value="300000">300000</span>
+<!--                    <span class="relative z-10 text-5xl md:text-4xl font-stint font-bold">-->
+<!--                        Lakh-->
+<!--                    </span>-->
+<!--                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold">-->
+                    <!--                        -->
+                    <!--                    </span>-->
                 </div>
                 <p class="text-white mt-2 text-xl font-karla uppercase font-bold">
-                    films produced by & for children
+                    Young Filmmakers Inspired
                 </p>
             </div>
         </div>
@@ -318,8 +322,8 @@
                 <div>
                     <span class="number text-4xl md:text-6xl font-bold font-stint text-brand-orange"
                           data-value="250">250</span>
-                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold">
-                        Student Films
+                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold inline-block">
+                        Student Produced Films
                     </span>
                 </div>
                 <p class="text-white mt-2 text-xl font-karla uppercase font-bold">

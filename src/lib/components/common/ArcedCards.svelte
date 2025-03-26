@@ -4,7 +4,7 @@
     import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
     import {MotionPathPlugin} from "gsap/dist/MotionPathPlugin";
     import {textAnimation} from "$lib/animations/textSplit.js";
-    import bgImg from "$lib/assets/images/arcedBGImg.jpg";
+    import bgImg from "$lib/assets/images/bgImg.jpg";
 
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
