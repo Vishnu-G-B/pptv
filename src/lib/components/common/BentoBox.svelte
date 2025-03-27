@@ -70,341 +70,185 @@
     });
 </script>
 
-<!--<section bind:this={sectionRef} class="h-fit w-full bg-background">-->
-<!--    <div class="h-fit w-full grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-auto grid-flow-dense p-4 relative bg-video">-->
-<!--        <div class="relative metric-box md:col-span-4 bg-gray-50 rounded-2xl p-8 flex flex-col justify-center min-h-[200px]-->
-<!--                ">-->
-<!--            <div class="absolute inset-0 rounded-2xl overflow-hidden">-->
-<!--                &lt;!&ndash;                Shift the image UP so the face are visible&ndash;&gt;-->
-<!--                <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>-->
-<!--                <div class="absolute inset-0 bg-primary/60 rounded-2xl "></div>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <span class="number relative z-10 text-orange-400 text-5xl md:text-7xl font-stint font-bold"-->
-<!--                      data-value="25">-->
-<!--                    25-->
-<!--                </span>-->
-<!--                <span class="relative z-10 text-brand-orange text-5xl md:text-7xl font-stint font-bold">-->
-<!--                    Crore <span class="text-3xl">School Children</span>-->
-<!--                </span>-->
-<!--            </div>-->
-<!--            <p class="mt-2 relative z-10 text-white text-xl font-karla uppercase font-bold mr-40">-->
-<!--                <span class="text-brand-orange">Mission</span> Quality educational-->
-<!--                content made affordable <br/> for Ministry Of Education’s PM eVIDYA initiative</p>-->
-<!--        </div>-->
+<section bind:this={sectionRef} class="h-fit w-full bg-background p-2 sm:p-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9
+                grid-rows-auto
+                sm:grid-rows-[repeat(5,minmax(250px,auto))]
+                lg:grid-rows-[repeat(10,minmax(65px,auto))]
+                gap-4">
 
-
-<!--        <div class="relative metric-box md:col-span-2 md:row-span-2 bg-gray-50 rounded-2xl p-4 flex flex-col justify-center">-->
-<!--            <video class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted-->
-<!--                   playsinline>-->
-<!--                <source src="{teacherTraining}" type="video/mp4">-->
-<!--                Your browser does not support the video tag.-->
-<!--            </video>-->
-<!--            <div class="absolute inset-0 bg-primary/60 rounded-2xl "></div>-->
-<!--            <div class="relative z-10 text-brand-orange">-->
-<!--                <div>-->
-<!--                    <span class="number text-4xl md:text-6xl font-bold font-stint"-->
-<!--                          data-value="5000">5,000-->
-<!--                    </span>-->
-<!--                    <span class="relative z-10 text-5xl md:text-3xl font-stint font-bold tracking-tighter">-->
-<!--                    Teachers&nbsp;Trained-->
-<!--                    </span>-->
-<!--                </div>-->
-<!--                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">-->
-<!--                    In Film Pedagogy integration <br> into the-->
-<!--                    academic curriculum</p>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-6 flex flex-col justify-center ">-->
-<!--            <div>-->
-<!--                <span class="number text-4xl md:text-5xl text-primary font-stint font-bold"-->
-<!--                      data-value="65">-->
-<!--                    65-->
-<!--                </span>-->
-<!--                <span class="relative z-10 text-primary text-5xl md:text-3xl font-stint font-bold">-->
-<!--                    Film Festivals-->
-<!--                </span>-->
-<!--            </div>-->
-<!--            <p class="text-orange-400 mt-2 text-xl font-karla uppercase font-bold">Special screenings, nominations and-->
-<!--                kids workshops worldwide</p>-->
-<!--        </div>-->
-
-<!--        <div class="metric-box md:col-span-2 md:row-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-6 flex flex-col justify-center">-->
-<!--            <video class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted-->
-<!--                   playsinline>-->
-<!--                <source src="{ecavid}" type="video/mp4">-->
-<!--                Your browser does not support the video tag.-->
-<!--            </video>-->
-<!--            <div class="absolute inset-0 bg-primary/50 rounded-2xl "></div>-->
-<!--            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-5 rounded-2xl"></div>-->
-<!--            <div class="relative z-10 text-white mix-blend-difference">-->
-<!--                <div>-->
-<!--                    <span class="number text-4xl md:text-4xl font-bold font-stint"-->
-<!--                          data-value="21">21-->
-<!--                    </span>-->
-<!--                    <span class="relative z-10 text-5xl md:text-3xl font-stint font-bold">-->
-<!--                    Global Awards-->
-<!--                    </span>-->
-<!--                </div>-->
-<!--                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">-->
-<!--                    In Education and Films</p>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="metric-box md:col-span-2 md:row-span-2 bg-gray-50 rounded-2xl p-4 flex flex-col justify-center">-->
-<!--            <video class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted-->
-<!--                   playsinline>-->
-<!--                <source src="{LandingVid}" type="video/mp4">-->
-<!--                Your browser does not support the video tag.-->
-<!--            </video>-->
-<!--            <div class="absolute top-0 left-0 w-full h-full bg-primary/40 z-5 rounded-2xl"></div>-->
-<!--            <div class="relative z-10 text-white mix-blend-difference">-->
-<!--                <div>-->
-<!--                    <span class="number text-4xl md:text-6xl font-bold font-stint text-white"-->
-<!--                          data-value="3">3-->
-<!--                </span>-->
-<!--                    <span class="relative z-10 text-5xl md:text-4xl font-stint font-bold">-->
-<!--                        Lakh-->
-<!--                    </span>-->
-
-<!--                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold">-->
-<!--                    Young Filmmakers-->
-<!--                    </span>-->
-<!--                </div>-->
-<!--                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">-->
-<!--                    films produced by & for children-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-1 flex flex-col md:flex-row justify-center items-center">-->
-<!--            <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">-->
-<!--                <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>-->
-<!--            </div>-->
-<!--            <p class="text-primary text-xl font-karla uppercase font-bold text-center">-->
-<!--                <span class="text-2xl text-center font-extrabold">ECA - APER</span><br/>-->
-<!--                Conferred award for blending films in education</p>-->
-<!--        </div>-->
-
-<!--        <div class="metric-box md:col-span-2 md:row-span-2 relative bg-gray-50 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-center overflow-hidden">-->
-<!--            <div class="absolute inset-0">-->
-<!--                <img src="{temp1}" alt="Background" class="w-full h-full object-cover"/>-->
-<!--                <div class="absolute inset-0 bg-primary/60"></div>-->
-<!--            </div>-->
-
-<!--            <div class="relative z-10 text-white ">-->
-<!--                <span class="number text-4xl md:text-6xl font-bold font-stint text-white"-->
-<!--                      data-value="1500">1500-->
-<!--                </span>-->
-<!--                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">-->
-<!--                    Young Filmmakers Inspired in urban and rural schools-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="metric-box md:col-span-2 bg-gray-50 border-2 border-surface rounded-2xl p-1 flex flex-col md:flex-row justify-center items-center">-->
-<!--            <div class="h-[15rem] w-fit bg-gray-50 rounded-lg mx-1">-->
-<!--                <img src={EmblemDark} alt="Government of India Logo" class="h-full w-auto mb-4"/>-->
-<!--            </div>-->
-<!--            <div class="text-primary text-xl font-karla font-bold text-center">-->
-<!--                <span class="text-2xl text-center font-extrabold">1<sup class="lowercase">st</sup> Academic Film Studio</span><br/>-->
-<!--                Co-Production with Ladakh Government <br/>-->
-<!--                Co-Production with Ladakh Autonomous Hill Development Council-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;    Ladakh behind ladhak bento grid&ndash;&gt;-->
-<!--    &lt;!&ndash;    PPL video being 250+ bento&ndash;&gt;-->
-<!--</section>-->
-
-<!--        IN PHOTO REF REPLACE THE 3l with the PM-EVIDYA box Make sure the 3l one is landscape-->
-
-
-<section bind:this={sectionRef} class="h-fit w-full bg-background">
-    <div class="grid grid-cols-12 grid-rows-[repeat(12,minmax(100px,auto))] gap-4 m-4">
         <div class="metric-box flex flex-col justify-end items-start
-                    col-start-1 row-start-1 col-span-12 row-span-3 md:col-start-1 md:row-start-1 md:col-span-7 md:row-span-3
-                    bg-gray-50 rounded-2xl pl-4 pb-4 relative">
+                    col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-3
+                    bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
-                <!-- Shift the image UP so the face are visible-->
-                <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl "/>
-                <div class="absolute inset-0 bg-primary/60 rounded-2xl -mt-4"></div>
+                <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
+                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
             </div>
-            <div>
-                <span class="number relative z-10 text-orange-400 text-5xl md:text-7xl font-stint font-bold"
-                      data-value="25">
-                    25
-                </span>
-                <span class="relative z-10 text-brand-orange text-5xl md:text-7xl font-stint font-bold">
-                    Crore <span class="text-3xl">School Children</span>
-                </span>
+            <div class="relative z-10">
+                <div class="flex flex-col sm:flex-row items-start sm:items-end sm:justify-start gap-2">
+                    <span class="number text-orange-400 text-6xl sm:text-[5vw] lg:text-[3vw] font-stint font-bold"
+                          data-value="25">
+                        25
+                    </span>
+                    <span class="text-brand-orange text-3xl sm:text-[3vw] lg:text-[2.5vw] font-stint font-bold">
+                        Crore School Children
+                    </span>
+                </div>
+                <p class="mt-2 text-white text-base sm:text-[2.3vw] lg:text-[1.3vw] font-karla uppercase font-bold">
+                    <span class="text-brand-orange">Mission</span> Quality educational
+                    content made affordable for Ministry Of Education's PM eVIDYA initiative
+                </p>
             </div>
-            <p class="mt-2 relative z-10 text-white text-xl font-karla uppercase font-bold mr-40">
-                <span class="text-brand-orange">Mission</span> Quality educational
-                content made affordable <br/> for Ministry Of Education’s PM eVIDYA initiative</p>
         </div>
 
         <div class="metric-box flex flex-col justify-end items-start
-                    col-start-1 row-start-4 col-span-12 row-span-3 md:col-start-8 md:row-start-1 md:col-span-5 md:row-span-3
-                    bg-gray-50 rounded-2xl pl-4 pb-4 relative">
-            <video class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted
-                   playsinline>
+                    col-span-1 sm:col-span-1 lg:col-start-7 lg:col-span-3 lg:row-start-1 lg:row-span-4
+                    bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
                 <source src="{teacherTraining}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
-            <div class="relative z-10 text-brand-orange">
-                <div>
-                    <span class="number text-4xl md:text-6xl font-bold font-stint"
-                          data-value="5000">5,000
-                    </span>
-                    <span class="relative z-10 text-5xl md:text-3xl font-stint font-bold tracking-tighter">
-                    Teachers&nbsp;Trained
-                    </span>
+            <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
+            <div class="relative z-10 text-brand-orange w-full">
+                <div class="h-fit flex flex-col sm:flex-row items-start sm:items-end gap-2">
+                    <p class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint align-baseline"
+                       data-value="5000">5,000
+                    </p>
+                    <p class="text-3xl sm:text-[3vw] lg:text-[2vw] font-stint font-bold tracking-tighter align-baseline">
+                        Teachers&nbsp;Trained
+                    </p>
                 </div>
-                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">
+                <p class="text-white mt-2 text-base sm:text-[2.3vw] lg:text-[1.3vw] font-karla uppercase font-bold">
                     Blending Film Pedagogy & Academics
+                </p>
             </div>
         </div>
 
         <div class="metric-box flex flex-col justify-center items-center
-                    col-start-1 row-start-7 col-span-12 row-span-3 md:col-start-5 md:row-start-4 md:col-span-4 md:row-span-4
-                    bg-gray-50 border-2 border-surface rounded-2xl pl-4 pb-4">
-            <div class="flex flex-row justify-around items-center w-full">
-                <div class="h-[8rem] w-fit bg-gray-50 rounded-lg mx-1">
-                    <img src={year75logo} alt="Government of India Logo" class=" object-contain h-full w-auto mb-4"/>
+                    col-span-1 sm:col-span-1 lg:col-start-4 lg:col-span-3 lg:row-start-4 lg:row-span-2
+                    bg-gray-50 border-2 border-surface rounded-2xl p-4">
+            <div class="flex flex-row justify-around items-center w-full mb-4">
+                <div class="h-20 sm:h-24 lg:h-32 w-fit bg-gray-50 rounded-lg mx-1">
+                    <img src={year75logo} alt="Government of India Logo" class="object-contain h-full w-auto"/>
                 </div>
-                <div class="h-[8rem] w-fit bg-gray-50 rounded-lg mx-1">
-                    <img src={mygovlogo} alt="Government of India Logo" class="h-full w-auto mb-4"/>
+                <div class="h-20 sm:h-24 lg:h-32 w-fit bg-gray-50 rounded-lg mx-1">
+                    <img src={mygovlogo} alt="Government of India Logo" class="h-full w-auto rounded-tr-2xl"/>
                 </div>
             </div>
-
-            <p class="text-orange-400 mt-2 text-xl text-center font-karla uppercase font-bold">Recognized By Government
-                Of India<br/> @75 Ideas</p>
+            <p class="text-orange-400 text-2xl sm:text-[2.3vw] lg:text-[1.3vw] text-center font-karla uppercase font-bold">
+                Recognized By Government Of India @75 Ideas
+            </p>
         </div>
 
         <div class="metric-box flex flex-col justify-end items-start
-                    col-start-1 row-start-17 col-span-12 row-span-4 md:col-start-1 md:row-start-4 md:col-span-4 md:row-span-5
-                    bg-gray-50 rounded-2xl pb-4 pl-4 relative">
-            <video class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted
-                   playsinline>
+                    col-span-1 sm:col-span-1 lg:col-start-4 lg:col-span-3 lg:row-start-6 lg:row-span-2
+                    bg-gray-50 border-2 border-black rounded-2xl p-4 relative">
+            <div class="absolute top-0 right-0 transform-gpu -translate-y-3 h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 bg-transparent z-[1]">
+                <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-full w-auto"/>
+            </div>
+            <div class="relative z-10 text-brand-orange">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                    <span class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint text-brand-orange"
+                          data-value="11">11</span>
+                    <span class="text-3xl sm:text-[3vw] lg:text-[1.5vw] font-stint font-bold">
+                        Community Projects
+                    </span>
+                </div>
+                <p class="text-brand-orange mt-2 text-base sm:text-[2.2vw] lg:text-[1.2vw] font-karla uppercase font-bold">
+                    Building social impact through film stories by connecting villages to the world
+                </p>
+            </div>
+        </div>
+
+        <div class="metric-box flex flex-col justify-end items-start
+                    col-span-1 sm:col-span-1 lg:col-start-7 lg:col-span-3 lg:row-start-5 lg:row-span-3
+                    bg-gray-50 border-2 border-surface rounded-2xl p-2 relative overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
+                <source src="{studentfilmsbgvideo}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-primary/40 z-5 rounded-2xl"></div>
+            <div class="relative z-10 text-brand-orange">
+                <div class="flex flex-col sm:flex-row items-start sm:items-end gap-2">
+                    <span class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint text-brand-orange"
+                          data-value="250">250</span>
+                    <span class="text-3xl sm:text-[3vw] lg:text-[1.8vw] font-stint font-bold">
+                        Student&nbsp;Made&nbsp;Films
+                    </span>
+                </div>
+                <p class="text-white mt-2 text-base sm:text-[2.3vw] lg:text-[1.2vw] font-karla uppercase font-bold">
+                    Produced by children and schools to create an impact
+                </p>
+            </div>
+        </div>
+
+        <div class="metric-box flex flex-col justify-center items-center
+                    col-span-1 sm:col-span-1 lg:col-start-1 lg:col-span-3 lg:row-start-4 lg:row-span-4
+                    bg-gray-50 rounded-2xl relative overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
+                <source src="{lahdcvid}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-primary/60 z-[1] rounded-2xl"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full w-full p-4">
+                <div class="h-24 sm:h-32 lg:h-40 w-fit bg-transparent rounded-lg mb-4">
+                    <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto"/>
+                </div>
+                <p class="text-brand-orange text-4xl sm:text-[5vw] lg:text-[3vw] text-center font-karla uppercase font-bold">
+                    LAHDC
+                </p>
+                <p class="text-white mt-2 text-lg sm:text-[3vw] lg:text-[1.3vw] text-center font-karla uppercase font-bold">
+                    Academic Film Studio <br/> Leh District, Ladakh
+                </p>
+            </div>
+        </div>
+
+        <div class="metric-box flex flex-col justify-end items-start
+                    col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 lg:row-start-8 lg:row-span-3
+                    bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
                 <source src="{yifVideoFinal}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute top-0 left-0 w-full h-full bg-primary/40 z-5 rounded-2xl"></div>
+            <div class="absolute inset-0 bg-primary/40 z-5 rounded-2xl"></div>
             <div class="relative z-10 text-brand-orange">
-                <div>
-                    <span class="number text-4xl md:text-6xl font-bold font-stint text-brand-orange" data-value="300000">300000</span>
-<!--                    <span class="relative z-10 text-5xl md:text-4xl font-stint font-bold">-->
-<!--                        Lakh-->
-<!--                    </span>-->
-<!--                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold">-->
-                    <!--                        -->
-                    <!--                    </span>-->
-                </div>
-                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">
+                <span class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint text-brand-orange"
+                      data-value="300000">300000</span>
+                <p class="text-white mt-2 text-base sm:text-[2.3vw] lg:text-[1.2vw] font-karla uppercase font-bold">
                     Young Filmmakers Inspired
                 </p>
             </div>
         </div>
 
         <div class="metric-box flex flex-col justify-end items-start
-                    col-start-1 row-start-10 col-span-12 row-span-3 md:col-start-9 md:row-start-4 md:col-span-4 md:row-span-4
-                    bg-gray-50 border-2 border-surface rounded-2xl pl-4 pb-4">
-            <video class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted
-                   playsinline>
-                <source src="{studentfilmsbgvideo}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="absolute top-0 left-0 w-full h-full bg-primary/40 z-5 rounded-2xl"></div>
+                    col-span-1 sm:col-span-1 sm:col-start-2 sm:row-start-4 lg:col-start-7 lg:col-span-3 lg:row-start-8 lg:row-span-3
+                    bg-gray-50 border-2 border-surface rounded-2xl p-4 relative overflow-hidden">
+            <div class="absolute inset-0 rounded-2xl overflow-hidden">
+                <img src="{studentfilmbg}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
+                <div class="absolute inset-0 bg-primary/40 rounded-2xl"></div>
+            </div>
             <div class="relative z-10 text-brand-orange">
-                <div>
-                    <span class="number text-4xl md:text-6xl font-bold font-stint text-brand-orange"
-                          data-value="250">250</span>
-                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold inline-block">
-                        Student Produced Films
+                <div class="flex flex-col sm:flex-row items-start sm:items-end gap-2">
+                    <span class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint text-brand-orange"
+                          data-value="65">65</span>
+                    <span class="text-3xl sm:text-[3vw] lg:text-[1.8vw] font-stint font-bold">
+                        Film Festivals
                     </span>
                 </div>
-                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">
-                    Produced by children and schools to create an impact</p>
-            </div>
-        </div>
-
-        <div class="metric-box flex flex-col justify-end items-start border-2 border-black
-                    col-start-1 row-start-21 col-span-12 row-span-4 md:col-start-1 md:row-start-9 md:col-span-4 md:row-span-4
-                    bg-gray-50 rounded-2xl pl-4 pb-4 relative">
-            <div class="flex-shrink-0 min-w-0 h-full w-full bg-transparent
-                    overflow-hidden z-[1]
-                    absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-14">
-                <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-[80%] w-full"
-                />
-            </div>
-            <div class="relative z-10 text-primary text-center">
-                <div class="text-primary">
-                    <span class="number text-4xl md:text-5xl font-bold font-stint text-brand-orange"
-                          data-value="11">11</span>
-                    <br/>
-                    <span class="relative z-10 text-xl md:text-2xl font-stint font-bold text-brand-orange">
-                        Community Projects
-                    </span>
-                </div>
-                <p class="text-primary text-center mt-2 text-xl font-karla uppercase font-bold">
-                    Building social impact through film stories by connecting villages to the world
+                <p class="text-white mt-2 text-base sm:text-[2.3vw] lg:text-[1.2vw] font-karla uppercase font-bold">
+                    Special screenings, nominations and kids workshops worldwide
                 </p>
             </div>
         </div>
 
-        <div class="metric-box flex flex-col justify-center items-center border-2 border-black
-                    col-start-1 row-start-25 col-span-12 row-span-4 md:col-start-5 md:row-start-8 md:col-span-4
-                    md:row-span-5 bg-gray-50 rounded-2xl pl-4 pb-4 relative overflow-hidden">
-            <video class="absolute top-0 left-0 w-full h-full object-cover z-[-1] rounded-2xl" autoplay loop muted
-                   playsinline>
-                <source src="{lahdcvid}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
-            <div class="flex flex-row justify-around items-center w-full z-10">
-                <!--                <div class="h-[10rem] w-fit bg-transparent rounded-lg mx-1 z-10">-->
-                <!--                    <img src={year75logo} alt="Government of India Logo" class="object-contain h-full w-auto mb-4 z-10"/>-->
-                <!--                </div>-->
-                <div class="h-[15rem] w-fit bg-transparent rounded-lg mx-1 z-10">
-                    <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto mb-4 z-10"/>
-                </div>
-            </div>
-            <p class="text-brand-orange mt-2 text-6xl text-center font-karla uppercase font-bold z-10">
-                LAHDC
-            </p>
-            <p class="text-white mt-2 text-2xl text-center font-karla uppercase font-bold z-10">
-                Academic Film Studio <br> Leh District, Ladakh
-        </div>
-
-        <div class="metric-box flex flex-col justify-end items-start
-                    col-start-1 row-start-13 col-span-12 row-span-4 md:col-start-9 md:row-start-8 md:col-span-4 md:row-span-5
-                    bg-gray-50 border-2 border-surface rounded-2xl pl-4 pb-4">
-            <div class="absolute inset-0 rounded-2xl overflow-hidden">
-                <!-- Shift the image UP so the face are visible-->
-                <img src="{studentfilmbg}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
-                <div class="absolute inset-0 bg-primary/40 rounded-2xl "></div>
-            </div>
-            <div class="relative z-10 text-brand-orange">
-                <div>
-                    <span class="number text-4xl md:text-6xl font-bold font-stint text-brand-orange"
-                          data-value="65">65</span>
-                    <span class="relative z-10 text-5xl md:text-2xl font-stint font-bold">
-                        Film Festivals
-                    </span>
-                </div>
-                <p class="text-white mt-2 text-xl font-karla uppercase font-bold">
-                    Special screenings, nominations and kids workshops worldwide</p>
-            </div>
-        </div>
     </div>
 </section>
 
 <style>
-    .bg-gradient {
-        background: rgb(216, 180, 254);
-        background: linear-gradient(180deg, rgba(216, 180, 254, 1) 0%, rgba(243, 244, 240, 1) 20%, rgba(243, 244, 240, 1) 80%, rgba(216, 180, 254, 1) 100%);
+    /* Additional responsive adjustments if needed */
+    @media (max-width: 640px) {
+        .metric-box {
+            min-height: 300px;
+        }
     }
 </style>
