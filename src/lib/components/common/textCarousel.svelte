@@ -7,17 +7,26 @@
     import temp3 from "$lib/assets/images/5_School Studio.png";
     import temp4 from "$lib/assets/images/4_YIF.webp";
     import temp5 from "$lib/assets/images/2_KAB.png";
+    import temp6 from "$lib/assets/images/6_Gullak.png"; // example for 6th image
 
     gsap.registerPlugin(ScrollTrigger);
 
-    export let items = ["SwadeshPlex", "Kidding Around Bharat", "PM eVidya School Studio", "Young India Filmmakers"];
-    // export let items = ["Learn", "Create", "Innovate", "Master"];
+    // Six headings and paragraphs
+    export let items = [
+        "SwadeshPlex",
+        "Kidding Around Bharat",
+        "PM eVidya School Studio",
+        "Young India Filmmakers",
+        "Creative Minds",
+        "Inspire India"
+    ];
     export let paragraphs = [
         "A Conscious OTT platform streaming impactful & educational content starting @ Just ONE Rupee",
-        "Community Filmmaking Tours to villages, artisans, start-ups  & changemakers across India capturing real stories on reel",
-        "A capacity building program for the Ministry Of Education’s PM eVIDYA initiative including studio design, teacher training and co-production of curriculum based content in regional languages.",
-        "A filmmaking festival for children  amplifying young voices from rural and urban communities across India",
-        // "Social impact initiative to support rural tourism, artisans, start-ups, through the incredible power of stories & cinema."
+        "Community Filmmaking Tours to villages, artisans, start-ups & changemakers across India capturing real stories on reel",
+        "A capacity building program for the Ministry Of Education's PM eVIDYA initiative including studio design, teacher training and co-production of curriculum based content in regional languages.",
+        "A filmmaking festival for children amplifying young voices from rural and urban communities across India",
+        "A creative initiative to foster art and technology collaboration across India.",
+        "A movement to inspire the next generation through innovative storytelling."
     ];
     export let isNarrow = false;
     export let backgroundImages = [
@@ -25,40 +34,25 @@
         temp2,
         temp3,
         temp4,
-        // temp5
+        temp5,
+        temp6
     ];
+
+    let containerHeight = ((items.length + 1) * 150) + "vh";
 
     let container;
     let wordItems;
     let paragraphItems;
+    let bgImages;
     let mainTimeline;
     let charTimeline;
     let bgTimeline;
     let paragraphTimeline;
     let headerTimeline;
-    let bgImages;
     let mediaMatch;
 
-    // Helper to return fade-in and fade-out offsets based on word index and total count.
     function getOffsets(index, total) {
-        if (total === 3) {
-            const offsets = [
-                {fadeIn: 15, fadeOut: 23.5},
-                {fadeIn: 25, fadeOut: 32},
-                {fadeIn: 34.5, fadeOut: 40}
-            ];
-            return offsets[index];
-        }
-        if (total === 4) {
-            const offsets = [
-                {fadeIn: 20, fadeOut: 35},
-                {fadeIn: 40, fadeOut: 60},
-                {fadeIn: 65, fadeOut: 75},
-                {fadeIn: 85, fadeOut: 100}
-            ];
-            return offsets[index];
-        }
-        const base = 10;
+        const base = index === 0 ? 0 : 10;
         const step = 25;
         const duration = 15;
         return {
@@ -72,6 +66,7 @@
         if (charTimeline) charTimeline.kill();
         if (bgTimeline) bgTimeline.kill();
         if (paragraphTimeline) paragraphTimeline.kill();
+        if (headerTimeline) headerTimeline.kill();
         if (mediaMatch) mediaMatch.kill();
     });
 
@@ -90,7 +85,6 @@
                 transformOrigin
             });
         });
-
         return {angle, numWords};
     }
 
@@ -99,13 +93,12 @@
             scrollTrigger: {
                 trigger: container,
                 start: 'top top',
-                end: 'bottom bottom',
+                end: () => `+=${container.offsetHeight}`,
                 scrub: 0.5
             }
         });
-
         mainTimeline.to(wordItems, {
-            rotationX: `+=${(numWords) * angle}`,
+            rotationX: `+=${numWords * angle * 1.2}`,
             force3D: true,
             duration: items.length,
             ease: 'power1.inOut'
@@ -116,12 +109,11 @@
         charTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: container,
-                start: 'top bottom',
-                end: 'bottom bottom',
+                start: 'top center',
+                end: () => `+=${container.offsetHeight}`,
                 scrub: true
             }
         });
-
         charTimeline.addLabel("start");
 
         const total = wordItems.length;
@@ -132,7 +124,6 @@
                 rotateX: -90,
                 opacity: 0
             });
-
             const {fadeIn, fadeOut} = getOffsets(index, total);
             charTimeline.fromTo(
                 chars,
@@ -168,7 +159,7 @@
                     duration: 2
                 },
                 "<"
-            )
+            );
         });
     }
 
@@ -176,20 +167,17 @@
         paragraphTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: container,
-                start: 'top bottom',
-                end: 'bottom bottom',
+                start: 'top center',
+                end: () => `+=${container.offsetHeight}`,
                 scrub: true
             }
         });
-
         paragraphTimeline.addLabel("start");
 
         const total = paragraphItems.length;
         paragraphItems.forEach((paragraph, index) => {
             const {fadeIn, fadeOut} = getOffsets(index, total);
-
             gsap.set(paragraph, {opacity: 0});
-
             paragraphTimeline
                 .fromTo(
                     paragraph,
@@ -209,62 +197,23 @@
         bgTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: container,
-                start: 'top bottom',
-                end: 'bottom bottom',
-                scrub: true
+                start: 'top center',
+                end: () => `+=${container.offsetHeight}`,
+                scrub: true,
             }
         });
-
         bgTimeline.addLabel("start");
 
-        const total = wordItems.length;
+        const total = bgImages.length;
         bgImages.forEach((img, index) => {
             const {fadeIn, fadeOut} = getOffsets(index, total);
             if (index === 0) {
-                bgTimeline
-                    // .fromTo(
-                    //     img,
-                    //     {opacity: 0},
-                    //     {opacity: 1, duration: 5, ease: "power1.inOut"},
-                    //     `start+=${fadeIn}`
-                    // )
-                    // .fromTo(
-                    //     '.words-carousel__filter',
-                    //     {opacity: 0},
-                    //     {opacity: 1, duration: 5, ease: "power1.inOut"},
-                    //     '<'
-                    // )
-                    .to(
-                        img,
-                        {opacity: 0, duration: 2, ease: 'none'},
-                        `start+=${fadeOut + 7}`
-                    );
-            } else if (index === 2) {
-                bgTimeline
-                    .fromTo(
-                        img,
-                        {opacity: 0},
-                        {opacity: 1, duration: 2, ease: "power1.inOut"},
-                        `start+=${fadeIn - 5}`
-                    )
-                    .to(
-                        img,
-                        {opacity: 1, duration: 2, ease: 'none'},
-                        `start+=${fadeOut + 7}`
-                    );
-            } else if (index === 3) {
-                bgTimeline
-                    .fromTo(
-                        img,
-                        {opacity: 0},
-                        {opacity: 1, duration: 2, ease: "power1.inOut"},
-                        `start+=${fadeIn}`
-                    )
-                    .to(
-                        img,
-                        {opacity: 1, duration: 2, ease: 'none'},
-                        `start+=${fadeOut + 7}`
-                    );
+                gsap.set(img, {opacity: 1});
+                bgTimeline.to(
+                    img,
+                    {opacity: 0, duration: 2, ease: 'none'},
+                    `start+=${fadeOut}`
+                );
             } else {
                 bgTimeline
                     .fromTo(
@@ -284,12 +233,10 @@
 
     function initMediaQueries() {
         mediaMatch = gsap.matchMedia();
-
         mediaMatch.add('(max-width: 767px)', () => {
             const params = setPositions(60);
             initMainTimeline(params);
         });
-
         mediaMatch.add('(min-width: 768px)', () => {
             const params = setPositions(150);
             initMainTimeline(params);
@@ -299,7 +246,6 @@
     function initHeaderTimeline() {
         gsap.set(".movingHeader", {y: "0%"});
         gsap.set(".movingHeader2", {y: "100%"});
-
         headerTimeline = gsap.timeline({repeat: -1});
         headerTimeline
             .to(".movingHeader", {
@@ -339,15 +285,16 @@
         initBgTimeline();
         initParagraphTimeline();
         initHeaderTimeline();
+        ScrollTrigger.refresh();
     });
 </script>
 
-<div class="headingDiv sticky top-1/2 left-1/2 transform-gpu  -translate-y-1/2 text-center
-                h-screen w-full z-[0] flex flex-col justify-center items-center gap-0 capitalize
-                xl:text-8xl 2xl:text-9xl brand-font font-bold text-brand-orange italic">
+<div class="headingDiv sticky top-1/2 left-1/2 transform-gpu -translate-y-1/2 text-center
+             h-screen w-full z-[0] flex flex-col justify-center items-center gap-0 capitalize
+             xl:text-8xl 2xl:text-9xl brand-font font-bold text-brand-orange italic">
     <span class="capitalize">OUR</span>
     <div class="m-0 p-0 -tracking-[0.13em] h-[130px] w-full flex flex-col justify-center items-center
-                    relative overflow-hidden">
+         relative overflow-hidden">
         <div class="movingHeaderContainer absolute text-brand-green">
             <span class="movingHeader -mr-4">A</span>
             <span class="movingHeader">w</span>
@@ -380,10 +327,11 @@
         </div>
     </div>
 </div>
-<div class="words-carousel relative {isNarrow ? 'h-[300vh] lg:-mt-[25vh]' : 'h-[450vh]'} bg-background mt-4 -mb-[18rem]"
-     bind:this={container}>
-    <div class="words-carousel__bg sticky top-1/2 left-1/2
-                transform -translate-x-3 sm:-translate-x-8 -translate-y-1/2
+
+<div class="words-carousel relative bg-background mt-4 -mb-[18rem]"
+     bind:this={container}
+     style="height: {containerHeight}">
+    <div class="words-carousel__bg sticky top-1/2 left-1/2 transform -translate-x-3 sm:-translate-x-8 -translate-y-1/2
                 w-[95vw] h-[95vh] overflow-hidden">
         {#each items as _, i}
             <img
@@ -398,30 +346,19 @@
 
     <div class="words-carousel__inner sticky top-1/2 transform -translate-y-1/2 h-screen flex items-center
                 justify-center perspective-[150rem] text-white">
-        <!--        <div class="paragraphs-container absolute top-1/2 lef mt-8 w-full">-->
-        <!--            {#each paragraphs as paragraph, index}-->
-        <!--                <p class="paragraph-item absolute top-0 left-0 w-full text-center text-lg md:text-2xl opacity-0-->
-        <!--                              text-white font-light mx-auto max-w-lg px-4"-->
-        <!--                   style="opacity: {index === 0 ? 1 : 0};">-->
-        <!--                    {paragraph}-->
-        <!--                </p>-->
-        <!--            {/each}-->
-        <!--        </div>-->
         <div class="flex flex-col items-center justify-center relative">
             <ul class="words-carousel__list relative w-[50vw] h-[50vw] transform-style-preserve-3d origin-[50%_50%]">
                 {#each items as item, index}
                     <li class="words-carousel__item absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                             text-center w-[95vw] text-[2rem] md:text-[5rem] backface-hidden font-bold
-                            text-white flex flex-col items-center justify-center"
-                    >
+                            text-white flex flex-col items-center justify-center">
                         <div class="single-line">
                             {#each item.split('') as char}
                                 <span class="char inline-block">{char}</span>
                             {/each}
                         </div>
                         <div class="paragraph-item w-full text-center text-lg md:text-2xl opacity-0
-                              text-white font-light mx-auto max-w-2xl "
-                             style="opacity: {index === 0 ? 1 : 0};">
+                              text-white font-light mx-auto max-w-2xl" style="opacity: {index === 0 ? 1 : 0};">
                             {paragraphs[index]}
                         </div>
                     </li>
@@ -446,6 +383,4 @@
     .movingHeader2 {
         display: inline-block;
     }
-
-
 </style>
