@@ -11,10 +11,11 @@
     import teacherTraining from '$lib/assets/Videos/Teacher Traning_Website Final.mp4';
     import year75logo from "$lib/assets/images/Azadi-Ka-Amrit-Mahotsav-Logo.png";
     import studentfilmsbgvideo from "$lib/assets/Videos/PPL Films_Website Final.mp4";
-    import projectGulak from "$lib/assets/images/Project Gullak Logo.png";
+    import projectGulak from "$lib/assets/images/gullakv2.jpg";
     import lahdcvid from "$lib/assets/Videos/Ladakh PM evidya_Website_Final.mp4";
     import yifVideoFinal from "$lib/assets/Videos/YIF_Website_Final 02.mp4";
-    import lahdcImg from "$lib/assets/images/5_School Studio.png";
+    import lahdcImg from "$lib/assets/images/placeimg.jpg";
+    import placeVid from "$lib/assets/Videos/placeholderVid.mp4";
 
     let sectionRef;
     gsap.registerPlugin(ScrollTrigger)
@@ -75,7 +76,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9
                 grid-rows-auto
                 sm:grid-rows-[repeat(5,minmax(250px,auto))]
-                lg:grid-rows-[repeat(10,minmax(65px,auto))]
+                lg:grid-rows-[repeat(10,minmax(100px,auto))]
                 gap-4">
 
         <div class="metric-box flex flex-col justify-end items-start
@@ -95,7 +96,7 @@
                         Crore School Going Children
                     </span>
                 </div>
-                <p class="mt-2 text-white text-base sm:text-[2.3vw] lg:text-[1.3vw] font-karla uppercase font-bold">
+                <p class="mt-2 text-white text-base sm:text-[2.3vw] lg:text-[1.1vw] font-karla uppercase font-bold">
                     <span class="text-brand-orange">Mission</span> Quality educational
                     content made affordable for Ministry Of Education's PM eVIDYA initiative
                 </p>
@@ -109,7 +110,7 @@
                 <source src="{yifVideoFinal}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute inset-0 bg-on-surface/20 z-5 rounded-2xl"></div>
+            <div class="absolute inset-0 bg-surface/40 z-5 rounded-2xl"></div>
             <div class="relative z-10 text-brand-orange">
                 <span class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint text-brand-orange"
                       data-value="300000">300000</span>
@@ -130,29 +131,30 @@
                     <img src={mygovlogo} alt="Government of India Logo" class="h-full w-auto rounded-tr-2xl"/>
                 </div>
             </div>
-            <p class="text-primary text-2xl sm:text-[2.3vw] lg:text-[1.5vw] text-center font-karla uppercase font-bold">
-                Recognized By <br/> Government Of India @75 Ideas
+            <p class="text-black text-2xl sm:text-[2.3vw] lg:text-[1.1vw] text-center font-karla uppercase font-bold">
+                Recognized By the Government Of India @75 Ideas
             </p>
         </div>
 
         <div class="metric-box flex flex-col justify-end items-start
                     col-span-1 sm:col-span-1 lg:col-start-4 lg:col-span-3 lg:row-start-6 lg:row-span-2
                     bg-gray-50 border-2 border-black rounded-2xl px-4 py-8 relative">
-            <div class="absolute top-1/2 right-0 transform-gpu -translate-y-1/2 translate-x-[12%]
-                        h-16 w-16 sm:h-20 sm:w-20 lg:h-56 lg:w-56 bg-transparent z-[1]">
-                <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-full w-full"/>
+            <div class="absolute inset-0 rounded-2xl overflow-hidden">
+                <img src="{projectGulak}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
+                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
             </div>
-            <div class="relative z-10 text-primary w-3/4">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-                    <span class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint text-primary"
-                          data-value="11">11</span>
-                    <span class="text-3xl sm:text-[3vw] lg:text-[1.2vw] font-stint font-bold">
+            <div class="relative z-10 sm:-mb-4">
+                <div class="flex flex-col sm:flex-row items-start sm:items-end sm:justify-start gap-2 -mb-2">
+                    <span class="number text-orange-400 text-6xl sm:text-[5vw] lg:text-[3vw] font-stint font-bold"
+                          data-value="11">
+                        11
+                    </span>
+                    <span class="text-brand-orange text-3xl sm:text-[3vw] lg:text-[2vw] font-stint font-bold">
                         Community Projects
                     </span>
                 </div>
-                <p class="w-full text-primary mt-2 text-base sm:text-[2.2vw] lg:text-[1.2vw] font-karla uppercase font-bold
-                          tracking-wider">
-                    Building social impact <br/>through film stories by connecting villages<br/> to the world
+                <p class="mt-2 text-white text-base sm:text-[2.3vw] lg:text-[1.2vw] font-karla uppercase font-bold">
+                    Films connecting villages to the world
                 </p>
             </div>
         </div>
@@ -187,40 +189,40 @@
                 <source src="{lahdcvid}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute inset-0 bg-on-surface/20 z-[1] rounded-2xl"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full w-full p-4">
+            <div class="absolute inset-0 bg-surface/30 z-[1] rounded-2xl"></div>
+            <div class="relative z-10 flex flex-col items-start justify-end h-full w-full p-4">
                 <!--                <div class="h-24 sm:h-32 lg:h-40 w-fit bg-transparent rounded-lg mb-4">-->
                 <!--                    <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto"/>-->
                 <!--                </div>-->
-                <p class="text-brand-orange text-4xl sm:text-[5vw] lg:text-[3vw] text-center font-karla uppercase font-bold">
-                    Placeholder
+                <p class="text-brand-orange text-4xl sm:text-[5vw] lg:text-[2.2vw] text-center font-karla font-bold">
+                    PM eVIDYA School Studio
                 </p>
-                <p class="text-white mt-2 text-lg sm:text-[3vw] lg:text-[1.3vw] text-center font-karla uppercase font-bold">
-                    This is placeholder small text
+                <p class="text-white mt-2 text-lg sm:text-[3vw] lg:text-[1.5vw] text-center font-karla uppercase font-bold">
+                    LAHDC, Leh Collaboration
                 </p>
             </div>
         </div>
 
-        <div class="metric-box flex flex-col justify-end items-start lg:h-[300px]
+        <div class="metric-box flex flex-col justify-end items-start
                     col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 lg:row-start-8 lg:row-span-3
                     bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
                 <img src="{lahdcImg}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
-                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
+<!--                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>-->
             </div>
             <div class="relative z-10 flex flex-row-reverse items-center justify-center h-full w-full p-4 gap-4">
-                <div class="h-24 sm:h-32 lg:h-40 w-fit bg-transparent rounded-lg mb-4">
-                    <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto"/>
-                </div>
-                <div class="relative z-10 flex flex-col items-center justify-center h-full gap-2">
-                    <p class="text-brand-orange text-4xl sm:text-[5vw] lg:text-[5vw] text-center font-karla uppercase font-bold
-                                tracking-wider lg:-mr-2">
-                        LAHDC
-                    </p>
-                    <p class="text-white mt-2 text-lg sm:text-[3vw] lg:text-[1.5vw] text-center font-karla uppercase font-bold">
-                        Academic Film Studio <br/> Leh District, Ladakh
-                    </p>
-                </div>
+<!--                <div class="h-24 sm:h-32 lg:h-40 w-fit bg-transparent rounded-lg mb-4">-->
+<!--                    <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto"/>-->
+<!--                </div>-->
+<!--                <div class="relative z-10 flex flex-col items-center justify-center h-full gap-2">-->
+<!--                    <p class="text-brand-orange text-4xl sm:text-[5vw] lg:text-[5vw] text-center font-karla uppercase font-bold-->
+<!--                                tracking-wider lg:-mr-2">-->
+<!--                        LAHDC-->
+<!--                    </p>-->
+<!--                    <p class="text-white mt-2 text-lg sm:text-[3vw] lg:text-[1.5vw] text-center font-karla uppercase font-bold">-->
+<!--                        Academic Film Studio <br/> Leh District, Ladakh-->
+<!--                    </p>-->
+<!--                </div>-->
             </div>
         </div>
 
@@ -228,20 +230,20 @@
                     col-span-1 sm:col-span-1 sm:col-start-2 sm:row-start-4 lg:col-start-7 lg:col-span-3 lg:row-start-8 lg:row-span-3
                     bg-gray-50 border-2 border-surface rounded-2xl p-4 relative overflow-hidden">
             <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
-                <source src="{studentfilmsbgvideo}" type="video/mp4">
+                <source src="{placeVid}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="absolute inset-0 bg-on-surface/20 z-5 rounded-2xl"></div>
             <div class="relative z-10 text-brand-orange">
                 <div class="flex flex-col sm:flex-row items-start sm:items-end gap-2">
                     <span class="number text-6xl sm:text-[5vw] lg:text-[3vw] font-bold font-stint text-brand-orange"
-                          data-value="250">250</span>
+                          data-value="21">21</span>
                     <span class="text-3xl sm:text-[3vw] lg:text-[1.8vw] font-stint font-bold">
-                        Student&nbsp;Made&nbsp;Films
+                        Global Awards
                     </span>
                 </div>
                 <p class="text-white mt-2 text-base sm:text-[2.3vw] lg:text-[1.2vw] font-karla uppercase font-bold">
-                    Produced by children and schools to create an impact
+                    Infinite Accolades and love
                 </p>
             </div>
         </div>
