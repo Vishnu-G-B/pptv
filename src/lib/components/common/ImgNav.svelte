@@ -101,6 +101,18 @@
             />
         </div>
 
+        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh] bg-transparent
+                    overflow-hidden z-[1]">
+            <img src="{yif_logo}" alt="YIF Logo" class="object-contain h-full w-full"
+            />
+        </div>
+
+        <div class="navAnim flex-shrink-0 min-w-0 h-[7vh] w-[7vh] min-[426px]:h-[10.5vh] min-[426px]:w-[11vh]
+                    bg-transparent rounded-full overflow-hidden z-[1]">
+            <img src="{ecatvlogo2}" alt="Ecatv Logo" class="object-contain h-full w-full rounded-full"
+            />
+        </div>
+
         <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh] bg-transparent rounded-full
                     overflow-hidden z-[1]">
             <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-cover h-full w-full"
@@ -113,25 +125,10 @@
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh] bg-transparent
-                    overflow-hidden z-[1]">
-            <img src="{yif_logo}" alt="YIF Logo" class="object-contain h-full w-full"
-            />
-        </div>
-
-
         <div class="navAnim flex-shrink-0 min-w-0 h-[10vh] w-[8vh] min-[426px]:h-[13.5vh] min-[426px]:w-[12vh]  bg-transparent
                     overflow-hidden z-[1]">
             <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-full w-full"
             />
         </div>
-
-        <div class="navAnim flex-shrink-0 min-w-0 h-[7vh] w-[7vh] min-[426px]:h-[10.5vh] min-[426px]:w-[11vh]
-                    bg-transparent rounded-full overflow-hidden z-[1]">
-            <img src="{ecatvlogo2}" alt="Ecatv Logo" class="object-contain h-full w-full rounded-full"
-            />
-        </div>
-
-
     </div>
 </div>
