@@ -9,7 +9,7 @@
     import projectGulak from "$lib/assets/images/gullakv2.jpg";
     import lahdcvid from "$lib/assets/Videos/Ladakh PM evidya_Website_Final.mp4";
     import yifVideoFinal from "$lib/assets/Videos/YIF_Website_Final 02.mp4";
-    import lahdcImg from "$lib/assets/images/placeimg.jpg";
+    import ADimg from "$lib/assets/images/placeimg.webp";
     import placeVid from "$lib/assets/Videos/placeholderVid.mp4";
     import InternationalFilmBG from "$lib/assets/images/3B_ECA TV.png";
     import FilmbyNforBG from "$lib/assets/images/2B_KAB.png";
@@ -72,8 +72,8 @@
 <section bind:this={sectionRef} class="h-fit w-full bg-background p-2 sm:p-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9
                 grid-rows-auto
-                sm:grid-rows-[repeat(5,minmax(250px,auto))]
-                lg:grid-rows-[repeat(12,minmax(100px,auto))]
+                sm:grid-rows-[repeat(6,minmax(250px,auto))]
+                lg:grid-rows-[repeat(12,minmax(40px,auto))]
                 gap-4">
 
         <div class="metric-box flex flex-col justify-end items-start
@@ -133,7 +133,7 @@
             </p>
         </div>
 
-        <div class="metric-box flex flex-col justify-end items-start
+        <div class="metric-box flex flex-col justify-end items-start lg:h-[175px]
                     col-span-1 sm:col-span-1 lg:col-start-4 lg:col-span-3 lg:row-start-6 lg:row-span-2
                     bg-surface border-2 border-black rounded-2xl px-4 py-8 relative">
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
@@ -157,7 +157,7 @@
         </div>
 
         <div class="metric-box flex flex-col justify-end items-start
-                    col-span-1 sm:col-span-1 lg:col-start-7 lg:col-span-3 lg:row-start-5 lg:row-span-5
+                    col-span-1 sm:col-span-1 lg:col-start-7 lg:col-span-3 lg:row-start-5 lg:row-span-4
                     bg-gray-50 border-2 border-surface rounded-2xl p-2 relative overflow-hidden">
             <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
                 <source src="{teacherTraining}" type="video/mp4">
@@ -240,7 +240,7 @@
                     col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 lg:row-start-10 lg:row-span-3
                     bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
-                <img src="{lahdcImg}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
+                <img src="{ADimg}" alt="Background" class="w-full h-full object-fill rounded-2xl"/>
             </div>
             <div class="relative z-10 flex flex-row-reverse items-center justify-center h-full w-full p-4 gap-4">
 
@@ -248,7 +248,7 @@
         </div>
 
         <div class="metric-box flex flex-col justify-end items-start
-                    col-span-1 sm:col-span-1 sm:col-start-2 sm:row-start-4 lg:col-start-7 lg:col-span-3 lg:row-start-10 lg:row-span-3
+                    col-span-1 sm:col-span-1 sm:col-start-2 sm:row-start-4 lg:col-start-7 lg:col-span-3 lg:row-start-9 lg:row-span-4
                     bg-gray-50 border-2 border-surface rounded-2xl p-4 relative overflow-hidden">
             <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
                 <source src="{placeVid}" type="video/mp4">
