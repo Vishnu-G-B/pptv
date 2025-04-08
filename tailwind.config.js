@@ -20,6 +20,7 @@ export default {
                 karla: ['Poppins', "sans-serif"],
                 Iconsolata: ['Poppins', "sans-serif"],
                 fancy: ["FancyFont", "sans-serif"],
+                poppinsbold: ["Poppins-Bold", "sans-serif"],
             },
 
         }

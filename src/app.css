@@ -19,6 +19,11 @@
 }
 
 @font-face {
+    font-family: 'Poppins-Bold';
+    src: url(./lib/assets/fonts/Poppins-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
     font-family: "FancyFont";
     src: url(./lib/assets/fonts/autumn-brush.regular.otf) format("opentype");
 }

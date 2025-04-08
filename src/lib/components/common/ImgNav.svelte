@@ -85,8 +85,8 @@
     <div class="imageContainer h-fit w-full absolute top-0 left-0 flex justify-start items-center
                 gap-[1vw] min-[376px]:gap-[2vw] p-0 min-[376px]:p-[0vw] sm:pl-[2vw] sm:py-0 sm:pr-0 z-50">
         <div class="absolute top-1/2 left-0 w-full -translate-y-1/2 z-[1]">
-            <hr class="border-t-2 border-primary">
-            <hr class="border-t-2 border-[#adff30] opacity-75 mt-1">
+            <hr class="border-t-2 border-primary border-dashed">
+<!--            <hr class="border-t-2 border-[#adff30] opacity-75 mt-1">-->
         </div>
 
         <div class="navAnim firstImg flex-shrink-0 min-w-0 h-[7vh] min-[426px]:h-[20vh] w-auto max-w-[15vh]
@@ -95,40 +95,40 @@
             />
         </div>
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh]  bg-transparent
-                    overflow-hidden z-[1]">
-            <img src="{swadeshplex}" alt="Swadeshplex Logo" class="object-cover h-full w-full"
-            />
-        </div>
+<!--        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh]  bg-transparent-->
+<!--                    overflow-hidden z-[1]">-->
+<!--            <img src="{swadeshplex}" alt="Swadeshplex Logo" class="object-cover h-full w-full"-->
+<!--            />-->
+<!--        </div>-->
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh] bg-transparent
-                    overflow-hidden z-[1]">
-            <img src="{yif_logo}" alt="YIF Logo" class="object-contain h-full w-full"
-            />
-        </div>
+<!--        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[10vh] min-[426px]:w-[10vh] bg-transparent-->
+<!--                    overflow-hidden z-[1]">-->
+<!--            <img src="{yif_logo}" alt="YIF Logo" class="object-contain h-full w-full"-->
+<!--            />-->
+<!--        </div>-->
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[7vh] w-[7vh] min-[426px]:h-[10.5vh] min-[426px]:w-[11vh]
-                    bg-transparent rounded-full overflow-hidden z-[1]">
-            <img src="{ecatvlogo2}" alt="Ecatv Logo" class="object-contain h-full w-full rounded-full"
-            />
-        </div>
+<!--        <div class="navAnim flex-shrink-0 min-w-0 h-[7vh] w-[7vh] min-[426px]:h-[10.5vh] min-[426px]:w-[11vh]-->
+<!--                    bg-transparent rounded-full overflow-hidden z-[1]">-->
+<!--            <img src="{ecatvlogo2}" alt="Ecatv Logo" class="object-contain h-full w-full rounded-full"-->
+<!--            />-->
+<!--        </div>-->
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh] bg-transparent rounded-full
-                    overflow-hidden z-[1]">
-            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-cover h-full w-full"
-            />
-        </div>
+<!--        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh] bg-transparent rounded-full-->
+<!--                    overflow-hidden z-[1]">-->
+<!--            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-cover h-full w-full"-->
+<!--            />-->
+<!--        </div>-->
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh]
-                    bg-transparent rounded-full overflow-hidden z-[1]">
-            <img src="{evidyaLogo}" alt="Evidya Logo" class="object-cover h-full w-full rounded-full"
-            />
-        </div>
+<!--        <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh]-->
+<!--                    bg-transparent rounded-full overflow-hidden z-[1]">-->
+<!--            <img src="{evidyaLogo}" alt="Evidya Logo" class="object-cover h-full w-full rounded-full"-->
+<!--            />-->
+<!--        </div>-->
 
-        <div class="navAnim flex-shrink-0 min-w-0 h-[10vh] w-[8vh] min-[426px]:h-[13.5vh] min-[426px]:w-[12vh]  bg-transparent
-                    overflow-hidden z-[1]">
-            <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-full w-full"
-            />
-        </div>
+<!--        <div class="navAnim flex-shrink-0 min-w-0 h-[10vh] w-[8vh] min-[426px]:h-[13.5vh] min-[426px]:w-[12vh]  bg-transparent-->
+<!--                    overflow-hidden z-[1]">-->
+<!--            <img src="{projectGulak}" alt="Project Gulak Logo" class="object-cover h-full w-full"-->
+<!--            />-->
+<!--        </div>-->
     </div>
 </div>

@@ -329,13 +329,13 @@
     }
 
     onMount(() => {
-        wordItems = container.querySelectorAll('.words-carousel__item');
-        paragraphItems = container.querySelectorAll('.paragraph-item');
-        bgImages = container.querySelectorAll('.bg-image');
-        initMediaQueries();
-        initCharacterTimeline();
-        initBgTimeline();
-        initParagraphTimeline();
+        // wordItems = container.querySelectorAll('.words-carousel__item');
+        // paragraphItems = container.querySelectorAll('.paragraph-item');
+        // bgImages = container.querySelectorAll('.bg-image');
+        // initMediaQueries();
+        // initCharacterTimeline();
+        // initBgTimeline();
+        // initParagraphTimeline();
         initHeaderTimeline();
     });
 </script>
@@ -378,56 +378,56 @@
         </div>
     </div>
 </div>
-<div class="words-carousel relative {isNarrow ? 'h-[300vh] lg:-mt-[25vh]' : 'h-[450vh]'} bg-background mt-4 -mb-[18rem]"
-     bind:this={container}>
-    <div class="words-carousel__bg sticky top-1/2 left-1/2
-                transform -translate-x-3 sm:-translate-x-8 -translate-y-1/2
-                w-[95vw] h-[95vh] overflow-hidden">
-        {#each items as _, i}
-            <img
-                    src={backgroundImages[i]}
-                    alt=""
-                    class="bg-image h-full w-full absolute inset-0 object-cover opacity-0 rounded-xl"
-                    style="opacity: {i === 0 ? 1 : 0};"
-            />
-        {/each}
-        <div class="words-carousel__filter absolute inset-0 bg-[#250025]/70 rounded-xl"></div>
-    </div>
+<!--<div class="words-carousel relative {isNarrow ? 'h-[300vh] lg:-mt-[25vh]' : 'h-[450vh]'} bg-background mt-4 -mb-[18rem]"-->
+<!--     bind:this={container}>-->
+<!--    <div class="words-carousel__bg sticky top-1/2 left-1/2-->
+<!--                transform -translate-x-3 sm:-translate-x-8 -translate-y-1/2-->
+<!--                w-[95vw] h-[95vh] overflow-hidden">-->
+<!--        {#each items as _, i}-->
+<!--            <img-->
+<!--                    src={backgroundImages[i]}-->
+<!--                    alt=""-->
+<!--                    class="bg-image h-full w-full absolute inset-0 object-cover opacity-0 rounded-xl"-->
+<!--                    style="opacity: {i === 0 ? 1 : 0};"-->
+<!--            />-->
+<!--        {/each}-->
+<!--        <div class="words-carousel__filter absolute inset-0 bg-[#250025]/70 rounded-xl"></div>-->
+<!--    </div>-->
 
-    <div class="words-carousel__inner sticky top-1/2 transform -translate-y-1/2 h-screen flex items-center
-                justify-center perspective-[150rem] text-white">
-        <!--        <div class="paragraphs-container absolute top-1/2 lef mt-8 w-full">-->
-        <!--            {#each paragraphs as paragraph, index}-->
-        <!--                <p class="paragraph-item absolute top-0 left-0 w-full text-center text-lg md:text-2xl opacity-0-->
-        <!--                              text-white font-light mx-auto max-w-lg px-4"-->
-        <!--                   style="opacity: {index === 0 ? 1 : 0};">-->
-        <!--                    {paragraph}-->
-        <!--                </p>-->
-        <!--            {/each}-->
-        <!--        </div>-->
-        <div class="flex flex-col items-center justify-center relative">
-            <ul class="words-carousel__list relative w-[50vw] h-[50vw] transform-style-preserve-3d origin-[50%_50%]">
-                {#each items as item, index}
-                    <li class="words-carousel__item absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                            text-center w-[95vw] text-[2rem] md:text-[5rem] backface-hidden font-bold
-                            text-white flex flex-col items-center justify-center"
-                    >
-                        <div class="single-line">
-                            {#each item.split('') as char}
-                                <span class="char inline-block">{char}</span>
-                            {/each}
-                        </div>
-                        <div class="paragraph-item w-full text-center text-lg md:text-2xl opacity-0
-                              text-white font-light mx-auto max-w-2xl "
-                             style="opacity: {index === 0 ? 1 : 0};">
-                            {paragraphs[index]}
-                        </div>
-                    </li>
-                {/each}
-            </ul>
-        </div>
-    </div>
-</div>
+<!--    <div class="words-carousel__inner sticky top-1/2 transform -translate-y-1/2 h-screen flex items-center-->
+<!--                justify-center perspective-[150rem] text-white">-->
+<!--        &lt;!&ndash;        <div class="paragraphs-container absolute top-1/2 lef mt-8 w-full">&ndash;&gt;-->
+<!--        &lt;!&ndash;            {#each paragraphs as paragraph, index}&ndash;&gt;-->
+<!--        &lt;!&ndash;                <p class="paragraph-item absolute top-0 left-0 w-full text-center text-lg md:text-2xl opacity-0&ndash;&gt;-->
+<!--        &lt;!&ndash;                              text-white font-light mx-auto max-w-lg px-4"&ndash;&gt;-->
+<!--        &lt;!&ndash;                   style="opacity: {index === 0 ? 1 : 0};">&ndash;&gt;-->
+<!--        &lt;!&ndash;                    {paragraph}&ndash;&gt;-->
+<!--        &lt;!&ndash;                </p>&ndash;&gt;-->
+<!--        &lt;!&ndash;            {/each}&ndash;&gt;-->
+<!--        &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="flex flex-col items-center justify-center relative">-->
+<!--            <ul class="words-carousel__list relative w-[50vw] h-[50vw] transform-style-preserve-3d origin-[50%_50%]">-->
+<!--                {#each items as item, index}-->
+<!--                    <li class="words-carousel__item absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2-->
+<!--                            text-center w-[95vw] text-[2rem] md:text-[5rem] backface-hidden font-bold-->
+<!--                            text-white flex flex-col items-center justify-center"-->
+<!--                    >-->
+<!--                        <div class="single-line">-->
+<!--                            {#each item.split('') as char}-->
+<!--                                <span class="char inline-block">{char}</span>-->
+<!--                            {/each}-->
+<!--                        </div>-->
+<!--                        <div class="paragraph-item w-full text-center text-lg md:text-2xl opacity-0-->
+<!--                              text-white font-light mx-auto max-w-2xl "-->
+<!--                             style="opacity: {index === 0 ? 1 : 0};">-->
+<!--                            {paragraphs[index]}-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                {/each}-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <style>
     :global(.backface-hidden) {

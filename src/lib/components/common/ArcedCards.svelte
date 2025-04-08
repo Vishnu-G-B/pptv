@@ -10,20 +10,20 @@
 
     let cardContent = [
         {
-            title: "Conscious OTT Platform",
-            text: "We promote and stream impactful cinema and quality educational content aligned with NEP 2020 to support the PM eVIDYA initiative. Each Film also has activity-based learning modules. #GoPurple"
+            title: "A Teacher's Journey of stories",
+            text: "Founded by Shweta Parakh, a teacher, filmmaker and entrepreneur who travelled across India with a film school in her bag to mentor and capture children’s perspective of the world on life, love, relationships, aspirations, hope and little things that matter to our hearts!"
         },
         {
-            title: "Feature Your Film",
-            text: "Learn filmmaking from industry mentors and feature your film for a larger cause! You can embark on a filmmaking tour at Kidding Around Bharat or Join India’s largest Student Film Festival at Young India Filmmakers"
+            title: "Education through the lens",
+            text: "PPL has been on a transformative journey across India since 2012, mentoring kids aged 6 to 18 and teachers, empowering them to amplify their voice, dreams and aspirations through the most powerful skill of storytelling-FILMMAKING."
         },
         {
-            title: "Children’s Perspective",
-            text: "Watch quality content relevant for teachers and parents to empower our children in their early years and preparatory years. Our collaboration with ECA-APER coming soon."
+            title: "A Mentor-Student Startup",
+            text: "Co-founded by Kriti Gandhi, a Hong Kong based journalist, with a keen interest in capturing impactful stories of real life heroes, Kriti aligned with the soul of Purple People Labs, just like Shivain Arora & Krishnam Gupta who walked in as young filmmakers & grew as a family."
         },
         {
-            title: "Make A Difference",
-            text: "Every subscription contributes to free filmmaking workshops in rural areas, grants for urban school filmmakers & social impact projects and all we do at SWADESHPLEX"
+            title: "Make a film, Make A Difference",
+            text: "Every subscription contributes to free filmmaking workshops in rural areas, grants for urban school filmmakers & social impact projects for all we do at Purple People Labs."
         }
     ];
 
@@ -97,14 +97,14 @@
                         id="card-{i}"
                         class="card absolute w-[400px] h-[200px] sm:w-[480px] sm:h-[245px]
                            bg-background border-2 border-surface
-                           p-5 sm:p-10 rounded-2xl
+                           p-5 sm:p-8 rounded-2xl
                            shadow-[0_0_10px_rgba(102,0,102,0.1)]"
                         style="z-index: {3 - i}; transform: translate(-50%, -50%) rotate({i * 2}deg);"
                 >
                     <div class="flex flex-col justify-center items-start text-center w-full h-full">
                         <h3
                                 use:textAnimation
-                                class="text-lg sm:text-2xl font-bold text-brand-orange mb-3 text-left uppercase"
+                                class="text-lg sm:text-2xl font-bold text-brand-orange mb-1 text-left capitalize"
                         >
                             {item.title}
                         </h3>

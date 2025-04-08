@@ -258,7 +258,7 @@
 <svelte:window bind:innerWidth/>
 <div class="min-h-screen h-fit w-full flex flex-col relative bg-background wonderfull-trigger items-start justify-start pt-5">
     <p class="brand-font text-4xl md:text-5xl font-bold lg:hidden text-left px-5 text-primary w-full lg:text-7xl group">
-        The <span class="text-brand-orange relative">ONEderfull <span
+        Our <span class="text-brand-orange relative">ONEderfull <span
             class="hidden lg:block absolute bottom-1 w-full h-[9px] bg-primary left-0"></span><span
             class="hidden lg:block absolute bottom-1 left-0 bg-brand-orange w-0 h-[9px] group-hover:w-full transition-all duration-500"></span></span>
         Watchlist
@@ -266,7 +266,7 @@
     <div class="h-screen w-full flex-col items-center justify-center hidden lg:flex gap-2 sticky top-0">
         <div class="absolute top-0 h-full w-full backdrop-blur-lg opacity-0" id="wonderfull-cover-div"></div>
         <p class="text-7xl xl:text-8xl 2xl:text-9xl brand-font font-bold text-primary">
-            THE
+            OUR
         </p>
         <div class="text-7xl xl:text-8xl 2xl:text-9xl brand-font font-bold text-brand-orange relative italic overflow-hidden flex flex-row">
             <div class="relative overflow-visible">
@@ -300,41 +300,41 @@
             WATCHLIST
         </p>
         <div class="flex flex-row w-full gap-5 px-10 mt-10 max-w-[1100px]">
-            <div class="w-1/2 flex flex-col items-center justify-start">
-                <p class="text-lg xl:text-xl text-primary font-bold italic text-left w-full">
-                    THE CHILDREN’S PERSPECTIVE
+            <div class="w-full flex flex-col items-center justify-start p-1">
+                <p class="text-lg xl:text-xl text-primary font-bold italic text-center w-full">
+                    Watch Impactful Films Starting @ONE Rupee
                 </p>
                 <p class="text-lg font-light text-surface w-full">
                     Our films are not just stories; they are windows into the world from a fresh and unique
                     perspective—<span class="text-brand-orange font-bold italic">The
-                Children’s Perspective. </span>Each film reflects the hopes, challenges and life-experiences of young
-                    minds,
-                    bringing their untold stories to life.
+                    Children’s Perspective. </span>Each film reflects the hopes, challenges and life-experiences of young
+                    minds, bringing their untold stories to life. Through our films we amplify young voices and connect villages with the world.
+                    #GoPurple
                 </p>
             </div>
 
-            <div class="w-1/2 flex flex-col items-center justify-start">
-                <p class="text-lg xl:text-xl text-brand-orange font-bold italic text-left w-full text-nowrap">
-                    THREE FOLD LEARNING OUTCOMES
-                </p>
-                <p class="text-lg font-light text-surface w-full">
-                    These films are carefully analyzed and transformed into impactful lesson plans by our team of
-                    academic experts as a TLM resource for: <br/> 1. Social Emotional Learning <br/> 2.Film & Media
-                    Skills
-                    Exploration <br/> 3. Community Service Engagement
-                </p>
-            </div>
+<!--            <div class="w-1/2 flex flex-col items-center justify-start">-->
+<!--                <p class="text-lg xl:text-xl text-brand-orange font-bold italic text-left w-full text-nowrap">-->
+<!--                    THREE FOLD LEARNING OUTCOMES-->
+<!--                </p>-->
+<!--                <p class="text-lg font-light text-surface w-full">-->
+<!--                    These films are carefully analyzed and transformed into impactful lesson plans by our team of-->
+<!--                    academic experts as a TLM resource for: <br/> 1. Social Emotional Learning <br/> 2.Film & Media-->
+<!--                    Skills-->
+<!--                    Exploration <br/> 3. Community Service Engagement-->
+<!--                </p>-->
+<!--            </div>-->
 
-            <div class="w-1/2 flex flex-col items-center justify-start">
-                <p class="text-lg xl:text-xl text-brand-green font-bold italic text-left w-full text-nowrap">
-                    EDUTAINMENT WITH A PURPOSE
-                </p>
-                <p class="text-lg  font-light text-surface w-full">
-                    Paired with activity-based modules, the films seamlessly blend storytelling with critical themes.
-                    Together, they create a rich educational experience that inspires learning, fosters empathy, and
-                    empowers children to envision a better world.
-                </p>
-            </div>
+<!--            <div class="w-1/2 flex flex-col items-center justify-start">-->
+<!--                <p class="text-lg xl:text-xl text-brand-green font-bold italic text-left w-full text-nowrap">-->
+<!--                    EDUTAINMENT WITH A PURPOSE-->
+<!--                </p>-->
+<!--                <p class="text-lg  font-light text-surface w-full">-->
+<!--                    Paired with activity-based modules, the films seamlessly blend storytelling with critical themes.-->
+<!--                    Together, they create a rich educational experience that inspires learning, fosters empathy, and-->
+<!--                    empowers children to envision a better world.-->
+<!--                </p>-->
+<!--            </div>-->
         </div>
     </div>
     <div class="min-h-screen h-fit lg:hidden w-full bg-background flex flex-col items-center pt-5 relative">
