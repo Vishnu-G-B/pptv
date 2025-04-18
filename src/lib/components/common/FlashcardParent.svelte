@@ -4,10 +4,10 @@
     import {onMount} from 'svelte';
     import img1 from "$lib/assets/images/1_PPL OTT.jpg";
     import img2 from "$lib/assets/images/2B_KAB.png";
-    import img3 from "$lib/assets/images/3_ECA TV.png";
+    import img6 from "$lib/assets/images/3_ECA TV.png";
     import img4 from "$lib/assets/images/5_School Studio.png";
     import img5 from "$lib/assets/images/6_Gullak.png";
-    import img6 from "$lib/assets/images/2_KAB.png";
+    import img3 from "$lib/assets/images/2_KAB.png";
     import {gsap} from "gsap/dist/gsap";
 
     let mounted = false;
@@ -42,7 +42,7 @@
         },
         {
             word: "offering 6",
-            title: "KAB Initiative",
+            title: "ECA-APER TV",
             image: img6
         }
     ];
@@ -135,18 +135,7 @@
             <div class="flex flex-wrap justify-center z-10">
                 {#each componentData.slice(0, 6) as card, i}
                     <div
-                            class="transform transition-all duration-700 ease-in-out m-4 md:m-6 lg:m-8"
-                            style="
-                          transform:
-                            {mounted ?
-                              `rotate(${(i % 2 === 0 ? 1 : -1) * (Math.floor(i/2) + 1) *
-                                (window.innerWidth < 768 ? 1 : 3)}deg)
-                               translateY(${i % 3 * (window.innerWidth < 768 ? 15 : 30)}px)` :
-                              'translateY(100px) scale(0.8)'};
-                          transition-delay: ${i * 100}ms;
-                          z-index: ${i};
-                        "
-                    >
+                            class="transform transition-all duration-700 ease-in-out m-4 md:m-6 lg:m-8">
                         <Flashcard imgsrc={card.image} answer={card.word} title={card.title}/>
                     </div>
                 {/each}

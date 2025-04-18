@@ -306,35 +306,35 @@
                 </p>
                 <p class="text-lg font-light text-surface w-full">
                     Our films are not just stories; they are windows into the world from a fresh and unique
-                    perspective—<span class="text-brand-orange font-bold italic">The
-                    Children’s Perspective. </span>Each film reflects the hopes, challenges and life-experiences of young
-                    minds, bringing their untold stories to life. Through our films we amplify young voices and connect villages with the world.
-                    #GoPurple
+                    perspective—The Children’s Perspective. Each film reflects the hopes, challenges and
+                    life-experiences of young minds, bringing their untold stories to life. Our films seamlessly blend
+                    storytelling with critical themes. They create a rich educational experience that inspires learning,
+                    fosters empathy and empowers children to envision a better world. #ONEderful #GoPurple
                 </p>
             </div>
 
-<!--            <div class="w-1/2 flex flex-col items-center justify-start">-->
-<!--                <p class="text-lg xl:text-xl text-brand-orange font-bold italic text-left w-full text-nowrap">-->
-<!--                    THREE FOLD LEARNING OUTCOMES-->
-<!--                </p>-->
-<!--                <p class="text-lg font-light text-surface w-full">-->
-<!--                    These films are carefully analyzed and transformed into impactful lesson plans by our team of-->
-<!--                    academic experts as a TLM resource for: <br/> 1. Social Emotional Learning <br/> 2.Film & Media-->
-<!--                    Skills-->
-<!--                    Exploration <br/> 3. Community Service Engagement-->
-<!--                </p>-->
-<!--            </div>-->
+            <!--            <div class="w-1/2 flex flex-col items-center justify-start">-->
+            <!--                <p class="text-lg xl:text-xl text-brand-orange font-bold italic text-left w-full text-nowrap">-->
+            <!--                    THREE FOLD LEARNING OUTCOMES-->
+            <!--                </p>-->
+            <!--                <p class="text-lg font-light text-surface w-full">-->
+            <!--                    These films are carefully analyzed and transformed into impactful lesson plans by our team of-->
+            <!--                    academic experts as a TLM resource for: <br/> 1. Social Emotional Learning <br/> 2.Film & Media-->
+            <!--                    Skills-->
+            <!--                    Exploration <br/> 3. Community Service Engagement-->
+            <!--                </p>-->
+            <!--            </div>-->
 
-<!--            <div class="w-1/2 flex flex-col items-center justify-start">-->
-<!--                <p class="text-lg xl:text-xl text-brand-green font-bold italic text-left w-full text-nowrap">-->
-<!--                    EDUTAINMENT WITH A PURPOSE-->
-<!--                </p>-->
-<!--                <p class="text-lg  font-light text-surface w-full">-->
-<!--                    Paired with activity-based modules, the films seamlessly blend storytelling with critical themes.-->
-<!--                    Together, they create a rich educational experience that inspires learning, fosters empathy, and-->
-<!--                    empowers children to envision a better world.-->
-<!--                </p>-->
-<!--            </div>-->
+            <!--            <div class="w-1/2 flex flex-col items-center justify-start">-->
+            <!--                <p class="text-lg xl:text-xl text-brand-green font-bold italic text-left w-full text-nowrap">-->
+            <!--                    EDUTAINMENT WITH A PURPOSE-->
+            <!--                </p>-->
+            <!--                <p class="text-lg  font-light text-surface w-full">-->
+            <!--                    Paired with activity-based modules, the films seamlessly blend storytelling with critical themes.-->
+            <!--                    Together, they create a rich educational experience that inspires learning, fosters empathy, and-->
+            <!--                    empowers children to envision a better world.-->
+            <!--                </p>-->
+            <!--            </div>-->
         </div>
     </div>
     <div class="min-h-screen h-fit lg:hidden w-full bg-background flex flex-col items-center pt-5 relative">

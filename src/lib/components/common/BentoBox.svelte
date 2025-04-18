@@ -95,23 +95,10 @@
                     col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-3
                     bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
-                <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
-                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
+                <img src="{ADimg}" alt="Background" class="w-full h-full object-fill rounded-2xl"/>
             </div>
-            <div class="relative z-10">
-                <div class="flex flex-col sm:flex-row items-start sm:items-end sm:justify-start gap-2">
-                    <span class="number text-orange-400 text-6xl sm:text-[5vw] lg:text-[3vw] font-stint font-bold"
-                          data-value="25">
-                        25
-                    </span>
-                    <span class="text-brand-orange text-3xl sm:text-[3vw] lg:text-[2.5vw] font-stint font-bold">
-                        Crore School Going Children
-                    </span>
-                </div>
-                <p class="mt-2 text-white text-base sm:text-[1.7vw] lg:text-[1.08vw] xl:text-[1vw] font-karla uppercase font-bold text-nowrap">
-                    <span class="text-brand-orange">Mission</span> Quality educational
-                    content made affordable for Ministry Of Education's PM eVIDYA initiative
-                </p>
+            <div class="relative z-10 flex flex-row-reverse items-center justify-center h-full w-full p-4 gap-4">
+
             </div>
         </div>
 
@@ -236,7 +223,8 @@
                      data-value="65">
                     65
                 </div>
-                <img class="object-cover w-1/2 h-auto absolute top-0 left-0 transform-gpu -translate-x-3" src="{laurels}" alt="leaves">
+                <img class="object-cover w-1/2 h-auto absolute top-0 left-0 transform-gpu -translate-x-3"
+                     src="{laurels}" alt="leaves">
                 <div class="text-surface text-3xl sm:text-[3vw] lg:text-[1.7vw] font-stint font-bold uppercase
                             w-1/2">
                     International Film Festivals
@@ -253,7 +241,7 @@
                 </div>
                 <div class="text-black text-2xl w-1/2 sm:text-[2.3vw] md:text-[1vw] lg:text-[1.1vw]
                             text-center font-karla uppercase font-bold p-1 leading-tight">
-                    conferred award <br/> film pedagogy
+                    conferred award <br/>in film pedagogy
                 </div>
             </div>
 
@@ -263,11 +251,25 @@
                     col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 lg:row-start-10 lg:row-span-4
                     bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
             <div class="absolute inset-0 rounded-2xl overflow-hidden">
-                <img src="{ADimg}" alt="Background" class="w-full h-full object-fill rounded-2xl"/>
+                <img src="{temp4}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>
+                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
             </div>
-            <div class="relative z-10 flex flex-row-reverse items-center justify-center h-full w-full p-4 gap-4">
+            <div class="relative z-10">
+                <div class="flex flex-col sm:flex-row items-start sm:items-end sm:justify-start gap-2">
+                    <span class="number text-orange-400 text-6xl sm:text-[5vw] lg:text-[3vw] font-stint font-bold"
+                          data-value="25">
+                        25
+                    </span>
+                    <span class="text-brand-orange text-3xl sm:text-[3vw] lg:text-[2.5vw] font-stint font-bold">
+                        Crore School Going Children
+                    </span>
+                </div>
+                <p class="mt-2 text-white text-base sm:text-[1.7vw] lg:text-[1.08vw] xl:text-[1vw] font-karla uppercase font-bold text-nowrap">
+                    <span class="text-brand-orange">Mission</span> Quality educational
+                    content made affordable for Ministry Of Education's PM eVIDYA initiative
+                </p>
+            </div>
 
-            </div>
         </div>
 
         <div class="metric-box flex flex-col justify-end items-start

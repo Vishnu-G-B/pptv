@@ -95,20 +95,21 @@
             {#each cardContent as item, i}
                 <div
                         id="card-{i}"
-                        class="card absolute w-[400px] h-[200px] sm:w-[480px] sm:h-[245px]
-                           bg-background border-2 border-surface
-                           p-5 sm:p-8 rounded-2xl
-                           shadow-[0_0_10px_rgba(102,0,102,0.1)]"
-                        style="z-index: {3 - i}; transform: translate(-50%, -50%) rotate({i * 2}deg);"
+                        class="card absolute w-11/12 max-w-[360px] sm:max-w-[420px] lg:max-w-[480px]
+               h-auto min-h-[180px] sm:min-h-[200px] lg:min-h-[220px]
+               bg-background border-2 border-surface
+               p-4 sm:p-6 lg:p-8 rounded-2xl
+               shadow-[0_0_10px_rgba(102,0,102,0.1)]"
+                        style="z-index: {cardContent.length - i}; transform: translate(-50%, -50%) rotate({i * 2}deg);"
                 >
-                    <div class="flex flex-col justify-center items-start text-center w-full h-full">
+                    <div class="flex flex-col justify-center items-start text-left w-full h-full">
                         <h3
                                 use:textAnimation
-                                class="text-lg sm:text-2xl font-bold text-brand-orange mb-1 text-left capitalize"
+                                class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-brand-orange mb-1 capitalize"
                         >
                             {item.title}
                         </h3>
-                        <p class="text-brand-green text-left text-sm sm:text-lg font-bold large-animation-3">
+                        <p class="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-brand-green large-animation-3">
                             {item.text}
                         </p>
                     </div>
