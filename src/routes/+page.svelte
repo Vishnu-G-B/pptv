@@ -6,7 +6,7 @@
     import TextCarousel from '$lib/components/common/textCarousel.svelte';
     import ImgNav from "$lib/components/common/ImgNav.svelte";
     import Watchlist from "$lib/components/common/watchlist.svelte";
-
+    import FlashcardParent from "$lib/components/common/FlashcardParent.svelte";
 </script>
 
 <ImgNav/>
@@ -14,7 +14,8 @@
 <BentoBox/>
 <Watchlist/>
 <div class="h-[400px] bg-background"></div>
-<TextCarousel/>
+<!--<TextCarousel/>-->
+<FlashcardParent/>
 <ArcedCards/>
 <Footer/>
 

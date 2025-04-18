@@ -340,44 +340,7 @@
     });
 </script>
 
-<div class="headingDiv sticky top-1/2 left-1/2 transform-gpu  -translate-y-1/2 text-center
-                h-screen w-full z-[0] flex flex-col justify-center items-center gap-0 capitalize
-                xl:text-8xl 2xl:text-9xl brand-font font-bold text-brand-orange italic">
-    <span class="capitalize">OUR</span>
-    <div class="m-0 p-0 -tracking-[0.13em] h-[130px] w-full flex flex-col justify-center items-center
-                    relative overflow-hidden">
-        <div class="movingHeaderContainer absolute text-brand-green">
-            <span class="movingHeader -mr-4">A</span>
-            <span class="movingHeader">w</span>
-            <span class="movingHeader">w</span>
-            <span class="movingHeader">w</span>
-            <span class="movingHeader">-</span>
-            <span class="movingHeader">f</span>
-            <span class="movingHeader">f</span>
-            <span class="movingHeader">e</span>
-            <span class="movingHeader">r</span>
-            <span class="movingHeader">i</span>
-            <span class="movingHeader">n</span>
-            <span class="movingHeader">g</span>
-            <span class="movingHeader">s</span>
-        </div>
-        <div class="movingHeaderContainer2 absolute text-primary">
-            <span class="movingHeader2 -mr-4">A</span>
-            <span class="movingHeader2">w</span>
-            <span class="movingHeader2">w</span>
-            <span class="movingHeader2">w</span>
-            <span class="movingHeader2">-</span>
-            <span class="movingHeader2">f</span>
-            <span class="movingHeader2">f</span>
-            <span class="movingHeader2">e</span>
-            <span class="movingHeader2">r</span>
-            <span class="movingHeader2">i</span>
-            <span class="movingHeader2">n</span>
-            <span class="movingHeader2">g</span>
-            <span class="movingHeader2">s</span>
-        </div>
-    </div>
-</div>
+
 <!--<div class="words-carousel relative {isNarrow ? 'h-[300vh] lg:-mt-[25vh]' : 'h-[450vh]'} bg-background mt-4 -mb-[18rem]"-->
 <!--     bind:this={container}>-->
 <!--    <div class="words-carousel__bg sticky top-1/2 left-1/2-->
