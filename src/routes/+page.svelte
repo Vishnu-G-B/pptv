@@ -13,7 +13,6 @@
 <Landing/>
 <BentoBox/>
 <Watchlist/>
-<div class="h-[400px] bg-background"></div>
 <!--<TextCarousel/>-->
 <FlashcardParent/>
 <ArcedCards/>

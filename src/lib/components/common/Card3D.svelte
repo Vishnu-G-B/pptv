@@ -13,8 +13,6 @@
             return cardContainerColor >= 1280 ? 'bg-brand-orange' : 'bg-brand-orange mt-[100px]';
         }
     }
-    console.log(cardContainerColor);
-    console.log(cardContainerColorString());
 
     let rotateX = 0;
     let rotateY = 0;

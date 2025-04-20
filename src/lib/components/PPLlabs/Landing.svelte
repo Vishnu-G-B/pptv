@@ -61,39 +61,21 @@
         Your browser does not support the video tag.
     </video>
     <div class="absolute inset-0 bg-gradient-to-r from-[#250025]/90 to-[#250025]/0"></div>
-
-
-    <div
-            class="absolute inset-0 flex items-center justify-start z-10 mb-4"
-    >
-        <div class="p-2 md:p-8 rounded-lg flex flex-col w-[60%]">
-            <h1
-                    class="text-4xl font-bold text-[#ff9900]"
-
-                    style="font-family: Arial">
+    <div class="absolute inset-0 flex items-center justify-start z-10 mb-4">
+        <div class="p-2 md:p-8 rounded-lg flex flex-col w-full sm:w-[60%]">
+            <h1 class="text-lg sm:text-4xl font-bold text-[#ff9900]" style="font-family: Arial">
                 Edutainment With A Purpose
             </h1>
-            <h2 class="text-2xl text-white/90 mb-4"
-            >
+            <h2 class="text-lg sm:text-2xl text-white/90 mb-4" >
                 Watch Impactful Films <span class="text-brand-green font-extrabold">Starting @ONE Rupee </span>
-
             </h2>
-            <div class="text-white/90 text-left text-xl mb-4">
+            <div class="text-white/90 text-left text-lg sm:text-xl mb-4">
                 We are a Conscious OTT Platform committed to produce and promote impactful cinema.
             </div>
-            <div class="text-white/90 text-left text-xl">
+            <div class="text-white/90 text-left text-lg sm:text-xl">
                 Our film and media skills curriculum empower schools, teachers and 6 to 18 year old children to explore
                 the power of digital storytelling to change the world, one film at a time! #GoPurple
             </div>
-<!--            <div class="flex flex-col sm:flex-row gap-2 md:gap-4 mt-4">-->
-            <!--                <button-->
-            <!--                        class="animate-button text-base md:text-2xl text-white px-4 md:px-6 py-2 md:py-3 rounded-xl-->
-            <!--                                font-bold font-sans transition-colors duration-300 backdrop-blur-sm bg-primary-->
-            <!--                                text-center uppercase"-->
-            <!--                        on:click={handleClick}>-->
-            <!--                    Subscribe-->
-            <!--                </button>-->
-            <!--            </div>-->
         </div>
     </div>
 </div>

@@ -240,7 +240,6 @@
 
             for (let i = currentIndexMovieCarousel; i < totalMovieCards; i++) {
                 let translateValues = getTranslatePercentage(document.getElementsByClassName(`movie-card-${i + 1}`));
-                console.log(translateValues.x);
                 movieTimeline.to(`.movie-card-${i + 1}`, {
                     x: `${translateValues.x - 100}%`,
                 }, '<');
@@ -337,8 +336,9 @@
             <!--            </div>-->
         </div>
     </div>
-    <div class="min-h-screen h-fit lg:hidden w-full bg-background flex flex-col items-center pt-5 relative">
-        <div class="h-[300px] w-full flex flex-row items-center justify-center overflow-hidden absolute top-5 z-[2] movie-cards-container">
+    <div class="min-h-screen h-fit lg:hidden w-full bg-background flex flex-col items-center pt-5 relative mb-[150px] ">
+        <div class="h-[300px] w-full flex flex-row items-center justify-center overflow-hidden absolute top-5
+                    movie-cards-container z-[60]">
             {#each {length: totalMovieCards} as _, index}
                 <div class="flex flex-row h-[300px] items-end justify-center absolute">
                     <!--{#if index === currentIndexMovieCarousel}-->
@@ -368,7 +368,7 @@
         <!--                       style="writing-mode: sideways-lr">MOVIE NAME HERE</p>-->
         <!--                    <div class="h-[300px] w-[200px] bg-primary rounded-xl z-[2]"></div>-->
         <!--                </div>-->
-        <div class="bg-surface h-fit w-full mt-[150px] relative z-50">
+        <div class="bg-surface h-fit w-full mt-[150px] relative ">
             <div class="relative h-[150px]">
                 <svg class="absolute -top-[90%] left-0 w-full h-[150px]" preserveAspectRatio="none"
                      viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
@@ -383,7 +383,7 @@
                           fill-opacity="1"></path>
                 </svg>
             </div>
-            <div class="h-fit bg-surface pb-7 w-full px-5 md:px-28 flex flex-col gap-5 items-center z-50">
+            <div class="h-fit bg-surface pb-7 w-full px-5 md:px-28 flex flex-col gap-5 items-center ">
                 <div class="flex flex-col h-fit w-fit items-center justify-center gap-2">
                     <div class="flex flex-row gap-5 z-[2] mt-5">
                         <button class="h-8 w-8 rounded-full bg-on-surface/50 backdrop-blur-xl wow-controller-left flex items-center justify-center"
@@ -428,14 +428,14 @@
                     </button>
                 </div>
             </div>
-            <div class="relative h-[50px] z-50">
-                <svg class="absolute -bottom-[280%] -rotate-180 left-0 w-full h-[150px] z-50" preserveAspectRatio="none"
+            <div class="relative h-[50px] ">
+                <svg class="absolute -bottom-[280%] -rotate-180 left-0 w-full h-[150px] " preserveAspectRatio="none"
                      viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0,0L34.3,32C68.6,64,137,128,206,154.7C274.3,181,343,171,411,176C480,181,549,203,617,186.7C685.7,171,754,117,823,112C891.4,107,960,149,1029,186.7C1097.1,224,1166,256,1234,256C1302.9,256,1371,224,1406,208L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                           fill="#FF9900FF"
                           fill-opacity="1"></path>
                 </svg>
-                <svg class="absolute -bottom-[250%] -rotate-180 left-0 w-full h-[150px] z-50" preserveAspectRatio="none"
+                <svg class="absolute -bottom-[250%] -rotate-180 left-0 w-full h-[150px] " preserveAspectRatio="none"
                      viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0,0L34.3,32C68.6,64,137,128,206,154.7C274.3,181,343,171,411,176C480,181,549,203,617,186.7C685.7,171,754,117,823,112C891.4,107,960,149,1029,186.7C1097.1,224,1166,256,1234,256C1302.9,256,1371,224,1406,208L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                           fill="#250025"
@@ -445,7 +445,7 @@
         </div>
     </div>
     <!--    GRID SOLUTION-->
-    <div class="h-fit w-full flex-col items-center justify-center mt-24 hidden lg:flex" id="wonderfull-poster-div">
+    <div class="h-fit w-full flex-col items-center justify-center mt-24 hidden lg:flex mb-[250px]" id="wonderfull-poster-div">
         <div class="grid-cols-[repeat(3,minmax(0,1fr))] hidden lg:grid lg:gap-[40px] xl:grid-cols-[repeat(4,minmax(0,1fr))] xl:gap-[30px] px-10">
             {#each {length: totalMovieCards} as _, index}
                 <!--Translate y value is half of the height of the card div-->

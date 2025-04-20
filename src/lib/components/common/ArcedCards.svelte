@@ -77,9 +77,9 @@
         <img src="{bgImg}" alt="filling background" class="object-contain sm:object-cover w-full h-full">
     </div>
 
-    <div class="cardContainer bg-[#f6f5ec] h-[400vh] w-full relative -mt-[90vh]">
+    <div class="cardContainer bg-[#f6f5ec] h-[400vh] w-full relative md:-mt-[90vh]">
         <div class="w-full text-center flex justify-center items-center md:justify-end md:items-start
-                    sticky top-0 md:top-20 z-20 md:pr-8 md:pt-4">
+                    sticky top-20 md:top-20 z-20 md:pr-8 md:pt-4">
             <div
                     use:textAnimation
                     class="text-center text-5xl capitalize font-bold z-20 leading-tight"
@@ -90,32 +90,24 @@
             </div>
         </div>
 
-        <div class="interCard w-[90%] max-w-[500px] sticky top-[20%] md:top-[20%]
+        <div class="interCard w-[90%] max-w-[500px] sticky top-[40%] md:top-[20%]
             mx-auto md:ml-auto md:mr-0 z-20 md:pr-8">
             {#each cardContent as item, i}
-                <div
-                        id="card-{i}"
-                        class="card absolute w-11/12 max-w-[360px] sm:max-w-[420px] lg:max-w-[480px]
-               h-auto min-h-[180px] sm:min-h-[200px] lg:min-h-[220px]
-               bg-background border-2 border-surface
-               p-4 sm:p-6 lg:p-8 rounded-2xl
-               shadow-[0_0_10px_rgba(102,0,102,0.1)]"
-                        style="z-index: {cardContent.length - i}; transform: translate(-50%, -50%) rotate({i * 2}deg);"
-                >
-                    <div class="flex flex-col justify-center items-start text-left w-full h-full">
-                        <h3
-                                use:textAnimation
-                                class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-brand-orange mb-1 capitalize"
-                        >
+                <div id="card-{i}" class="card absolute w-[350px] h-[180px] sm:w-[480px] sm:h-[245px]
+                        bg-background border-2 border-surface p-5 sm:p-8 rounded-2xl shadow-[0_0_10px_rgba(102,0,102,0.1)]"
+                     style="z-index: {3 - i}; transform: translate(-50%, -50%) rotate({i * 2}deg);">
+                    <div class="flex flex-col justify-center items-start text-center w-full h-full">
+                        <h3 use:textAnimation
+                            class="text-base sm:text-xl font-bold text-brand-orange mb-1 text-left capitalize">
                             {item.title}
                         </h3>
-                        <p class="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-brand-green large-animation-3">
+                        <p class="text-brand-green text-left text-xs sm:text-base font-bold large-animation-3">
                             {item.text}
                         </p>
                     </div>
                 </div>
             {/each}
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 md:-translate-x-0 -translate-y-1/2
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-[48%] md:-translate-x-0 -translate-y-1/2
                         md:left-auto md:right-8 md:top-0
                         z-50 opacity-0 w-full max-w-[500px] h-[450px]">
                 <svg

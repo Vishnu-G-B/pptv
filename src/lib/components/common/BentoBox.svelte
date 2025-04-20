@@ -8,11 +8,8 @@
     import year75logo from "$lib/assets/images/Azadi-Ka-Amrit-Mahotsav-Logo.png";
     import projectGulak from "$lib/assets/images/gullakv2.jpg";
     import lahdcvid from "$lib/assets/Videos/Ladakh PM evidya_Website_Final.mp4";
-    import yifVideoFinal from "$lib/assets/Videos/YIF_Website_Final 02.mp4";
     import ADimg from "$lib/assets/images/placeimg.webp";
     import placeVid from "$lib/assets/Videos/placeholderVid.mp4";
-    import InternationalFilmBG from "$lib/assets/images/3B_ECA TV.png";
-    import FilmbyNforBG from "$lib/assets/images/2B_KAB.png";
     import ecaaperlogo from "$lib/assets/images/eca-aper-logo-2024.png"
     import laurels from "$lib/assets/images/filmfestivalsleaves.png"
 
@@ -66,7 +63,6 @@
             }
         });
 
-        // Animate boxes appearing
         gsap.fromTo(boxes, {
             opacity: 0,
             y: 50
@@ -138,7 +134,7 @@
                     <img src={mygovlogo} alt="Government of India Logo" class="h-full w-auto rounded-tr-2xl"/>
                 </div>
             </div>
-            <p class="text-black text-2xl sm:text-[2.3vw] md:text-[1vw] lg:text-[1vw] text-center font-karla uppercase font-bold text-nowrap">
+            <p class="w-full text-black text-base sm:text-[2.3vw] lg:text-[1.2vw] text-center font-karla uppercase font-bold">
                 Recognized By the Government Of India @75 Ideas
             </p>
         </div>
@@ -200,10 +196,10 @@
                 <!--                <div class="h-24 sm:h-32 lg:h-40 w-fit bg-transparent rounded-lg mb-4">-->
                 <!--                    <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto"/>-->
                 <!--                </div>-->
-                <p class="text-brand-orange text-4xl sm:text-[5vw] lg:text-[2.2vw] text-center font-karla font-bold">
+                <p class="text-brand-orange text-3xl sm:text-[3vw] lg:text-[2.5vw] text-center font-karla font-bold">
                     PM eVIDYA School Studio
                 </p>
-                <p class="text-white mt-2 text-lg sm:text-[3vw] lg:text-[1.5vw] text-center font-karla uppercase font-bold">
+                <p class="text-white -mt-1 lg:mt-2 text-lg sm:text-[3vw] lg:text-[1.5vw] text-center font-karla uppercase font-bold">
                     LAHDC, Leh Collaboration
                 </p>
             </div>
@@ -216,17 +212,17 @@
             <!--                <img src="{InternationalFilmBG}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>-->
             <!--                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>-->
             <!--            </div>-->
-            <div class="flex items-center justify-center w-full h-full z-10 relative">
+            <div class="flex flex-col gap-10 sm:gap-0 sm:flex-row items-center justify-center w-full h-full z-10 relative">
                 <!--                Laurel wreath around 65+ remaing text on the right.-->
                 <div class="number text-orange-400 text-6xl sm:text-[5vw] lg:text-[4vw] font-stint font-bold sm:-ml-1
-                           w-1/2 flex justify-center items-center text-center"
+                            w-full sm:w-1/2 flex justify-center items-center text-center"
                      data-value="65">
                     65
                 </div>
-                <img class="object-cover w-1/2 h-auto absolute top-0 left-0 transform-gpu -translate-x-3"
+                <img class="object-cover w-3/4 sm:w-1/2 h-auto absolute top-0 left-1/2 sm:left-0 transform-gpu -translate-x-[54%] sm:-translate-x-3"
                      src="{laurels}" alt="leaves">
                 <div class="text-surface text-3xl sm:text-[3vw] lg:text-[1.7vw] font-stint font-bold uppercase
-                            w-1/2">
+                            w-full text-center sm:text-left sm:w-1/2">
                     International Film Festivals
                 </div>
             </div>
@@ -235,11 +231,12 @@
         <div class="metric-box flex flex-col justify-end items-start
                    col-span-1 sm:col-span-1 lg:col-start-4 lg:col-span-3 lg:row-start-8 lg:row-span-2
                    bg-gray-50 border-2 border-black rounded-2xl relative p-2">
-            <div class="flex flex-row justify-center items-center w-full p-2 gap-2">
-                <div class="h-20 sm:h-28 w-1/2 bg-gray-50 rounded-lg ml-4">
-                    <img src={ecaaperlogo} alt="Government of India Logo" class="object-contain h-full w-auto"/>
+            <div class="flex flex-col sm:flex-row justify-center items-center h-full w-full gap-2">
+                <div class="h-full sm:h-28 w-full sm:w-1/2 bg-gray-50 rounded-lg ml-4">
+                    <img src={ecaaperlogo} alt="Government of India Logo"
+                         class="object-contain h-full w-auto"/>
                 </div>
-                <div class="text-black text-2xl w-1/2 sm:text-[2.3vw] md:text-[1vw] lg:text-[1.1vw]
+                <div class="text-black text-2xl w-full sm:w-1/2 sm:text-[2.3vw] md:text-[1vw] lg:text-[1.1vw]
                             text-center font-karla uppercase font-bold p-1 leading-tight">
                     conferred award <br/>in film pedagogy
                 </div>
@@ -264,7 +261,7 @@
                         Crore School Going Children
                     </span>
                 </div>
-                <p class="mt-2 text-white text-base sm:text-[1.7vw] lg:text-[1.08vw] xl:text-[1vw] font-karla uppercase font-bold text-nowrap">
+                <p class="mt-2 text-white text-base sm:text-[1.7vw] lg:text-[1.08vw] xl:text-[1vw] font-karla uppercase font-bold">
                     <span class="text-brand-orange">Mission</span> Quality educational
                     content made affordable for Ministry Of Education's PM eVIDYA initiative
                 </p>

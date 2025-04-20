@@ -3,6 +3,10 @@ export default {
     mode: "jit",
     theme: {
         extend: {
+            screens: {
+                '2xs': '321px',
+                'xs': '376px',
+            },
             transitionProperty: {
                 'width': 'width',
             },
