@@ -4,12 +4,9 @@
     import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
     import mygovlogo from '$lib/assets/images/mygovlogo.png';
     import temp4 from '$lib/assets/images/Pragya Bodhini.webp';
-    import teacherTraining from '$lib/assets/Videos/Teacher Traning_Website Final.mp4';
     import year75logo from "$lib/assets/images/Azadi-Ka-Amrit-Mahotsav-Logo.png";
     import projectGulak from "$lib/assets/images/gullakv2.jpg";
-    import lahdcvid from "$lib/assets/Videos/Ladakh PM evidya_Website_Final.mp4";
     import ADimg from "$lib/assets/images/placeimg.webp";
-    import placeVid from "$lib/assets/Videos/placeholderVid.mp4";
     import ecaaperlogo from "$lib/assets/images/eca-aper-logo-2024.png"
     import laurels from "$lib/assets/images/filmfestivalsleaves.png"
 
@@ -25,21 +22,29 @@
         return formattedOther + ',' + lastThree;
     }
 
-    let container;
-    let scaleValue = 1;
+    // Collection of containers for video scaling
+    let videoContainers = [];
     const videoRatio = 16 / 9;
+    let scaleValues = {};
 
     onMount(() => {
         const boxes = sectionRef.querySelectorAll('.metric-box');
 
+        // Set up the resize observer for all video containers
         const observer = new ResizeObserver(entries => {
             for (const entry of entries) {
+                const container = entry.target;
+                const containerId = container.dataset.containerId;
                 const cw = entry.contentRect.width;
                 const ch = entry.contentRect.height;
-                scaleValue = Math.max(ch * videoRatio / cw, cw / (ch * videoRatio));
+                scaleValues[containerId] = Math.max(ch * videoRatio / cw, cw / (ch * videoRatio));
             }
         });
-        if (container) observer.observe(container);
+
+        // Observe all video containers
+        videoContainers.forEach(container => {
+            if (container) observer.observe(container);
+        });
 
         boxes.forEach((box) => {
             const numberElement = box.querySelector('.number');
@@ -99,13 +104,14 @@
         </div>
 
         <div
-                bind:this={container}
+                bind:this={videoContainers[0]}
+                data-container-id="video1"
                 class="metric-box flex flex-col justify-end items-start
                     col-span-1 sm:col-span-1 lg:col-start-7 lg:col-span-3 lg:row-start-1 lg:row-span-4
                     bg-gray-50 rounded-2xl p-4 relative overflow-hidden">
             <iframe
                     class="absolute top-1/2 left-1/2 w-full h-full object-cover z-0 rounded-2xl pointer-events-none p-0 m-0"
-                    style="transform: translate(-50%, -50%) scale({scaleValue});"
+                    style="transform: translate(-50%, -50%) scale({scaleValues['video1'] || 1});"
                     src="https://player.vimeo.com/video/1072992217?h=263d515145&amp;background=1&amp;loop=1&amp;transparent=0&amp;byline=0&amp;title=0&amp;portrait=0"
                     title="YIF Video"
                     frameborder="0"
@@ -161,13 +167,22 @@
             </div>
         </div>
 
-        <div class="metric-box flex flex-col justify-end items-start
+        <div
+                bind:this={videoContainers[1]}
+                data-container-id="video2"
+                class="metric-box flex flex-col justify-end items-start
                     col-span-1 sm:col-span-1 lg:col-start-7 lg:col-span-3 lg:row-start-5 lg:row-span-4
                     bg-gray-50 border-2 border-surface rounded-2xl p-2 relative overflow-hidden">
-            <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
-                <source src="{teacherTraining}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe
+                    class="absolute top-1/2 left-1/2 w-full h-full object-cover z-0 rounded-2xl pointer-events-none p-0 m-0"
+                    style="transform: translate(-50%, -50%) scale({scaleValues['video2'] || 1});"
+                    src="https://player.vimeo.com/video/1072992165?h=aafe6442f4&amp;background=1&amp;loop=1&amp;transparent=0&amp;byline=0&amp;title=0&amp;portrait=0"
+                    title="Teacher Training Video"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+            >
+            </iframe>
             <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>
             <div class="relative z-10 text-brand-orange w-full">
                 <div class="h-fit flex flex-col sm:flex-row items-start sm:items-end gap-2">
@@ -184,19 +199,25 @@
             </div>
         </div>
 
-        <div class="metric-box flex flex-col justify-center items-center
+        <div
+                bind:this={videoContainers[2]}
+                data-container-id="video3"
+                class="metric-box flex flex-col justify-center items-center
                     col-span-1 sm:col-span-1 lg:col-start-1 lg:col-span-3 lg:row-start-4 lg:row-span-4
                     bg-gray-50 rounded-2xl relative overflow-hidden">
-            <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
-                <source src="{lahdcvid}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe
+                    class="absolute top-1/2 left-1/2 w-full h-full object-cover z-0 rounded-2xl pointer-events-none p-0 m-0"
+                    style="transform: translate(-50%, -50%) scale({scaleValues['video3'] || 1});"
+                    src="https://player.vimeo.com/video/1072991962?h=1f85de6838&amp;background=1&amp;loop=1&amp;transparent=0&amp;byline=0&amp;title=0&amp;portrait=0"
+                    title="LAHDC Video"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+            >
+            </iframe>
             <div class="absolute inset-0 bg-surface/30 z-[1] rounded-2xl"></div>
             <div class="relative z-10 flex flex-col items-start justify-end h-full w-full p-4">
-                <!--                <div class="h-24 sm:h-32 lg:h-40 w-fit bg-transparent rounded-lg mb-4">-->
-                <!--                    <img src={EmblemLight} alt="Government of India Logo" class="h-full w-auto"/>-->
-                <!--                </div>-->
-                <p class="text-brand-orange text-3xl sm:text-[3vw] lg:text-[2.5vw] text-center font-karla font-bold">
+                <p class="text-brand-orange text-3xl sm:text-[3vw] lg:text-[2.5vw] text-center sm:text-left font-karla font-bold">
                     PM eVIDYA School Studio
                 </p>
                 <p class="text-white -mt-1 lg:mt-2 text-lg sm:text-[3vw] lg:text-[1.5vw] text-center font-karla uppercase font-bold">
@@ -208,12 +229,7 @@
         <div class="metric-box flex flex-col justify-end items-start
                     col-span-1 sm:col-span-1 lg:col-start-1 lg:col-span-3 lg:row-start-8 lg:row-span-2
                     bg-gray-50 border-2 border-black rounded-2xl px-4 py-3 relative">
-            <!--            <div class="absolute inset-0 rounded-2xl overflow-hidden">-->
-            <!--                <img src="{InternationalFilmBG}" alt="Background" class="w-full h-full object-cover rounded-2xl"/>-->
-            <!--                <div class="absolute inset-0 bg-primary/60 rounded-2xl"></div>-->
-            <!--            </div>-->
             <div class="flex flex-col gap-10 sm:gap-0 sm:flex-row items-center justify-center w-full h-full z-10 relative">
-                <!--                Laurel wreath around 65+ remaing text on the right.-->
                 <div class="number text-orange-400 text-6xl sm:text-[5vw] lg:text-[4vw] font-stint font-bold sm:-ml-1
                             w-full sm:w-1/2 flex justify-center items-center text-center"
                      data-value="65">
@@ -269,13 +285,22 @@
 
         </div>
 
-        <div class="metric-box flex flex-col justify-end items-start
+        <div
+                bind:this={videoContainers[3]}
+                data-container-id="video4"
+                class="metric-box flex flex-col justify-end items-start
                     col-span-1 sm:col-span-1 sm:col-start-2 sm:row-start-4 lg:col-start-7 lg:col-span-3 lg:row-start-9 lg:row-span-5
                     bg-gray-50 border-2 border-surface rounded-2xl p-4 relative overflow-hidden">
-            <video class="absolute inset-0 w-full h-full object-cover z-0 rounded-2xl" autoplay loop muted playsinline>
-                <source src="{placeVid}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe
+                    class="absolute top-1/2 left-1/2 w-full h-full object-cover z-0 rounded-2xl pointer-events-none p-0 m-0"
+                    style="transform: translate(-50%, -50%) scale({scaleValues['video4'] || 1});"
+                    src="https://player.vimeo.com/video/1072992017?h=ec1524e950&amp;background=1&amp;loop=1&amp;transparent=0&amp;byline=0&amp;title=0&amp;portrait=0"
+                    title="Placeholder Video"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+            >
+            </iframe>
             <div class="absolute inset-0 bg-surface/30 z-5 rounded-2xl"></div>
             <div class="relative z-10 text-brand-orange">
                 <div class="flex flex-col sm:flex-row items-start sm:items-end gap-2">
@@ -301,5 +326,3 @@
         }
     }
 </style>
-
-<!--src="https://player.vimeo.com/video/1072992217?h=263d515145&amp;background=1&amp;loop=1&amp;transparent=0&amp;byline=0&amp;title=0&amp;portrait=0"-->
