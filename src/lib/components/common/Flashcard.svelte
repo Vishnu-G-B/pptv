@@ -1,8 +1,10 @@
 <!-- Flashcard.svelte -->
 <script>
+    import PPLlogo from "$lib/assets/images/PPLlogo.png";
+
     export let imgsrc;
     export let answer;
-    export let title; // Add title prop
+    export let logosrc; // Add title prop
 
     let showCardBack = false;
     const toggleFlip = () => showCardBack = !showCardBack;
@@ -16,24 +18,28 @@
     >
         <div class="absolute inset-0 rounded-2xl overflow-hidden backface-hidden">
             <img src={imgsrc} alt="Background" class="w-full h-full object-cover rounded-2xl"/>
-            <div class="absolute inset-0 bg-[#660066]/60 rounded-2xl"></div>
+            <div class="absolute inset-0 bg-alternate-primary/60 rounded-2xl"></div>
 
             <div class="absolute inset-0 flex items-center justify-center">
-                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-white px-4 py-2 text-center">
-                    {title}
-                </h1>
+                <!--                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-white px-4 py-2 text-center">-->
+                <!--                    {title}-->
+                <!--                </h1>-->
+                <div class="navAnim firstImg flex-shrink-0 min-w-0 h-[7vh] min-[426px]:h-[27vh] w-auto
+                    bg-transparent rounded-full overflow-hidden z-[1]">
+                    <img src="{logosrc}" alt="PPL labs Logo" class="object-contain h-full w-full"/>
+                </div>
             </div>
         </div>
 
         <div class="absolute w-full h-full backface-hidden bg-[#250025] flex justify-center items-center rotate-y-180
                 rounded-xl shadow-md p-4 border-4 border-[#250025]">
-            <h3 class="text-center text-base sm:text-2xl font-bold text-[#dee3e9]">{answer}</h3>
+            <div class="text-center text-base sm:text-lg primary-font text-[#dee3e9]">{answer}</div>
         </div>
 
         <button
                 on:click={toggleFlip}
-                class="absolute bottom-2 sm:bottom-3 md:bottom-4 right-2 sm:right-3 md:right-4
-                  bg-[#ff9900] hover:bg-[#ff9900]/80 text-[#250025] rounded-full
+                class="absolute bottom-1 right-1
+                  text-brand-orange rounded-full
                   w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14
                   flex items-center justify-center shadow-lg z-20
                   transform transition-transform duration-300 hover:scale-110"

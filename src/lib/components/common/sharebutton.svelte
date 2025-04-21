@@ -1,7 +1,6 @@
 <!-- From Uiverse.io by Mohammad-Rahme-576 -->
 <div class="tooltip-container">
     <div class="button-content">
-        <span class="text">Share</span>
         <svg
                 class="share-icon"
                 xmlns="http://www.w3.org/2000/svg"

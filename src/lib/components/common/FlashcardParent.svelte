@@ -3,12 +3,19 @@
     import Flashcard from './Flashcard.svelte';
     import {onMount} from 'svelte';
     import img1 from "$lib/assets/images/1_PPL OTT.jpg";
-    import img2 from "$lib/assets/images/2B_KAB.png";
-    import img3 from "$lib/assets/images/3_ECA TV.png";
-    import img4 from "$lib/assets/images/5_School Studio.png";
-    import img5 from "$lib/assets/images/6_Gullak.png";
+    import img2 from "$lib/assets/images/4_YIF.webp";
+    import img3 from "$lib/assets/images/6_Gullak.png";
+    import img4 from "$lib/assets/images/2_KAB.png";
+    import img5 from "$lib/assets/images/3_ECA TV.png";
     import img6 from "$lib/assets/images/2_KAB.png";
     import gsap from "gsap/dist/gsap";
+
+    import PPLlogo from "$lib/assets/images/PPLlogo.png";
+    import kiddinglogo from "$lib/assets/images/Kidding Around Bharat.png";
+    import ecatvlogo2 from "$lib/assets/images/ecatv.png";
+    import projectGulak from "$lib/assets/images/Project_Gullak_Logo_Final.png";
+    import swadeshplex from "$lib/assets/images/SWADESHPLEX_LOGO.png";
+    import yif_logo from "$lib/assets/images/YIF_logo_final.png";
 
     let mounted = false;
     let headerTimeline;
@@ -17,32 +24,32 @@
     let componentData = [
         {
             word: "A Conscious OTT platform streaming impactful and educational content Starting @ Just ONE Rupee.",
-            title: "PURPLE PEOPLE LABS",
+            logosrc: PPLlogo,
             image: img1,
         },
         {
-            word: "Filmmaking Grant for children supported by industry mentors to amplify young voices from urban and rural india celebrating ideas.",
-            title: "YOUNG INDIA FILMMAKERS",
+            word: "YIF is a Mentor-Driven Grant, empowering the next-generation of filmmakers guided by the finest artists in the Indian film industry.",
+            logosrc: yif_logo,
             image: img2,
         },
         {
             word: "Community Filmmaking Tours to villages, artisans, start-ups  & changemakers across India capturing real stories on reel.",
-            title: "KIDDING AROUND BHARAT",
+            logosrc: swadeshplex,
             image: img3
         },
         {
             word: "A CSR filmmaking workshop for children supporting real stories from rural India.",
-            title: "THE PROJECT GULLAK",
+            logosrc: kiddinglogo,
             image: img4
         },
         {
             word: "offering 5",
-            title: "ECA - APER TV",
+            logosrc: ecatvlogo2,
             image: img5
         },
         {
             word: "A capacity building program for the Ministry Of Education’s PM eVIDYA initiative including studio design, teacher training and co-production of curriculum based content in regional languages.",
-            title: "PM eVIDYA SCHOOL STUDIO", // Added title
+            logosrc: projectGulak,
             image: img6
         }
     ];
@@ -137,18 +144,8 @@
             <div
                     class="h-full w-full sm:w-fit transform transition-all duration-700 ease-in-out m-4 md:m-6 lg:m-8
                                    flex justify-center items-center"
-                    style="
-                          transform:
-                            {mounted ?
-                              `rotate(${(i % 2 === 0 ? 1 : -1) * (Math.floor(i/2) + 1) *
-                                (window.innerWidth < 768 ? 0.6 : 2)}deg)
-                               translateY(${i % 3 * (window.innerWidth < 768 ? 5 : 15)}px)` :
-                              'translateY(100px) scale(0.8)'};
-                          transition-delay: ${i * 100}ms;
-                          z-index: ${i};
-                        "
             >
-                <Flashcard imgsrc={card.image} answer={card.word} title={card.title}/>
+                <Flashcard imgsrc={card.image} answer={card.word} logosrc={card.logosrc}/>
             </div>
         {/each}
     </div>

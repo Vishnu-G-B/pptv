@@ -118,16 +118,16 @@
                 <div class="h-fit w-fit">
                     <Sharebutton/>
                 </div>
-                {#each sections as section}
-                    <button
-                            class="px-4 py-2 bg-primary text-white text-xl uppercase font-bold
-                             rounded-lg transition-all duration-300 hover:bg-primary-dark"
-                            class:active={activeSection === section}
-                            on:click={() => showSection(section)}
-                    >
-                        {section}
-                    </button>
-                {/each}
+                <!--{#each sections as section}-->
+                <!--    <button-->
+                <!--            class="px-4 py-2 bg-primary text-white text-xl uppercase font-bold-->
+                <!--             rounded-lg transition-all duration-300 hover:bg-primary-dark"-->
+                <!--            class:active={activeSection === section}-->
+                <!--            on:click={() => showSection(section)}-->
+                <!--    >-->
+                <!--        {section}-->
+                <!--    </button>-->
+                <!--{/each}-->
 
             </div>
 
@@ -135,19 +135,19 @@
         </div>
     </div>
 
-    <div class="w-full px-24 flex flex-col justify-center py-5">
-        <div class="learn-content section-content" class:hidden={activeSection !=='Learn'}>
-            <Learn/>
-        </div>
+<!--    <div class="w-full px-24 flex flex-col justify-center py-5">-->
+<!--        <div class="learn-content section-content" class:hidden={activeSection !=='Learn'}>-->
+<!--            <Learn/>-->
+<!--        </div>-->
 
-        <div class="engage-content section-content" class:hidden={activeSection !=='Engage'}>
-            <Engage/>
-        </div>
+<!--        <div class="engage-content section-content" class:hidden={activeSection !=='Engage'}>-->
+<!--            <Engage/>-->
+<!--        </div>-->
 
-        <div class="act-content section-content" class:hidden={activeSection !== 'Act'}>
-            <Act/>
-        </div>
-    </div>
+<!--        <div class="act-content section-content" class:hidden={activeSection !== 'Act'}>-->
+<!--            <Act/>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
 
 <style>

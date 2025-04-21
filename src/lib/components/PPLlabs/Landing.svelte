@@ -97,6 +97,15 @@
                 Our film and media skills curriculum empower schools, teachers and 6 to 18 year old children to explore
                 the power of digital storytelling to change the world, one film at a time! #GoPurple
             </p>
+            <div class="flex flex-col sm:flex-row gap-2 md:gap-4 mt-5">
+                <button
+                        class="animate-button text-base md:text-2xl text-white px-4 md:px-4 py-2 md:py-3 rounded-xl
+                                font-bold font-sans transition-colors duration-300 backdrop-blur-sm bg-primary
+                                text-center uppercase"
+                        on:click={handleClick}>
+                    Subscribe
+                </button>
+            </div>
         </div>
     </div>
 </div>
