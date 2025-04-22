@@ -24,7 +24,7 @@
                 <!--                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-white px-4 py-2 text-center">-->
                 <!--                    {title}-->
                 <!--                </h1>-->
-                <div class="navAnim firstImg flex-shrink-0 min-w-0 h-[7vh] min-[426px]:h-[27vh] w-auto
+                <div class="navAnim firstImg flex-shrink-0 min-w-0 h-[22vh] min-[426px]:h-[27vh] w-auto
                     bg-transparent rounded-full overflow-hidden z-[1]">
                     <img src="{logosrc}" alt="PPL labs Logo" class="object-contain h-full w-full"/>
                 </div>
