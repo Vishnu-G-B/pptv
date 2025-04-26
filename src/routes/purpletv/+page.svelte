@@ -31,7 +31,7 @@
 
 </script>
 
-<div class="h-screen w-full bg-surface grid-lines home-video-container-trigger">
+<div class="h-screen w-full bg-surface grid-lines home-video-container-trigger relative">
     <!--    <div class="w-full pb-[56.25%] sticky top-0 h-0 z-[3] home-video-container">-->
     <!--        <iframe class="absolute top-0 left-0 w-full h-full"-->
     <!--                width="512"-->
@@ -40,11 +40,18 @@
     <!--                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"-->
     <!--                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
     <!--    </div>-->
-    <div class="w-full h-full sticky top-0 z-[3] home-video-container">
+    <div class="absolute inset-0 bg-gradient-to-r from-alternate-primary to-transparent to-[35%] z-5 "></div>
+    <div class="w-full h-full z-[3] home-video-container">
         <video autoplay muted loop playsinline id="myVideo" class="object-cover w-full h-full">
             <source src="{sampleVid}" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
+    </div>
+    <div class="absolute left-24 bottom-32 w-1/3 h-fit p-10 text-on-surface text-lg">
+        <span class="text-5xl font-bold text-nowrap ">Purple People Labs</span>
+        Watch films made by children, teachers & schools for a happier world on stories that matter.<br/><br/>
+        Education - Entertainment - Social
+        Impact. #GoPurple
     </div>
 </div>
 <div class="h-screen bg-surface grid-lines pt-10 w-full flex flex-col gap-0">

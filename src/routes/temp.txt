@@ -1,0 +1,3 @@
+footer:
+move the circle logo to the left under the text,
+button goes to the right, and the social media icons go under the button on the right.

@@ -57,8 +57,6 @@
 
 
 <style>
-    /* From Uiverse.io by Mohammad-Rahme-576 */
-    /* Container Styles */
     .tooltip-container {
         position: relative;
         display: inline-block;
@@ -165,9 +163,10 @@
     /* Tooltip Styles */
     .tooltip-content {
         position: absolute;
-        top: 102%;
+        /* MODIFIED: Position the bottom edge relative to the container's top */
+        bottom: calc(100% + 10px); /* Add 10px gap above the button */
         left: 50%;
-        transform: translateX(-50%) scale(0.8);
+        transform: translateX(-50%) scale(0.8); /* Keep horizontal centering */
         background: white;
         border-radius: 15px;
         padding: 22px;
@@ -186,8 +185,24 @@
     .tooltip-container:hover .tooltip-content {
         opacity: 1;
         visibility: visible;
-        transform: translateX(-50%) scale(1);
+        transform: translateX(-50%) scale(1); /* Animate to full scale */
         pointer-events: auto;
+    }
+
+    /* Tooltip Arrow */
+    .tooltip-content::before {
+        content: "";
+        position: absolute;
+        /* MODIFIED: Position the arrow at the bottom of the tooltip */
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* MODIFIED: Make the triangle point downwards */
+        border-width: 10px 10px 0 10px;
+        border-style: solid;
+        /* MODIFIED: Set the top border color to create the arrow */
+        border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
+        filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.1)); /* Adjust shadow direction */
     }
 
     /* Social Icons Styles */
@@ -309,19 +324,6 @@
         animation: ripple 0.6s linear;
     }
 
-    /* Tooltip Arrow */
-    .tooltip-content::before {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-width: 0 10px 10px 10px;
-        border-style: solid;
-        border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
-        filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.1));
-    }
-
     /* Accessibility */
     .button-content:focus {
         outline: none;
@@ -393,7 +395,8 @@
         }
 
         .tooltip-content::before {
-            border-color: transparent transparent rgba(30, 30, 30, 0.9) transparent;
+            /* MODIFIED: Set top border color for dark mode arrow */
+            border-color: rgba(30, 30, 30, 0.9) transparent transparent transparent;
         }
 
         .social-icon {

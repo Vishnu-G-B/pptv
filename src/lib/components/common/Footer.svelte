@@ -1,5 +1,6 @@
 <script>
     import AutoText from "./AutoText.svelte";
+    import footertemp from "$lib/assets/images/footer_temp.jpg"
 </script>
 
 <!--    <div class="w-full h-fit">-->
@@ -28,21 +29,25 @@
             <button class="w-fit px-5 h-fit text-sm py-1 mt-5 active:bg-brand-orange hover:bg-brand-orange transition-colors duration-300 brand-font text-alternate-primary bg-brand-green rounded-xl">
                 Contact Us
             </button>
+            <div>
+
+            </div>
         </div>
         <div class="flex flex-col">
             <div class="w-full h-fit flex flex-col items-end justify-start text-sm md:text-lg tracking-tight font-thin brand-font text-background mt-14 md:mt-0 gap-3">
-                <p>PM eVIDYA School Studio</p>
-                <p>Young India Filmmakers</p>
-                <p>Kidding Around Bharat</p>
-                <p>ECA TV</p>
-                <p>Impact Projects</p>
-                <p>The Crew Story</p>
+                <!--                <p>Facebook</p>-->
+                <!--                <p>Instagram</p>-->
+                <!--                <p>YouTube</p>-->
+                <!--                <p>ECA TV</p>-->
+                <!--                <p>Impact Projects</p>-->
+                <!--                <p>Partners</p>-->
+                <img src="{footertemp}" alt="" class="h-[150px] w-auto rounded-full">
             </div>
-            <div class="w-full h-fit flex flex-col items-end justify-start text-sm md:text-lg tracking-tight font-thin brand-font text-background mt-14 gap-3">
-                <p>Press & Partners</p>
-                <p>FAQs</p>
-            </div>
-            <div class="w-full h-fit flex flex-row items-start justify-end mt-14 gap-3">
+            <!--            <div class="w-full h-fit flex flex-col items-end justify-start text-sm md:text-lg tracking-tight font-thin brand-font text-background mt-14 gap-3">-->
+            <!--                <p>Press & Partners</p>-->
+            <!--                <p>FAQs</p>-->
+            <!--            </div>-->
+            <div class="w-full h-fit flex flex-row items-start justify-end mt-14 gap-3 mr-10">
                 <div class="h-5 w-5 rounded-full bg-brand-orange"></div>
                 <div class="h-5 w-5 rounded-full bg-brand-green"></div>
                 <div class="h-5 w-5 rounded-full bg-brand-orange"></div>
