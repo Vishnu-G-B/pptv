@@ -16,11 +16,12 @@
     let collapsedWidth;
     let expandedWidth;
 
-
     function expandNavbar() {
         if (!isExpanded) {
             gsap.to(navContainerBgGradient, {
                 left: 0,
+                duration: 0.3,
+                ease: "power2.out",
             });
             gsap.to(navContainer, {
                 width: expandedWidth,
@@ -34,7 +35,7 @@
                 duration: 0.3,
                 stagger: 0.1,
                 ease: "power2.out",
-                delay: 0.3
+                delay: 0.1
             });
             isExpanded = true;
         }
@@ -44,7 +45,8 @@
         if (isExpanded) {
             gsap.to(navContainerBgGradient, {
                 left: "-120%",
-                duration: 1,
+                duration: 0.5,
+                ease: "power2.out",
             });
             gsap.to(navLinks, {
                 display: "none",
@@ -66,55 +68,86 @@
 
     onMount(() => {
         navLinks = navContainer.querySelectorAll('.desktop-nav-links-description');
-        gsap.set(navLinks,
-            {
+        gsap.set(navLinks, {
+            opacity: 0,
+            y: "100%",
+            display: "none"
+        });
+
+        // Make sure the content is temporarily visible with all text showing
+        // to properly calculate the full expanded width
+        navLinks.forEach(link => {
+            gsap.set(link, {
+                display: "block",
                 opacity: 0,
-                y: "100%"
+                position: "static"
             });
+        });
 
-        collapsedWidth = `${navContent.querySelector('.nav-icon').offsetWidth + 32}px`;
-        expandedWidth = `${navContent.scrollWidth + 102}px`;
+        // Temporarily make the container visible to calculate proper width
+        const originalDisplay = navContent.style.display;
+        navContent.style.visibility = 'hidden';
+        navContent.style.display = 'flex';
+        navContent.style.position = 'absolute';
+        navContent.style.width = 'auto';
 
+        // Find the widest icon for collapsed state
+        const icons = navContent.querySelectorAll('.nav-icon');
+        let maxIconWidth = 0;
+        icons.forEach(icon => {
+            maxIconWidth = Math.max(maxIconWidth, icon.offsetWidth);
+        });
+
+        // Force a reflow to ensure all elements are properly measured
+        void navContent.offsetWidth;
+
+        // Calculate the width needed for the expanded state
+        // Add extra padding to ensure text fits properly
+        expandedWidth = `${navContent.scrollWidth + 40}px`;
+
+        // Set collapsed width based on the widest icon plus padding
+        collapsedWidth = `${maxIconWidth + 32}px`;
+
+        // Reset styles
+        navLinks.forEach(link => {
+            gsap.set(link, {
+                display: "none",
+                opacity: 0,
+                position: ""
+            });
+        });
+
+        navContent.style.visibility = '';
+        navContent.style.display = originalDisplay;
+        navContent.style.position = '';
+        navContent.style.width = '';
+
+        // Set initial width
         navContainer.style.width = collapsedWidth;
     });
 </script>
 
-<div class="fixed -left-[120%] top-0 bg-gradient-to-r from-alternate-primary to-transparent to-95% h-screen w-1/2"
+<div class="fixed -left-[120%] top-0 bg-gradient-to-r from-alternate-primary to-transparent to-95% h-screen w-1/4"
      bind:this={navContainerBgGradient}></div>
 <div class="h-screen fixed left-0 top-0 z-[6] transition-all duration-300"
      on:mouseenter={expandNavbar}
      on:mouseleave={collapseNavbar}
      bind:this={navContainer} role="none">
     <div bind:this={navContent}
-         class="h-full w-[200px] desktop-nav-container backdrop-blur-sm relative flex flex-col items-start justify-center p-4 gap-5 overflow-hidden"
+         class="h-full desktop-nav-container backdrop-blur-sm relative flex flex-col items-start justify-center p-4 gap-5 overflow-visible"
          role="navigation">
         <a href="/">
             <div class="w-fit h-fit mb-4 absolute top-3 -ml-2">
                 <img src="{pplLogo}" class="w-[95px] h-[95px] object-cover" alt="ppl logo">
             </div>
         </a>
-        <!--        <a href="/">-->
-        <!--            <div class="w-full h-fit flex flex-row items-center group whitespace-nowrap">-->
-        <!--                <div class="nav-icon mr-4 flex-shrink-0">-->
-        <!--                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="40px" height="40px"-->
-        <!--                         class="fill-on-surface">-->
-        <!--                        <path d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z"/>-->
-        <!--                    </svg>-->
-        <!--                </div>-->
-
-        <!--                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-hidden">-->
-        <!--                    Home-->
-        <!--                    <div class="h-0.5 w-0 group-hover:w-full bg-primary/80 absolute bottom-0 transition-all duration-300"></div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </a>-->
         <a href="/">
             <div class="w-full h-fit flex flex-row items-center group whitespace-nowrap">
-                <div class="nav-icon mr-4 flex-shrink-0">
-                    <img src="{hearticon}" alt="heart icon" class="h-[60px] w-[60px] object-cover">
+                <div class="nav-icon mr-4 flex-shrink-0 w-[60px] h-[60px] flex items-center justify-center">
+                    <img src="{hearticon}" alt="heart icon" class="max-w-full max-h-full object-contain">
                 </div>
 
-                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-hidden">
+                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-visible">
                     PPL Featured
                     <div class="h-0.5 w-0 group-hover:w-full bg-primary/80 absolute bottom-0 transition-all duration-300"></div>
                 </div>
@@ -122,11 +155,11 @@
         </a>
         <a href="https://yif-website.vercel.app/">
             <div class="w-full h-fit flex flex-row items-center relative group whitespace-nowrap">
-                <div class="nav-icon mr-4 flex-shrink-0">
+                <div class="nav-icon mr-4 flex-shrink-0 w-[60px] h-[60px] flex items-center justify-center">
                     <img src="{trending}" alt="logo of young india festival"
-                         class="w-[40px] h-[40px] object-cover p-1 bg-gray-50 rounded-full">
+                         class="max-w-full max-h-full object-contain p-1 bg-gray-50 rounded-full">
                 </div>
-                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-hidden">
+                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-visible">
                     Most Loved
                     <div class="h-0.5 w-0 group-hover:w-full bg-primary/80 absolute bottom-0 transition-all duration-300"></div>
                 </div>
@@ -134,10 +167,11 @@
         </a>
         <a href="https://yif-website.vercel.app/">
             <div class="w-full h-fit flex flex-row items-center relative group whitespace-nowrap">
-                <div class="nav-icon mr-4 flex-shrink-0">
-                    <img src="{yifLogo}" alt="logo of young india festival" class="w-[55px] h-[55px] object-left">
+                <div class="nav-icon mr-4 flex-shrink-0 w-[60px] h-[60px] flex items-center justify-center">
+                    <img src="{yifLogo}" alt="logo of young india festival"
+                         class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-hidden">
+                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-visible">
                     Young India Filmmakers
                     <div class="h-0.5 w-0 group-hover:w-full bg-primary/80 absolute bottom-0 transition-all duration-300"></div>
                 </div>
@@ -145,11 +179,11 @@
         </a>
         <a href="https://yif-website.vercel.app/">
             <div class="w-full h-fit flex flex-row items-center relative group whitespace-nowrap">
-                <div class="nav-icon mr-4 flex-shrink-0">
+                <div class="nav-icon mr-4 flex-shrink-0 w-[60px] h-[60px] flex items-center justify-center">
                     <img src="{swadeshplexlogo}" alt="logo of young india festival"
-                         class="w-[55px] h-[55px] object-left">
+                         class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-hidden">
+                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-visible">
                     SwadeshPlex
                     <div class="h-0.5 w-0 group-hover:w-full bg-primary/80 absolute bottom-0 transition-all duration-300"></div>
                 </div>
@@ -157,11 +191,11 @@
         </a>
         <a href="https://yif-website.vercel.app/">
             <div class="w-full h-fit flex flex-row items-center relative group whitespace-nowrap">
-                <div class="nav-icon mr-4 flex-shrink-0 rounded-full">
+                <div class="nav-icon mr-4 flex-shrink-0 w-[60px] h-[60px] flex items-center justify-center">
                     <img src="{kiddinglogo}" alt="logo of young india festival"
-                         class="w-[55px] h-[55px] object-cover rounded-full">
+                         class="max-w-full max-h-full object-contain rounded-full">
                 </div>
-                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-hidden">
+                <div class="text-base primary-font text-on-surface desktop-nav-links-description opacity-0 hidden overflow-visible">
                     Kidding Around Bharat
                     <div class="h-0.5 w-0 group-hover:w-full bg-primary/80 absolute bottom-0 transition-all duration-300"></div>
                 </div>
