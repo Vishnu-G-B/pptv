@@ -79,7 +79,7 @@
         box-shadow 0.4s ease;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         position: relative;
-        z-index: 10;
+        z-index: 1;
         overflow: hidden;
     }
 
@@ -176,7 +176,7 @@
         transition: opacity 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
         transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
         visibility 0.5s ease;
-        z-index: 100;
+        z-index: 1;
         pointer-events: none;
         backdrop-filter: blur(10px);
         background: rgba(255, 255, 255, 0.9);

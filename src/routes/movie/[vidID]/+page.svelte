@@ -36,7 +36,7 @@
 
 <div class="bg-surface h-fit overflow-hidden">
     <div class="h-screen w-full bg-surface  relative flex justify-start items-center mb-5 overflow-hidden">
-        <div class="h-[50%] w-[45%] absolute rounded-xl bottom-12 left-16 z-10">
+        <div class="h-[50%] w-[45%] absolute rounded-xl bottom-12 left-16">
             <div class="h-full w-full rounded-3xl flex-col justify-between items-center
                         text-white primary-font p-4">
                 <div class="text-center text-3xl mb-2 font-extrabold uppercase">
@@ -103,7 +103,7 @@
                 <div class="w-fit h-fit">
                     <Pplheartbutton/>
                 </div>
-                <div class="h-fit w-fit">
+                <div class="h-fit w-fit z-[1]">
                     <Sharebutton/>
                 </div>
             </div>
