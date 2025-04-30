@@ -4,7 +4,7 @@
     import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
     import Section from '$lib/components/Timeline2/Section.svelte';
 
-    export let data = []; // The timeline data array
+    export let data = [];
 
     let timelineContainer;
     let progressBar;
@@ -32,11 +32,11 @@
 
 <div bind:this={timelineContainer} class="timeline-container relative w-full">
 
-    <div class="progress-bar-container fixed top-0 left-0 h-screen w-2 bg-gray-200 z-50">
-        <div bind:this={progressBar} class="progress-bar-fill h-0 w-full bg-blue-500"></div>
+    <div class="progress-bar-container fixed top-0 left-0 h-screen w-2 bg-surface z-50">
+        <div bind:this={progressBar} class="progress-bar-fill h-0 w-full bg-primary"></div>
     </div>
 
-    <div class="sections-wrapper ml-2">
+    <div class="sections-wrapper ml-2 bg-surface">
         {#each data as sectionData (sectionData.year)}
             <Section year={sectionData.year} items={sectionData.items}/>
         {/each}
