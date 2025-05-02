@@ -5,8 +5,9 @@
     import pplLogo from "$lib/assets/images/PPLlogo.png";
     import swadeshplexlogo from "$lib/assets/images/SWADESHPLEX_LOGO.png";
     import kiddinglogo from "$lib/assets/images/Kidding Around Bharat.png";
-    import movieticketicon from "$lib/assets/images/movies.png";
+    import movieticketicon from "$lib/assets/images/movies.gif";
     import popcorn from "$lib/assets/images/popcorn.png";
+    import home from "$lib/assets/images/home.png";
 
     let navContainer;
     let navContent;
@@ -117,7 +118,7 @@
     });
 </script>
 
-<div class="fixed -left-[120%] top-0 h-screen w-screen bg-gradient-to-r from-surface via-surface/70 to-transparent pointer-events-none"
+<div class="fixed -left-[120%] top-0 h-screen w-screen bg-gradient-to-r from-surface via-surface/90 to-transparent pointer-events-none"
      bind:this={navContainerBgGradient}></div>
 <div class="h-screen fixed left-0 top-0 z-[6] transition-all duration-300"
      on:mouseenter={expandNavbar}
@@ -134,8 +135,20 @@
             </div>
         </a>
         <a href="/">
+            <div class="w-full h-fit flex flex-row items-center group whitespace-nowrap mt-10">
+                <div class="nav-icon mr-4 flex-shrink-0 w-[55px] h-[55px] flex items-center justify-center">
+                    <img src="{home}" alt="heart icon" class="max-w-full max-h-full object-contain">
+                </div>
+
+                <div class="text-base primary-font text-white desktop-nav-links-description opacity-0 hidden overflow-visible">
+                    Home
+                    <div class="h-0.5 w-0 group-hover:w-full bg-primary/80 absolute bottom-0 transition-all duration-300"></div>
+                </div>
+            </div>
+        </a>
+        <a href="/">
             <div class="w-full h-fit flex flex-row items-center group whitespace-nowrap">
-                <div class="nav-icon mr-4 flex-shrink-0 w-[60px] h-[60px] flex items-center justify-center">
+                <div class="nav-icon mr-4 flex-shrink-0 w-[55px] h-[55px] flex items-center justify-center">
                     <img src="{movieticketicon}" alt="heart icon" class="max-w-full max-h-full object-contain">
                 </div>
 
