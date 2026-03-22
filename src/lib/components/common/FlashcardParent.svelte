@@ -1,4 +1,4 @@
-<!-- App.svelte -->
+<!-- FlashcardParent.svelte — "Kidding Around Bharat" offerings section -->
 <script>
     import Flashcard from './Flashcard.svelte';
     import {onMount} from 'svelte';
@@ -17,6 +17,9 @@
     import swadeshplex from "$lib/assets/images/SWADESHPLEX_LOGO.png";
     import yif_logo from "$lib/assets/images/YIF_logo_final.png";
 
+    // Vimeo placeholder — same ID used in BentoBox
+    const VIMEO_PLACEHOLDER = '1072992217';
+
     let mounted = false;
     let headerTimeline;
     let windowWidth;
@@ -26,31 +29,37 @@
             word: "A Conscious OTT platform streaming impactful and educational content Starting @ Just ONE Rupee.",
             logosrc: PPLlogo,
             image: img1,
+            vimeoId: VIMEO_PLACEHOLDER,
         },
         {
             word: "YIF is a Mentor-Driven Grant, empowering the next-generation of filmmakers guided by the finest artists in the Indian film industry.",
             logosrc: yif_logo,
             image: img2,
+            vimeoId: VIMEO_PLACEHOLDER,
         },
         {
-            word: "Community Filmmaking Tours to villages, artisans, start-ups  & changemakers across India capturing real stories on reel.",
+            word: "Community Filmmaking Tours to villages, artisans, start-ups & changemakers across India capturing real stories on reel.",
             logosrc: swadeshplex,
-            image: img3
+            image: img3,
+            vimeoId: VIMEO_PLACEHOLDER,
         },
         {
             word: "A CSR filmmaking workshop for children supporting real stories from rural India.",
             logosrc: kiddinglogo,
-            image: img4
+            image: img4,
+            vimeoId: VIMEO_PLACEHOLDER,
         },
         {
-            word: "offering 5",
+            word: "India's First OTT Platform for Early Childhood Education — coming soon.",
             logosrc: ecatvlogo2,
-            image: img5
+            image: img5,
+            vimeoId: VIMEO_PLACEHOLDER,
         },
         {
-            word: "A capacity building program for the Ministry Of Education’s PM eVIDYA initiative including studio design, teacher training and co-production of curriculum based content in regional languages.",
+            word: "A capacity building program for the Ministry Of Education's PM eVIDYA initiative including studio design, teacher training and co-production of curriculum based content in regional languages.",
             logosrc: projectGulak,
-            image: img6
+            image: img6,
+            vimeoId: VIMEO_PLACEHOLDER,
         }
     ];
 
@@ -84,27 +93,25 @@
     onMount(() => {
         initHeaderTimeline();
         window.addEventListener('resize', handleResize);
-        setTimeout(() => {
-            mounted = true;
-        }, 100);
+        setTimeout(() => { mounted = true; }, 100);
         return () => {
             window.removeEventListener('resize', handleResize);
-            if (headerTimeline) {
-                headerTimeline.kill();
-            }
+            if (headerTimeline) headerTimeline.kill();
         };
     });
 </script>
 
 <svelte:window bind:innerWidth={windowWidth}/>
 
+<!-- Section heading: "Kidding Around Bharat" replacing "Awww-fferings" -->
 <div class="headingDiv sticky top-1/2 left-1/2 transform-gpu -translate-y-1/2 text-center
-                h-fit w-full z-[0] flex flex-col justify-center items-center gap-0 capitalize
-                text-4xl xs:text-5xl sm:text-6xl lg:text-8xl xl:text-9xl brand-font font-bold text-brand-orange italic">
+            h-fit w-full z-[0] flex flex-col justify-center items-center gap-0 capitalize
+            text-4xl xs:text-5xl sm:text-6xl lg:text-8xl xl:text-9xl brand-font font-bold text-brand-orange italic">
     <span class="capitalize">OUR</span>
     <div class="m-0 p-0 -tracking-[0.05em] w-full flex flex-col justify-center items-center
                 relative overflow-hidden"
          style="height: { windowWidth < 375 ? '40px' : windowWidth < 640 ? '50px' : windowWidth < 768 ? '70px' : windowWidth < 1024 ? '60px' : windowWidth < 1280 ? '80px' : '110px'}">
+        <!-- First text: Awww-fferings (animates out) -->
         <div class="movingHeaderContainer absolute text-brand-green w-full flex justify-center">
             <span class="movingHeader inline-block -mr-1 md:-mr-2 lg:-mr-3">A</span>
             <span class="movingHeader inline-block">w</span>
@@ -120,6 +127,7 @@
             <span class="movingHeader inline-block">g</span>
             <span class="movingHeader inline-block">s</span>
         </div>
+        <!-- Second text: Offerings (animates in) -->
         <div class="movingHeaderContainer2 absolute text-primary w-full flex justify-center">
             <span class="movingHeader2 inline-block -mr-1 md:-mr-2 lg:-mr-3">A</span>
             <span class="movingHeader2 inline-block">w</span>
@@ -142,10 +150,15 @@
     <div class="h-full w-full flex flex-wrap justify-center z-10 relative">
         {#each componentData.slice(0, 6) as card, i}
             <div
-                    class="h-full w-full sm:w-fit transform transition-all duration-700 ease-in-out m-4 md:m-6 lg:m-8
-                                   flex justify-center items-center"
+                class="h-full w-full sm:w-fit transform transition-all duration-700 ease-in-out m-4 md:m-6 lg:m-8
+                       flex justify-center items-center"
             >
-                <Flashcard imgsrc={card.image} answer={card.word} logosrc={card.logosrc}/>
+                <Flashcard
+                    imgsrc={card.image}
+                    answer={card.word}
+                    logosrc={card.logosrc}
+                    vimeoId={card.vimeoId}
+                />
             </div>
         {/each}
     </div>
@@ -153,29 +166,12 @@
 
 <style>
     @keyframes blob {
-        0% {
-            transform: translate(0px, 0px) scale(1);
-        }
-        33% {
-            transform: translate(30px, -30px) scale(1.1);
-        }
-        66% {
-            transform: translate(-20px, 20px) scale(0.9);
-        }
-        100% {
-            transform: translate(0px, 0px) scale(1);
-        }
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -30px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
     }
-
-    .animate-blob {
-        animation: blob 7s infinite;
-    }
-
-    .animation-delay-2000 {
-        animation-delay: 2s;
-    }
-
-    .animation-delay-4000 {
-        animation-delay: 4s;
-    }
+    .animate-blob { animation: blob 7s infinite; }
+    .animation-delay-2000 { animation-delay: 2s; }
+    .animation-delay-4000 { animation-delay: 4s; }
 </style>

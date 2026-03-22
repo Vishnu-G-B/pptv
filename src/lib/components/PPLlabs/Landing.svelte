@@ -2,7 +2,6 @@
     import {onMount} from 'svelte';
     import {gsap} from "gsap/dist/gsap";
     import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
-    import {goto} from "$app/navigation";
     import SplitType from "split-type";
 
     gsap.registerPlugin(ScrollTrigger);
@@ -12,8 +11,6 @@
     const videoRatio = 16 / 9;
 
     onMount(() => {
-        const tl = gsap.timeline({defaults: {ease: "power3.out"}});
-
         let typeSplit = new SplitType('.text-anim-parent', {
             types: 'lines, words, chars',
             tagName: 'span'
@@ -53,59 +50,52 @@
 
         return () => observer.disconnect();
     });
-
-    const handleClick = () => {
-        goto('/purpletv');
-    };
 </script>
 
 <div
-        bind:this={container1}
-        class="w-full h-screen relative bg-gradient overflow-hidden"
+    bind:this={container1}
+    class="w-full h-screen relative bg-gradient overflow-hidden"
 >
     <iframe
-            class="absolute top-1/2 left-1/2 w-full h-full object-cover z-0 pointer-events-none"
-            style="transform: translate(-50%, -50%) scale({scaleValues.video1});"
-            src="https://player.vimeo.com/video/1077053431?h=fa003380ac&amp;background=1&amp;loop=1&amp;transparent=0&amp;byline=0&amp;title=0&amp;portrait=0"
-            title="YIF Video"
-            frameborder="0"
-            allow="autoplay; fullscreen; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+        class="absolute top-1/2 left-1/2 w-full h-full object-cover z-0 pointer-events-none"
+        style="transform: translate(-50%, -50%) scale({scaleValues.video1});"
+        src="https://player.vimeo.com/video/1077053431?h=fa003380ac&amp;background=1&amp;loop=1&amp;transparent=0&amp;byline=0&amp;title=0&amp;portrait=0"
+        title="PPL Background Video"
+        frameborder="0"
+        allow="autoplay; fullscreen; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
     ></iframe>
 
-    <div class="absolute inset-0 bg-gradient-to-r from-[#250025]/90 to-[#250025]/0"></div>
+    <!-- Dark overlay - now centered gradient instead of left-biased -->
+    <div class="absolute inset-0 bg-[#250025]/60"></div>
 
-    <div class="absolute inset-0 flex items-center justify-start z-10 mb-4">
-        <div class="p-2 md:p-8 rounded-lg flex flex-col w-full sm:w-[60%] text-white/90">
+    <!-- Centered content -->
+    <div class="absolute inset-0 flex items-center justify-center z-10">
+        <div class="flex flex-col items-center text-center text-white/90 px-4 md:px-8 max-w-4xl w-full">
+
             <h1
-                    class="text-lg sm:text-4xl font-bold text-[#ff9900]"
-                    style="font-family: Arial"
+                class="text-anim-parent text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-3"
+                style="font-family: Arial"
             >
-                Edutainment With A Purpose
+                Purple People Labs
             </h1>
 
-            <h2 class="text-lg sm:text-2xl mb-4">
-                Watch Impactful Films
-                <span class="text-brand-green font-extrabold">@ONE Rupee</span>
-            </h2>
-
-            <p class="text-left text-lg sm:text-xl mb-4">
-                We are a Conscious OTT Platform committed to produce and promote impactful cinema.
+            <p class="text-base sm:text-xl md:text-2xl text-white/80 mb-2 max-w-2xl">
+                Start an industry-driven &amp; NEP 2020 aligned content creators lab at your school.
             </p>
 
-            <p class="text-left text-lg sm:text-xl">
-                Our film and media skills curriculum empower schools, teachers and 6 to 18 year old children to explore
-                the power of digital storytelling to change the world, one film at a time! #GoPurple
+            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff9900] mb-8">
+                Education + Entertainment + Impact
             </p>
-            <div class="flex flex-col sm:flex-row gap-2 md:gap-4 mt-5">
-                <button
-                        class="animate-button text-base md:text-2xl text-white px-4 md:px-4 py-2 md:py-3 rounded-xl
-                                font-bold font-sans transition-colors duration-300 backdrop-blur-sm bg-primary
-                                text-center uppercase"
-                        on:click={handleClick}>
-                    Subscribe
-                </button>
-            </div>
+
+            <a
+                href="#"
+                class="animate-button text-base md:text-xl text-white px-8 md:px-10 py-3 md:py-4 rounded-xl
+                       font-bold font-sans transition-colors duration-300 backdrop-blur-sm bg-primary
+                       text-center uppercase inline-block"
+            >
+                #GoPurple
+            </a>
         </div>
     </div>
 </div>

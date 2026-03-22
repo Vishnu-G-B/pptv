@@ -10,20 +10,16 @@
 
     let cardContent = [
         {
-            title: "A Teacher's Journey of stories",
-            text: "Founded by Shweta Parakh, a teacher, filmmaker and entrepreneur who travelled across India with a film school in her bag to mentor and capture children’s perspective of the world on life, love, relationships, aspirations, hope and little things that matter to our hearts!"
+            title: "Why We Started",
+            text: "To support the PM eVidya mission — affordable access to quality educational content for 25 crore school going children in India. With over 15 lakh schools in India, and less than 0.02% of cinema created specifically for children, we see filmmaking as a vital tool for education, communication and social impact."
         },
         {
-            title: "Education through the lens",
-            text: "PPL has been on a transformative journey across India since 2012, mentoring kids aged 6 to 18 and teachers, empowering them to amplify their voice, dreams and aspirations through the most powerful skill of storytelling-FILMMAKING."
+            title: "What We Do",
+            text: "Established in 2012, we design an all integrated Film Pedagogy program for K to 12 schools including Film & Media Curriculum, Content Creator Labs, Content IP Design, Teacher Training, Social Impact Campaigns & International Film Festivals — By Children, For Children."
         },
         {
-            title: "A Mentor-Student Startup",
-            text: "Co-founded by Kriti Gandhi, a Hong Kong based journalist, with a keen interest in capturing impactful stories of real life heroes, Kriti aligned with the soul of Purple People Labs, just like Shivain Arora & Krishnam Gupta who walked in as young filmmakers & grew as a family."
-        },
-        {
-            title: "Make a film, Make A Difference",
-            text: "Every subscription contributes to free filmmaking workshops in rural areas, grants for urban school filmmakers & social impact projects for all we do at Purple People Labs."
+            title: "Who We Are",
+            text: "We are a growing crew of educators, filmmakers, philanthropists, journalists, artists, techies, lawyers... children at heart. Purple is a color of creativity and wisdom. We are proudly a family of 'purple people', here to make a difference for children through film & media skills education and impactful cinema."
         }
     ];
 
@@ -78,15 +74,36 @@
     </div>
 
     <div class="cardContainer bg-[#f6f5ec] h-[400vh] w-full relative md:-mt-[90vh]">
-        <div class="w-full text-center flex justify-center items-center md:justify-end md:items-start
-                    sticky top-20 md:top-20 z-20 md:pr-8 md:pt-4">
-            <div
+        <!-- Heading + stats -->
+        <div class="w-full text-center flex flex-col justify-start items-center md:items-end
+                    sticky top-20 md:top-20 z-20 md:pr-8 md:pt-4 gap-3">
+            <div class="bg-background/85 backdrop-blur-sm rounded-2xl px-5 py-3 flex flex-col items-center md:items-end gap-3">
+                <div
                     use:textAnimation
-                    class="text-center text-5xl capitalize font-bold z-20 leading-tight"
+                    class="text-center md:text-right text-5xl capitalize font-bold z-20 leading-tight"
                     style="font-family: Arial"
-            >
-                <span class="text-primary font-fancy text-6xl font-extralight block">What makes us</span>
-                <span class="text-brand-orange block">WOW!</span>
+                >
+                    <span class="text-primary font-fancy text-6xl font-extralight block">What makes us</span>
+                    <span class="text-brand-orange block">WOW!</span>
+                </div>
+
+                <!-- Stats row -->
+                <div class="flex flex-row flex-wrap justify-center md:justify-end gap-4 md:gap-6">
+                    <div class="flex flex-col items-center">
+                        <span class="text-2xl md:text-3xl font-bold text-primary">300+</span>
+                        <span class="text-xs md:text-sm text-surface text-center">Films By Children</span>
+                    </div>
+                    <div class="hidden sm:block w-px bg-on-surface/20"></div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-2xl md:text-3xl font-bold text-primary">75+</span>
+                        <span class="text-xs md:text-sm text-surface text-center">International Screenings</span>
+                    </div>
+                    <div class="hidden sm:block w-px bg-on-surface/20"></div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-2xl md:text-3xl font-bold text-brand-orange">∞</span>
+                        <span class="text-xs md:text-sm text-surface text-center">Impact &amp; Love</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -110,18 +127,9 @@
             <div class="absolute top-1/2 left-1/2 transform -translate-x-[48%] md:-translate-x-0 -translate-y-1/2
                         md:left-auto md:right-8 md:top-0
                         z-50 opacity-0 w-full max-w-[500px] h-[450px]">
-                <svg
-                        viewBox="0 -50 500 450"
-                        preserveAspectRatio="xMidYMid meet"
-                        class="w-full h-full"
-                >
-                    <path
-                            id="path"
-                            d="M 168 -27 Q 255 117 242 374"
-                            stroke="#000000"
-                            stroke-width="1"
-                            fill="none"
-                    />
+                <svg viewBox="0 -50 500 450" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                    <path id="path" d="M 168 -27 Q 255 117 242 374"
+                          stroke="#000000" stroke-width="1" fill="none"/>
                 </svg>
             </div>
         </div>

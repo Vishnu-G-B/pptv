@@ -351,6 +351,13 @@
             <img src="{yif_logo}" alt="YIF Logo" class="object-cover h-full w-full"/>
             <span class="desktopLabel ml-2 text-white font-medium text-lg">YIF</span>
         </div>
+        
+        <button class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh] bg-transparent rounded-full
+                    overflow-hidden z-[1] flex items-center"
+                on:click={handleClick}>
+            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-cover h-full w-full"/>
+            <span class="desktopLabel ml-2 text-white font-medium text-lg">Kidding Around Bharat</span>
+        </button>
 
         <div class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11vh] min-[426px]:w-[11vh] bg-transparent
                     overflow-hidden z-[1] flex items-center">
@@ -358,12 +365,6 @@
             <span class="desktopLabel ml-2 text-white font-medium text-lg">Swadeshplex</span>
         </div>
 
-        <button class="navAnim flex-shrink-0 min-w-0 h-[8vh] w-[8vh] min-[426px]:h-[11.5vh] min-[426px]:w-[11.5vh] bg-transparent rounded-full
-                    overflow-hidden z-[1] flex items-center"
-                on:click={handleClick}>
-            <img src="{kiddinglogo}" alt="Kidding Bharat Logo" class="object-cover h-full w-full"/>
-            <span class="desktopLabel ml-2 text-white font-medium text-lg">Kidding Around Bharat</span>
-        </button>
 
         <div class="navAnim flex-shrink-0 min-w-0 h-[7vh] w-[7vh] min-[426px]:h-[10.5vh] min-[426px]:w-[11vh]
                             bg-transparent rounded-full overflow-hidden z-[1] flex items-center">
