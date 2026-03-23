@@ -30,18 +30,19 @@
                 start: 'top top+=100px',
                 end: 'center top-=500px',
                 scrub: true,
+                invalidateOnRefresh: true,
             }
         });
 
         tl.fromTo(yearHeader,
             {
                 scale: 1,
-                yPercent: 0,
+                y: 0,
                 opacity: 1
             },
             {
-                scale: 0.15,
-                yPercent: -80,
+                scale: 0.4,
+                y: () => -(window.innerHeight * 0.45),
                 opacity: 0.8,
                 ease: 'power2.out'
             }
@@ -60,7 +61,7 @@
          class="year-header-pin-wrapper h-screen w-full absolute top-0 left-0 pointer-events-none z-10">
         <div class="h-full flex items-center justify-center">
             <h2 bind:this={yearHeader}
-                class="year-header text-[25vw] md:text-[20vw] lg:text-[18vw] font-bold text-gray-200 select-none origin-center whitespace-nowrap">
+                class="year-header text-[6vw] font-bold text-gray-200 select-none origin-center whitespace-nowrap">
                 {year}
             </h2>
         </div>
