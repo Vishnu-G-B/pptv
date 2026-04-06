@@ -5,6 +5,7 @@
     import Item from '$lib/components/Timeline2/Item.svelte';
 
     export let year = 'YEAR';
+    export let logo = '';
     export let items = [];
 
     let sectionElement;
@@ -21,7 +22,6 @@
             pin: yearHeaderWrapper,
             pinSpacing: false,
             anticipatePin: 1,
-
         });
 
         const tl = gsap.timeline({
@@ -35,53 +35,51 @@
         });
 
         tl.fromTo(yearHeader,
-            {
-                scale: 1,
-                y: 0,
-                opacity: 1
-            },
-            {
-                scale: 0.4,
-                y: () => -(window.innerHeight * 0.45),
-                opacity: 0.8,
-                ease: 'power2.out'
-            }
+            { scale: 1, y: 0, opacity: 1 },
+            { scale: 0.4, y: () => -(window.innerHeight * 0.45), opacity: 0.8, ease: 'power2.out' }
         );
 
         return () => {
             st?.kill();
-            tl.scrollTrigger?.kill(); // Kill the trigger associated with the timeline
-            tl.kill(); // Kill the timeline itself
+            tl.scrollTrigger?.kill();
+            tl.kill();
         };
     });
 </script>
 
-<section bind:this={sectionElement} class="year-section relative min-h-screen bg-surface">
+<section bind:this={sectionElement} class="year-section relative min-h-screen bg-[#250025]">
     <div bind:this={yearHeaderWrapper}
          class="year-header-pin-wrapper h-screen w-full absolute top-0 left-0 pointer-events-none z-10">
         <div class="h-full flex items-center justify-center">
             <h2 bind:this={yearHeader}
-                class="year-header text-[6vw] font-bold text-gray-200 select-none origin-center whitespace-nowrap">
+                class="year-header text-[6vw] font-bold text-white select-none origin-center whitespace-nowrap">
                 {year}
             </h2>
         </div>
     </div>
 
-    <div class="section-content relative z-0 pt-[100vh] bg-surface">
+    <div class="section-content relative z-0 pt-[100vh] bg-[#250025]">
         {#each items as item (item.title)}
-            <Item title={item.title} text={item.text} imageUrl={item.imageUrl}/>
+            <Item
+                title={item.title}
+                subtitle={item.subtitle || ''}
+                text={item.text}
+                fullText={item.fullText || item.text}
+                imageUrl={item.imageUrl || ''}
+                vimeoId={item.vimeoId || ''}
+                meta={item.meta || []}
+                supporters={item.supporters || []}
+                logo={logo}
+            />
         {/each}
     </div>
 </section>
 
 <style>
-
     .year-header-pin-wrapper.is-pinned {
         pointer-events: none;
     }
-
     .year-header-pin-wrapper.is-pinned .year-header {
         pointer-events: auto;
     }
-
 </style>

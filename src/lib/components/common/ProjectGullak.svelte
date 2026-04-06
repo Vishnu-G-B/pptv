@@ -3,6 +3,7 @@
     import {gsap} from 'gsap/dist/gsap';
     import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
     import projectGullakLogo from "$lib/assets/images/Project_Gullak_Logo_Final.png";
+    import {openContact} from "$lib/stores/modalStore.js";
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -86,10 +87,10 @@
     <div class="gullak-content-block mt-20 flex flex-col items-center text-center gap-4">
         <p class="text-white/50 text-sm uppercase tracking-widest">Want to partner with us?</p>
         <h3 class="text-3xl sm:text-4xl font-bold text-white">Edutainment With A Purpose</h3>
-        <a href="#contact"
+        <button on:click|preventDefault={openContact}
            class="mt-4 px-8 py-3 rounded-xl bg-primary text-white font-bold text-lg uppercase tracking-wide
                   hover:bg-primary/80 transition-colors duration-200">
             Contact Us
-        </a>
+        </button>
     </div>
 </div>

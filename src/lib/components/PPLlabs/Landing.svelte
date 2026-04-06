@@ -70,7 +70,7 @@
     <div class="absolute inset-0 bg-[#250025]/60"></div>
 
     <!-- Centered content -->
-    <div class="absolute inset-0 flex items-center justify-center z-10">
+    <div class="absolute inset-0 flex items-end justify-center pb-4 z-10">
         <div class="flex flex-col items-center text-center text-white/90 px-4 md:px-8 max-w-4xl w-full">
 
             <h1
@@ -80,8 +80,9 @@
                 Purple People Labs
             </h1>
 
-            <p class="text-base sm:text-xl md:text-2xl text-white/80 mb-2 max-w-2xl">
-                Start an industry-driven &amp; NEP 2020 aligned content creators lab at your school.
+            <p class="text-base sm:text-xl md:text-xl text-white/80 mb-2 max-w-2xl">
+                Film Pedagogy for K to 12 schools <br/>
+                Film & Media Programs, Filmmaking Tours, Teacher Training & Creator Labs.
             </p>
 
             <p class="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff9900] mb-8">

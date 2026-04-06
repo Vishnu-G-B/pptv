@@ -27,7 +27,6 @@
             progressST?.kill();
         };
     });
-
 </script>
 
 <div bind:this={timelineContainer} class="timeline-container relative w-full">
@@ -38,7 +37,7 @@
 
     <div class="sections-wrapper ml-2 bg-surface">
         {#each data as sectionData (sectionData.year)}
-            <Section year={sectionData.year} items={sectionData.items}/>
+            <Section year={sectionData.year} logo={sectionData.logo} items={sectionData.items}/>
         {/each}
     </div>
 

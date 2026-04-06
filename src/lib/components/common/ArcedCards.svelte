@@ -5,6 +5,7 @@
     import {MotionPathPlugin} from "gsap/dist/MotionPathPlugin";
     import {textAnimation} from "$lib/animations/textSplit.js";
     import bgImg from "$lib/assets/images/bgImg.jpg";
+    import { openWow } from '$lib/stores/modalStore.js';
 
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -27,14 +28,7 @@
         const path = document.querySelector("#path");
         cardContent.forEach((_, index) => {
             gsap.set(`#card-${index}`, {
-                motionPath: {
-                    path: path,
-                    align: path,
-                    alignOrigin: [0.5, 0.5],
-                    autoRotate: false,
-                    start: 1,
-                    end: 1
-                }
+                motionPath: { path, align: path, alignOrigin: [0.5, 0.5], autoRotate: false, start: 1, end: 1 }
             });
 
             const cardTl = gsap.timeline({
@@ -48,22 +42,10 @@
             });
 
             cardTl.to(`#card-${index}`, {
-                motionPath: {
-                    path: path,
-                    align: path,
-                    alignOrigin: [0.5, 0.5],
-                    start: 1,
-                    end: 0,
-                    autoRotate: false
-                },
-                scale: 0.8,
-                opacity: 0,
-                ease: "none"
+                motionPath: { path, align: path, alignOrigin: [0.5, 0.5], start: 1, end: 0, autoRotate: false },
+                scale: 0.8, opacity: 0, ease: "none"
             });
-            cardTl.to(`#card-${index + 1}`, {
-                rotateX: 0,
-                ease: "none",
-            }, "<");
+            cardTl.to(`#card-${index + 1}`, { rotateX: 0, ease: "none" }, "<");
         });
     });
 </script>
@@ -74,20 +56,17 @@
     </div>
 
     <div class="cardContainer bg-[#f6f5ec] h-[400vh] w-full relative md:-mt-[90vh]">
-        <!-- Heading + stats -->
+        <!-- Heading + stats + Know More -->
         <div class="w-full text-center flex flex-col justify-start items-center md:items-end
                     sticky top-20 md:top-20 z-20 md:pr-8 md:pt-4 gap-3">
             <div class="bg-background/85 backdrop-blur-sm rounded-2xl px-5 py-3 flex flex-col items-center md:items-end gap-3">
-                <div
-                    use:textAnimation
-                    class="text-center md:text-right text-5xl capitalize font-bold z-20 leading-tight"
-                    style="font-family: Arial"
-                >
+                <div use:textAnimation
+                     class="text-center md:text-right text-5xl capitalize font-bold z-20 leading-tight"
+                     style="font-family: Arial">
                     <span class="text-primary font-fancy text-6xl font-extralight block">What makes us</span>
                     <span class="text-brand-orange block">WOW!</span>
                 </div>
-
-                <!-- Stats row -->
+                <!-- Stats -->
                 <div class="flex flex-row flex-wrap justify-center md:justify-end gap-4 md:gap-6">
                     <div class="flex flex-col items-center">
                         <span class="text-2xl md:text-3xl font-bold text-primary">300+</span>
@@ -104,21 +83,30 @@
                         <span class="text-xs md:text-sm text-surface text-center">Impact &amp; Love</span>
                     </div>
                 </div>
+                <!-- Know More -->
+                <button on:click={openWow}
+                    class="self-start flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest
+                           hover:text-brand-orange transition-colors duration-200 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 110 20A10 10 0 0112 2z"/>
+                    </svg>
+                    Know More
+                </button>
             </div>
         </div>
 
-        <div class="interCard w-[90%] max-w-[500px] sticky top-[40%] md:top-[20%]
-            mx-auto md:ml-auto md:mr-0 z-20 md:pr-8">
+        <!-- Cards — bigger text -->
+        <div class="interCard w-[90%] max-w-[500px] sticky top-[40%] md:top-[20%] mx-auto md:ml-auto md:mr-0 z-20 md:pr-8">
             {#each cardContent as item, i}
-                <div id="card-{i}" class="card absolute w-[350px] h-[180px] sm:w-[480px] sm:h-[245px]
-                        bg-background border-2 border-surface p-5 sm:p-8 rounded-2xl shadow-[0_0_10px_rgba(102,0,102,0.1)]"
+                <div id="card-{i}" class="card absolute w-[340px] h-[200px] sm:w-[500px] sm:h-[270px]
+                        bg-background border-2 border-surface p-6 sm:p-10 rounded-2xl shadow-[0_0_10px_rgba(102,0,102,0.1)]"
                      style="z-index: {3 - i}; transform: translate(-50%, -50%) rotate({i * 2}deg);">
-                    <div class="flex flex-col justify-center items-start text-center w-full h-full">
+                    <div class="flex flex-col justify-center items-start w-full h-full">
                         <h3 use:textAnimation
-                            class="text-base sm:text-xl font-bold text-brand-orange mb-1 text-left capitalize">
+                            class="text-lg sm:text-2xl font-bold text-brand-orange mb-2 text-left capitalize">
                             {item.title}
                         </h3>
-                        <p class="text-brand-green text-left text-xs sm:text-base font-bold large-animation-3">
+                        <p class="text-brand-green text-left text-sm sm:text-base font-semibold leading-snug">
                             {item.text}
                         </p>
                     </div>

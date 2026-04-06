@@ -58,3 +58,29 @@
 body {
     background-color: #f3f3e7;
 }
+
+/* ── Purple-themed custom scrollbar ──────────────────────────
+   Append these lines to the END of your existing app.css
+   ──────────────────────────────────────────────────────────── */
+
+/* Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #1a0020;
+}
+::-webkit-scrollbar-thumb {
+    background: #550055;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff9900;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #550055 #1a0020;
+}

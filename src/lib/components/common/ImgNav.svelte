@@ -1,10 +1,10 @@
 <script>
-    import PPLlogo from "$lib/assets/images/PPLlogo.png";
-    import kiddinglogo from "$lib/assets/images/Kidding Around Bharat.png";
-    import ecatvlogo2 from "$lib/assets/images/ecatv.png";
+    import PPLlogo from "$lib/assets/images/logos/Purple People Labs Logo.png";
+    import kiddinglogo from "$lib/assets/images/logos/Kidding Around Bharat Logo.png";
+    import ecatvlogo2 from "$lib/assets/images/logos/ECA TV Logo.png";
     import projectGulak from "$lib/assets/images/Project_Gullak_Logo_Final.png";
-    import swadeshplex from "$lib/assets/images/SWADESHPLEX_LOGO.png";
-    import yif_logo from "$lib/assets/images/YIF_logo_final.png";
+    import swadeshplex from "$lib/assets/images/logos/SWADESHPLEX Logo.png";
+    import yif_logo from "$lib/assets/images/logos/YIF Logo.png";
     import {onDestroy, onMount} from "svelte";
     import {gsap} from "gsap/dist/gsap";
     import {ScrollTrigger} from "gsap/dist/ScrollTrigger";

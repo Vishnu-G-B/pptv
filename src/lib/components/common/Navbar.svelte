@@ -1,10 +1,10 @@
 <script>
     import {onMount} from 'svelte';
     import {gsap} from "gsap";
-    import yifLogo from "$lib/assets/images/YIF_logo_final.png";
-    import pplLogo from "$lib/assets/images/PPLlogo.png";
-    import swadeshplexlogo from "$lib/assets/images/SWADESHPLEX_LOGO.png";
-    import kiddinglogo from "$lib/assets/images/Kidding Around Bharat.png";
+    import yifLogo from "$lib/assets/images/logos/YIF Logo.png";
+    import pplLogo from "$lib/assets/images/logos/Purple People Labs Logo.png";
+    import swadeshplexlogo from "$lib/assets/images/logos/SWADESHPLEX Logo.png";
+    import kiddinglogo from "$lib/assets/images/logos/Kidding Around Bharat Logo.png";
     import movieticketicon from "$lib/assets/images/movies.gif";
     import popcorn from "$lib/assets/images/popcorn.png";
     import home from "$lib/assets/images/home.png";
