@@ -1,11 +1,4 @@
 <script>
-    // ─── Web3Forms contact form ───
-    // Sign up free at https://web3forms.com to get your access key.
-    // Replace the placeholder below with your key — no backend needed.
-    // Data is stored in your Web3Forms dashboard + emailed to you instantly.
-
-    const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // ← replace this
-
     const projects = [
         'Academic Creators Lab',
         'Kidding Around Bharat',
@@ -41,7 +34,6 @@
 
         try {
             const payload = {
-                access_key: WEB3FORMS_ACCESS_KEY,
                 subject: `PPL Website Enquiry — ${form.project}`,
                 from_name: form.name,
                 name: form.name,

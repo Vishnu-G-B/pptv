@@ -81,5 +81,4 @@
 <ArcedCards/>
 <EcatvSection/>
 <ProjectGullak/>
-<!--<ContactForm/>-->
 <Footer/>

@@ -58,7 +58,7 @@
     // ─── Contact form (FormSubmit.co) ───
     // IMPORTANT: Replace with the real PPL email address.
     // On first submit, FormSubmit.co sends a confirmation email — click it once to activate.
-    const FORMSUBMIT_EMAIL = 'YOUR_EMAIL@EXAMPLE.COM';
+    const FORMSUBMIT_EMAIL = 'vishnub2710@gmail.com';
 
     const projects = [
         'Academic Creators Lab',
@@ -71,11 +71,14 @@
     ];
 
     let form = { name: '', phone: '', email: '', project: '', message: '' };
+    let honeypot = '';
     let formStatus = ''; // '' | 'sending' | 'success' | 'error'
     let formError = '';
 
     async function submitForm() {
         if (formStatus === 'sending') return;
+        // Silently drop bot submissions that filled the honeypot
+        if (honeypot) return;
         if (!form.name.trim() || !form.email.trim() || !form.project || !form.message.trim()) {
             formError = 'Please fill in all required fields.';
             return;
@@ -93,7 +96,7 @@
                     project:  form.project,
                     message:  form.message,
                     _subject: `PPL Website Enquiry — ${form.project}`,
-                    _captcha: 'false',
+                    _honey:   honeypot,
                     _template: 'table',
                 })
             });
@@ -114,6 +117,7 @@
     function resetForm() {
         formStatus = '';
         formError = '';
+        honeypot = '';
     }
 </script>
 
@@ -360,6 +364,16 @@
                                 placeholder="Tell us about yourself or what you have in mind…"
                                 rows="5" class="ppl-input resize-none"></textarea>
                         </div>
+                        <!-- Honeypot — invisible to humans, filled by bots -->
+                        <input
+                            type="text"
+                            name="_honey"
+                            bind:value={honeypot}
+                            tabindex="-1"
+                            autocomplete="off"
+                            aria-hidden="true"
+                            style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;"
+                        />
                         <!-- Error -->
                         {#if formError}
                             <p class="text-red-400 text-sm">{formError}</p>
@@ -372,11 +386,6 @@
                                        : 'bg-primary text-white hover:bg-primary/80 active:scale-[0.98]'}">
                             {formStatus === 'sending' ? 'Sending…' : '#GoPurple — Send Message'}
                         </button>
-                        <p class="text-white/30 text-xs text-center">
-                            Powered by <a href="https://formsubmit.co" target="_blank" rel="noopener noreferrer"
-                                class="underline hover:text-white/50">FormSubmit</a>.
-                            Your data is never sold or shared.
-                        </p>
                     </div>
                 {/if}
             </div>
