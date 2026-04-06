@@ -8,6 +8,7 @@
     import Timeline from "$lib/components/Timeline2/Timeline.svelte";
     import ProjectGullak from "$lib/components/common/ProjectGullak.svelte";
     import ContactForm from "$lib/components/common/ContactForm.svelte";
+    import EcatvSection from "$lib/components/common/EcatvSection.svelte";
 
     // Vimeo placeholder — same as used in BentoBox
     const VIMEO_PLACEHOLDER = '1072992217';
@@ -78,6 +79,7 @@
 </div>
 <Watchlist/>
 <ArcedCards/>
+<EcatvSection/>
 <ProjectGullak/>
 <!--<ContactForm/>-->
 <Footer/>
